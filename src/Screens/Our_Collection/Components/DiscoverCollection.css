@@ -1,0 +1,24 @@
+.discover-collection-component {
+    width: 100%;
+    margin: 80px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.discover-collection-heading {
+    font-size: 55px;
+    text-align: center;
+    margin: 30px 0px;
+    font-family: "Gelasio", serif;
+}
+.discover-collection-desc {
+    width: 60%;
+    font-size: 17px;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.discover-collection-collections {
+    width: 100%;
+}
