@@ -1,6 +1,6 @@
 .home-discovercollection {
     width: 100%;
-    height: 100vh;
+    padding: 120px 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -7,6 +7,11 @@ import DiscoverCollection from "./Components/DiscoverCollection";
 import AboutUS from "./Components/AboutUS";
 import QuartzAdvantage from "./Components/QuartzAdvantage";
 import Gallery from "./Components/Gallery";
+import LoveUS from "./Components/LoveUs";
+import InsideStore from './Components/InsideStore'
+import CustomerReview from "./Components/CustomerReviews";
+
+import SubscriptionNewsLetter from "./Components/SubscriptionNewsLetter";
 
 function HomeScreen() {
     const [activeColor, setActiveColor] = useState(0)
@@ -60,6 +65,10 @@ function HomeScreen() {
       <AboutUS />
       <QuartzAdvantage />
       <Gallery />
+      <LoveUS />
+      <InsideStore />
+      <CustomerReview />
+      <SubscriptionNewsLetter />
     </div>
   );
 }

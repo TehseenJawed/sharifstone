@@ -1,0 +1,36 @@
+.home-loveus-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.home-loveus-innercontainer {
+    width: 60%; 
+}
+.home-loveus-innercontainer2 {
+    width: 40%; 
+    margin-right: 30px;
+}
+.home-loveus-heading {
+    font-size: 55px;
+    margin-top: 20px;
+    color: #221F1F;
+    font-family: "Gelasio", serif;
+}
+.home-loveus-desc {
+    font-size: 18px;
+    line-height: 30px;
+    color: #221F1F;
+}
+.home-loveus-progress {
+    width: 100%;
+    height: 5px;
+    background-color: #D8DEDF;
+    margin: 45px 0px;
+}
+.home-loveus-progressfill {
+    background-color: #EE2A2E;
+    width: 50%;
+    height: 5px;
+}

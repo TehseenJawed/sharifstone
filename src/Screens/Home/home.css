@@ -14,12 +14,8 @@
   justify-content: center;
   align-items: center;
   margin-top: -15px;
-  background: rgb(238, 42, 46);
-  background: linear-gradient(
-    90deg,
-    rgba(126, 22, 25, 1) 100%
-    rgba(238, 42, 46, 1) 0%,
-  );
+  background: rgb(126,22,25);
+  background: linear-gradient(90deg, rgba(126,22,25,1) 0%, rgba(238,42,46,1) 100%);
 }
 .covercard-headertext {
   font-size: 54px;
