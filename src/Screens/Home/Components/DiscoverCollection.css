@@ -1,0 +1,55 @@
+.home-discovercollection {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.home-discovercollection-heading {
+    font-size: 55px;
+    font-family: "Gelasio", serif;
+    color: #221F1F;
+}
+.home-desciption {
+    font-size: 16px;
+    width: 44%;
+    text-align: center;
+    line-height: 30px;
+}
+.home-discovercollection-button {
+    background-color: #EE2A2E;
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 20px 25px;
+    border-radius: 30px;
+    margin-top: 25px;
+}
+.discovercollection-carouse-image {
+    width: 50%;
+    height: 450px;
+    background-color: red;
+    box-shadow: 5px 21px 34px #8888886f;
+}
+.discovercollection-carouse-sideimage {
+    width: 12%;
+    margin: 35px;
+    height: 400px;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.discovercollection-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 70px 0px;
+}
+.discovercollection-arrow {
+    padding: 15px;
+    background-color: #D5262A;
+    border-radius: 30px;
+}

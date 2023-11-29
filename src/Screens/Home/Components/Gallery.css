@@ -1,0 +1,22 @@
+.home-gallerycontainer {
+    display: flex;
+    width: 100%;
+    margin: 40px 0px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.home-gallerysub-container1 {
+    width: 15%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.home-gallerysub-container2 {
+    width: 80%;
+    text-align: center;
+}
+.homecontainer1-tabs {
+    font-size: 20px;
+    margin: 40px 0px;
+}

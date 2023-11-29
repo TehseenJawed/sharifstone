@@ -1,0 +1,24 @@
+.nav-container {
+    background-color: #221F1F;
+    /* width: 60%; */
+    padding: 17px;
+    border-radius: 30px;
+    display: flex;
+    /* margin-: 30; */
+}
+.nav-item {
+    color: white;
+    padding: 0px 10px;
+    font-weight: 600;
+    font-size: 17px;
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+}
+.active-dott {
+    width: 10px;
+    height: 10px;
+    margin-right: 6px;
+    border-radius: 20px;
+    background-color: #B22023;
+}
