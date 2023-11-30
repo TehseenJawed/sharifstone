@@ -1,0 +1,13 @@
+.contact-maincontainer {
+    width: 100%;
+    margin: 100px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-maindesc {
+    width: 55%;
+    font-size: 22px;
+    line-height: 35px;
+    text-align: center;
+}

@@ -7,7 +7,6 @@ const OurCollection = () => {
         <div>
             <CoverComponent image={'url(images/cover/our_collection.png)'} label={['OUR', 'COLLECTION']}/>
             <DiscoverCollection />
-            <SubscriptionNewsLetter />
         </div>
     )
 }

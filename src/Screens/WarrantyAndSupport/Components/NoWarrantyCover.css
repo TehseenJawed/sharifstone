@@ -1,0 +1,11 @@
+.nowarranty-cover {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    line-height: 35px;
+}
+.nowarranty-cover div {
+    margin-right: 25px;
+}

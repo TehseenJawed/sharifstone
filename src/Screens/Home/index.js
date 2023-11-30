@@ -9,9 +9,7 @@ import QuartzAdvantage from "./Components/QuartzAdvantage";
 import Gallery from "./Components/Gallery";
 import LoveUS from "./Components/LoveUs";
 import InsideStore from './Components/InsideStore'
-import CustomerReview from "./Components/CustomerReviews";
-
-import SubscriptionNewsLetter from "./Components/SubscriptionNewsLetter";
+import CustomerReview from "../../components/CustomerReviews";
 
 function HomeScreen() {
     const [activeColor, setActiveColor] = useState(0)
@@ -67,8 +65,7 @@ function HomeScreen() {
       <Gallery />
       <LoveUS />
       <InsideStore />
-      <CustomerReview />
-      <SubscriptionNewsLetter />
+      <CustomerReview label={"CUSTOMER REVIEW"}/>
     </div>
   );
 }

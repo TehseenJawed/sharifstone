@@ -1,9 +1,10 @@
 import './CustomerReviews.css'
-import Customer1 from '../../../assets/images/homeImage/customer_batool.png'
-import Customer2 from '../../../assets/images/homeImage/customer_jacob.png'
-import Customer3 from '../../../assets/images/homeImage/customer_sharon.png'
-import OrganizationLogo from '../../../assets/images/homeImage/org_logo.png'
-const CustomerReview = () => {
+import Customer1 from '../assets/images/homeImage/customer_batool.png'
+import Customer2 from '../assets/images/homeImage/customer_jacob.png'
+import Customer3 from '../assets/images/homeImage/customer_sharon.png'
+import OrganizationLogo from '../assets/images/homeImage/org_logo.png'
+
+const CustomerReview = ({label}) => {
     const customerArray = [
         {
             name: 'Batool Dharamsey',
@@ -26,7 +27,7 @@ const CustomerReview = () => {
     ]
     return (
         <div className="home-customerreview-container">
-            <div className="home-customerreview-header">CUSTOMER REVIEWS</div>
+            <div className="home-customerreview-header">{label}</div>
 
             <div className='home-customerreview-cardcontainer'>
                 {

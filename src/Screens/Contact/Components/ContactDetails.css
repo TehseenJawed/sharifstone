@@ -1,0 +1,22 @@
+.contactdetails-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 80px 0px;
+}
+.contactdetails-innercontainer {
+    width: 260px;
+    margin-right: 20px;
+    display: flex;;
+}
+.contactdetails-innercontainer div{
+    margin-left: 10px;
+    width: 200px;
+}
+.contactus-subheading {
+    font-size: 22px;
+}
+.contactus-subtext {
+    font-size: 18px;
+}

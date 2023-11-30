@@ -27,16 +27,22 @@
     margin-top: 25px;
 }
 .discovercollection-carouse-image {
-    width: 50%;
-    height: 450px;
-    background-color: red;
-    box-shadow: 5px 21px 34px #8888886f;
+    width: 60%;
+    height: 610px;
+    /* background-color: red; */
+    background-position: fill; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    /* box-shadow: 5px 21px 34px #8888886f; */
 }
 .discovercollection-carouse-sideimage {
     width: 12%;
     margin: 35px;
     height: 400px;
-    background-color: green;
+    background-position: fill; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    /* background-color: green; */
     display: flex;
     justify-content: center;
     align-items: center;

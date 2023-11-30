@@ -3,6 +3,7 @@ import NavMenu from "../components/navMenu";
 import Logo from "../assets/images/logo.png";
 import Footer from "../components/footer";
 import "./Layout.css";
+import SubscriptionNewsLetter from "../Screens/Home/Components/SubscriptionNewsLetter";
 
 function Layout({ children }) {
   return (
@@ -11,7 +12,8 @@ function Layout({ children }) {
         <img src={Logo} alt="Logo" />
         <NavMenu />
       </div>
-        {children}
+      {children}
+      <SubscriptionNewsLetter />
       <Footer />
     </div>
   );
