@@ -1,0 +1,86 @@
+.choosecolor-container {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.choosecolor-innercontainer {
+    width: 32%;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.choosecolor-innercontainer2 {
+    width: 68%;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.choosecolor-cover {
+    width: 90%;
+    margin-top: 10px;
+}
+.choosecolor-bgncontainer {
+    display: flex;
+    margin-top: 50px;
+}
+.choosecolor-btn-active {
+    padding: 15px 30px;
+    background-color: #EE2A2E;
+    color: white;
+    border-radius: 35px;
+    margin-right: 15px;
+}
+.choosecolor-btn {
+    padding: 15px 30px;
+    border: 2px solid black;
+    border-radius: 35px;
+    font-weight: 600;
+}
+.choosecolor-sel-container {
+    width: 100%;
+    height: 70vh;
+    margin-top: 10px;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.choosecolor-palete-container {
+    width: 120px;
+    height: 90px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+.choosecolor-palate {
+    text-align: center;
+    margin: 5px;
+}
+.choosecolor-palatetext {
+    margin: 15px;
+}
+.choosecolor-selectcontainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 25px 0px;
+}
+.choosecolor-selectcontainer div {
+    font-size: 22px;
+    font-weight: 600;
+}
+.choosecolor-selectcontainer input {
+    width: 200px;
+    border: none;
+    border-bottom: 1px solid gray;
+    padding: 0px;
+}

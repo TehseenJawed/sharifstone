@@ -11,6 +11,7 @@ import ProductDescription from "../Screens/ProductDescription";
 import AboutUs from "../Screens/AboutUs";
 import WarrantyAndSupport from "../Screens/WarrantyAndSupport";
 import ContactScreen from "../Screens/Contact";
+import KitchenVisualizer from "../Screens/KitchenVisualizer";
 
 createBrowserRouter([
   {
@@ -40,9 +41,9 @@ const router = createBrowserRouter(
     {
       path: "/kitchen-visualizer",
       element: (
-        <Layout>
-          <HomeScreen />
-        </Layout>
+        // <Layout>
+          <KitchenVisualizer />
+        // </Layout>
       ),
     },
     {
