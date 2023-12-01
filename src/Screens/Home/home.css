@@ -39,6 +39,7 @@
   height: 160px;
   background-repeat: no-repeat;
   background-position: center;
+  z-index: 1;
 }
 .covercard-bottomcontainer {
     width: 100%;
@@ -68,4 +69,35 @@
     position: absolute;
     right: 0;
     top: 0px;
+}
+
+@media screen and (max-width: 768px) and (min-width: 425px) {
+    .home-covercard {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+    .covercard-subcontainer {
+        width: 100%;
+        margin-top: -125px;
+    }
+    .covercard-headertext {
+        font-size: 35px;
+        margin-left: 10px;
+        margin-bottom: 50px;
+        width: 35%
+    }
+    .covercard-bottomcontainer {
+        width: 50%;
+        flex-direction: column;
+        position: absolute;
+        right: 0px;
+        top: 100px;
+        margin-top: 0px;
+    }
+    .home-covercard {
+        position: relative;
+    }
+    .covercar-image{
+        top: -140px
+    }
 }

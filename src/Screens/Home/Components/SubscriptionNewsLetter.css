@@ -7,6 +7,7 @@
     background-color: #F3F5F5;
     padding: 80px 0px;
     position: relative;
+    overflow: hidden;
 }
 .home-subscription-header {
     text-align: center;
@@ -30,8 +31,33 @@
     padding: 20px 50px;
     border-radius: 30px;
     margin-left: -40px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.home-subscription-btn:hover {
+    transition: 0.3s;
+    background-color: #a72022;
+
 }
 .home-subscrion-bg {
     position: absolute;
     bottom: 0;
+}
+
+@media screen and (max-width: 768px) and (min-width: 425px) {
+    .home-subscription-header {
+        font-size: 30px;
+    }
+    .home-subscript-input {
+        width: 280px;
+    }
+    .home-subscription-btn {
+        width: 60px;
+        height: 60px;
+        padding: 0px;
+        margin-left: -60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }

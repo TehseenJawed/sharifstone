@@ -13,7 +13,7 @@ function Gallery() {
 
         <div className="home-gallerycontainer">
           <div className="home-gallerysub-container1">
-            <div>
+            <div className="home-gallery-contain">
                 {
                     galleryType.map((v,i) => <div onClick={() => setCurrentImage(v)} style={{color: currentImage === v ? '#EE2A2E' : ''}} className="homecontainer1-tabs">{v}</div>)
                 }

@@ -67,3 +67,13 @@
     right: 0;
     bottom: -100;
 }
+
+@media screen and (max-width: 1024px) and (min-width: 756px) {
+    .footer-container-links {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .footer-innersection {
+        width: auto;
+    }
+}

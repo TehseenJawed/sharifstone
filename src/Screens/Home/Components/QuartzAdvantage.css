@@ -61,8 +61,40 @@
     margin-top: 30px;
 }
 .homebrand-button {
-    padding: 15px 40px;
+    width: 200px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #EE2A2E;
+    transition: 0.3s;
     color: white;
+    text-align: center;
     border-radius: 30px;
+    cursor: pointer;
+}
+.homebrand-button:hover {
+    transition: 0.3s;
+    background-color: #b62427;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 756px) {
+    .homebrand-button {
+        width: 330px;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 425px) {
+    .homebrand-images {
+        flex-wrap: wrap;
+        align-items: flex-end;
+        justify-content: space-evenly;
+        margin-bottom: 40px;
+    }
+    .home-advantageinnercontainer {
+        width: 100%;
+    }
+    .homebrand-button {
+        display: none;
+    }
 }

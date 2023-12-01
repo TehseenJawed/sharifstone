@@ -2,6 +2,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .home-insidestore-heading {
@@ -13,6 +14,7 @@
 .home-insidestore-imagecontainer {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     margin: 50px 0px;
@@ -46,3 +48,27 @@
     font-weight: 600;
     margin-top: 20px;
 }
+
+@media screen and (max-width: 1024px) and (min-width: 756px) {
+    .home-insidestore-imagecontainer img{
+        margin: 10px;
+    }
+    .home-insidestore-imagecontainer {
+        justify-content: flex-start;
+
+    }
+    .homeinsider-offercard {
+        margin: 20px;
+    }
+}
+@media screen and (max-width: 768px) and (min-width: 425px) {
+    .home-insidestore-imagecontainer {
+        justify-content: center;
+        text-align: center;
+    }
+    .home-insidestore-subheading {
+        width: 100%;
+        text-align: center;
+    }
+}
+

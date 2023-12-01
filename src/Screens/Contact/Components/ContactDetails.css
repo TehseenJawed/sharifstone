@@ -20,3 +20,15 @@
 .contactus-subtext {
     font-size: 18px;
 }
+
+@media screen and (max-width: 1024px) and (min-width: 756px) {
+    .contactdetails-container {
+        flex-wrap: wrap;
+        width: 85%;
+        margin-left: 50px;
+        justify-content: flex-start;
+    }
+    .contactdetails-innercontainer {
+        margin: 20px 10px;
+    }
+}

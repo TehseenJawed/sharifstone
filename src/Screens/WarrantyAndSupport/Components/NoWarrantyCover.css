@@ -9,3 +9,14 @@
 .nowarranty-cover div {
     margin-right: 25px;
 }
+
+@media screen and (max-width: 1024px) and (min-width: 756px) {
+    .reorganize-subcontainer {
+        width: 55% !important;
+        margin-right: 15px;
+    }
+    .nowarranty-cover {
+        align-items: flex-start;
+        font-size: 20px;
+    }
+}

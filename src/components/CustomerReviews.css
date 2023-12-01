@@ -14,6 +14,7 @@
 .home-customerreview-cardcontainer {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     margin: 45px 0px;
@@ -45,4 +46,16 @@
 .home-customerreview-customer {
     color: #999999;
 
+}
+@media screen and (max-width: 1024px) and (min-width: 756px) {
+.home-customerreview-cardcontainer {
+    justify-content: flex-start;
+    margin-left: 85px;
+}
+}
+@media screen and (max-width: 768px) and (min-width: 425px) {
+    .home-customerreview-cardcontainer {
+        justify-content: center;
+        margin-left: 0px;
+    }
 }

@@ -67,6 +67,12 @@
     margin-top: 25px;
     border-radius: 30px;
     z-index: 1;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.submit-btn:hover {
+    transition: 0.3s;
+    background-color: #a31d1f;
 }
 .contactform-bg {
     position: absolute;

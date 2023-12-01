@@ -34,3 +34,31 @@
     width: 50%;
     height: 5px;
 }
+
+@media screen and (max-width: 1024px) and (min-width: 756px) {
+    .home-loveus-container {
+        width: 100%;
+        height: auto;
+        flex-direction: column-reverse;
+    }
+    .home-loveus-innercontainer2 {
+        width: 65%; 
+        margin-right: 0px;
+    }
+    .home-loveus-innercontainer {
+        width: 80%; 
+    }
+    .home-loveus-innercontainer img{
+        width: 100%; 
+        margin: 50px 0px
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 425px) {
+    .home-loveus-innercontainer2 {
+        width: 90%;
+    }
+    .home-loveus-innercontainer {
+        width: 100%;
+    }
+}

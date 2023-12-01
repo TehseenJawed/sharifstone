@@ -45,7 +45,7 @@ function HomeScreen() {
                 {
                     colorCarousel.map((v,i) => <div onClick={() => setActiveColor(i)} className="homecard-color-card"  style={{ backgroundImage: v , border: activeColor === i ? '3px solid black' : ''}}></div>)
                 }
-                <HiArrowLongRight onClick={() => changeColor(true)} size={40} color={'#fff'}/>
+                <HiArrowLongRight style={{zIndex: 1}} onClick={() => changeColor(true)} size={40} color={'#fff'}/>
             </div>
 
             <div className="covercard-bottomcontainer">

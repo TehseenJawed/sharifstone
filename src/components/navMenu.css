@@ -22,3 +22,42 @@
     border-radius: 20px;
     background-color: #B22023;
 }
+.mobile-menu-btn {
+    width: 60px;
+    height: 60px;
+    background-color: black;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mobile-menu-container {
+    width: 100%;
+    background-color: #221F1F;
+    left: 0px;
+    top: 0px;
+    height: 100vh;
+    overflow: auto;
+    z-index: 2;
+    position: fixed;
+}
+.mobile-remove-menu {
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    text-decoration: none;
+    margin: 40px;
+}
+.mobile-remove-menucontainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.mobile-menu-item {
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    padding: 30px 0px;
+}

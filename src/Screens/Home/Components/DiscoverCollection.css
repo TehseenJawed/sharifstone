@@ -25,6 +25,12 @@
     padding: 20px 25px;
     border-radius: 30px;
     margin-top: 25px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.home-discovercollection-button:hover{
+    background-color: #ce2326;
+    transition: 0.3s;
 }
 .discovercollection-carouse-image {
     width: 60%;
@@ -58,4 +64,23 @@
     padding: 15px;
     background-color: #D5262A;
     border-radius: 30px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.discovercollection-arrow:hover {
+    transition: 0.3s;
+    background-color: #8b1517;
+}
+
+@media screen and (max-width: 768px) and (min-width: 425px) {
+    .home-discovercollection-heading {
+        font-size: 40px;
+    }
+    .home-desciption {
+        font-size: 16px;
+        width: 75%;
+        margin-top: 50px;
+        text-align: center;
+        line-height: 30px;
+    }
 }
