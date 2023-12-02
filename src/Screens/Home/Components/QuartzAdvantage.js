@@ -57,8 +57,8 @@ function QuartzAdvantage() {
             ))}
           </div>
         </div>
-        <div className="homebrand-dowmloadcontainer">
           <div className="homebrand-button">Download Slab Technical Chart</div>
+        <div className="homebrand-dowmloadcontainer">
         </div>
       </div>
     </div>

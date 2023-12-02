@@ -5,14 +5,16 @@
     align-items: center;
 }
 .home-aboutinnercontainer {
-    width: 90%;
+    width: 95%;
 }
 .home-aboutheading {
     font-size: 35px;
     text-align: center;
     font-family: "Gelasio", serif;
 }
-
+.home-discovercollection-button {
+    padding: 15px 70px;
+}
 .home-aboutsubcontainer {
     width: 100%;
     display: flex;
