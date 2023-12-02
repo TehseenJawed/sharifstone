@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./ReorganizeIndustry.css";
 function ReorganizeIndustry() {
   return (
@@ -21,7 +22,7 @@ function ReorganizeIndustry() {
             expectations of our customers, we are able to give the customers
             more than what they have expected.
           </div>
-          <div style={{display: 'flex'}}><div className="reorganize-getstarted">Get Started</div></div>
+          <div style={{display: 'flex'}}><Link to={"/contact"} className="reorganize-getstarted">Get Started</Link></div>
         </div>
       </div>
     </div>

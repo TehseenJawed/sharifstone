@@ -1,45 +1,71 @@
 .reorganize_container {
-    width: 100%;
-    margin: 120px 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  margin: 120px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .reorganize-imagecontainer {
-    width: 90%;
-    height: 700px;
-    background-image: url('../../../../public/images/cover/reorganize_industry.png');
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
-    border-radius: 30px;
-    display: flex;
-    justify-content: flex-end;
+  width: 90%;
+  height: 700px;
+  background-image: url("../../../../public/images/cover/reorganize_industry.png");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  border-radius: 30px;
+  display: flex;
+  justify-content: flex-end;
 }
 .reorganize-subcontainer {
-    width: 42%;
+  width: 42%;
+  color: white;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+}
+.reorganize-heading {
+  font-size: 40px;
+  font-family: "Gelasio", serif;
+  font-weight: 600;
+  line-height: 55px;
+}
+.reorganize-desc {
+  margin-top: 25px;
+  line-height: 30px;
+  font-size: 20px;
+}
+.reorganize-getstarted {
+  background-color: #ee2a2e;
+  color: white;
+  padding: 20px 50px;
+  border-radius: 35px;
+  margin-top: 25px;
+}
+
+@media screen and (max-width: 768px) and (min-width: 320px) {
+  .reorganize-heading {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .reorganize-desc {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 425px) and (min-width: 320px) {
+  .reorganize-subcontainer {
+    width: 90%;
     color: white;
     height: 700px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
-}
-.reorganize-heading {
-    font-size: 40px;
-    font-family: "Gelasio", serif;
-    font-weight: 600;
-    line-height: 55px;
-}
-.reorganize-desc {
-    margin-top: 25px;
-    line-height: 30px;
-    font-size: 20px;
-}
-.reorganize-getstarted {
-    background-color: #EE2A2E;
-    color: white;
-    padding: 20px 50px;
-    border-radius: 35px;
-    margin-top: 25px;
+  }
+  .reorganize-imagecontainer {
+    height: 900px;
+    justify-content: center;
+    align-items: flex-end;
+  }
 }

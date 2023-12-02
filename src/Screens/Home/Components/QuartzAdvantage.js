@@ -45,7 +45,7 @@ function QuartzAdvantage() {
         >
           <div className="homebrand-images">
             {advantages.map((v, i) => (
-              <div style={{ margin: "0px 20px" }}>
+              <div className="homebrand-container">
                 <div
                   className="homebrand-image"
                   style={{

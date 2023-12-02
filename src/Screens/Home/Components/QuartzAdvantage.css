@@ -54,47 +54,84 @@
   background-size: cover;
 }
 .homebrand-dowmloadcontainer {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
 }
 .homebrand-button {
-    width: 200px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #EE2A2E;
-    transition: 0.3s;
-    color: white;
-    text-align: center;
-    border-radius: 30px;
-    cursor: pointer;
+  width: 200px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ee2a2e;
+  transition: 0.3s;
+  color: white;
+  text-align: center;
+  border-radius: 30px;
+  cursor: pointer;
 }
 .homebrand-button:hover {
-    transition: 0.3s;
-    background-color: #b62427;
+  transition: 0.3s;
+  background-color: #b62427;
+}
+.homebrand-container {
+  margin: 0px 20px;
 }
 
 @media screen and (max-width: 1024px) and (min-width: 756px) {
-    .homebrand-button {
-        width: 330px;
-    }
+  .homebrand-button {
+    width: 330px;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 320px) {
+  .homebrand-images {
+    flex-wrap: wrap;
+    align-items: center;
+    height: 250px;
+    justify-content: space-evenly;
+    margin-bottom: 40px;
+  }
+  .home-advantageinnercontainer {
+    width: 100%;
+  }
+  .homebrand-button {
+    display: none;
+  }
+  .home-advamtageheading {
+    font-size: 35px;
+    text-align: center;
+  }
+  .home-advantagebg {
+    width: 100%;
+    align-items: flex-end;
+  }
+  .homebrand-image {
+    width: 30px;
+    height: 30px;
+  }
+  .homebrand-text {
+    font-size: 13px;
+    width: 90px;
+  }
+  .homebrand-container {
+    margin: 0px;
+  }
+  .homebrand-images {
+    align-items: flex-end;
+    justify-content: space-evenly;
+    margin-bottom: 40px;
+  }
+  .home-advamtagedesc {
+    width: 80%;
+  }
 }
 
 @media screen and (max-width: 768px) and (min-width: 425px) {
-    .homebrand-images {
-        flex-wrap: wrap;
-        align-items: flex-end;
-        justify-content: space-evenly;
-        margin-bottom: 40px;
-    }
-    .home-advantageinnercontainer {
-        width: 100%;
-    }
-    .homebrand-button {
-        display: none;
-    }
+  .home-advantagecontainer {
+    margin-top: 60px;
+  }
 }

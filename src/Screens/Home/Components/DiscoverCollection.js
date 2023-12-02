@@ -2,6 +2,7 @@ import React from "react";
 import "./DiscoverCollection.css";
 import { MdOutlineArrowBackIos, MdOutlineArrowRight } from "react-icons/md";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 function DiscoverCollection() {
   return (
@@ -24,7 +25,7 @@ function DiscoverCollection() {
         <MdOutlineArrowForwardIos color="white" size={20} className="discovercollection-arrow"/>
         </div>
       </div>
-      <div className="home-discovercollection-button">See More</div>
+      <Link to={'/quartz-collection'} className="home-discovercollection-button">See More</Link>
     </div>
   );
 }

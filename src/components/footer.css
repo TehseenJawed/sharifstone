@@ -77,3 +77,18 @@
         width: auto;
     }
 }
+
+@media screen and (max-width: 768px) and (min-width: 320px) {
+    .footer-container-links {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .foolter-endsection {
+        flex-direction: column-reverse;
+    }
+    .footer-socialmedia {
+        width: 300px;
+        font-size: 15px;
+        margin-bottom: 30px;
+    }
+}

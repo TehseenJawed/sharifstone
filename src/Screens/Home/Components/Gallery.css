@@ -24,7 +24,7 @@
     margin: 40px 0px;
 }
 
-@media screen and (max-width: 768px) and (min-width: 425px) {
+@media screen and (max-width: 768px) and (min-width: 320px) {
     .home-gallerycontainer {
         flex-direction: column;
     }
@@ -45,5 +45,14 @@
     }
     .home-gallerysub-container2 {
         margin-top: 20px;
+    }
+}
+@media screen and (max-width: 425px) and (min-width: 320px) {
+    .home-gallerysub-container1 {
+        height: 100px;
+    }
+    .homecontainer1-tabs {
+        font-size: 17px;
+        margin: 10px;
     }
 }

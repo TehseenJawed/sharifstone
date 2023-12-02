@@ -10,9 +10,12 @@ import Gallery from "./Components/Gallery";
 import LoveUS from "./Components/LoveUs";
 import InsideStore from './Components/InsideStore'
 import CustomerReview from "../../components/CustomerReviews";
+import {Link} from 'react-router-dom'
+import GetAQuote from "./Components/GetAQuote";
 
 function HomeScreen() {
     const [activeColor, setActiveColor] = useState(0)
+    const [openQuote, setOpenQuote] = useState(false)
     const colorCarousel = ["url(images/color_1.png)", "url(images/color_2.png)", "url(images/color_3.png)"]
 
     const changeColor = (isNext) => {
@@ -32,6 +35,7 @@ function HomeScreen() {
     }
   return (
     <div>
+      {openQuote && <GetAQuote data={{openQuote, setOpenQuote}}/>}  
       <div className="home-container">
         <img className="home-coverimage" src={CoverImage} alt="" />
         <div className="home-covercard">
@@ -52,7 +56,7 @@ function HomeScreen() {
                 <div className="covercard-bottomtext">
                   Beauty and quality beyond imagination. Service beyond what's expected.
                 </div>
-                <div className="covercard-collectionbtn">View Collection</div>
+                <Link to={'/quartz-collection'} className="covercard-collectionbtn">View Collection</Link>
                 <img className="covercar-image" src={bgDesign} />
             </div>
           </div>
@@ -60,7 +64,7 @@ function HomeScreen() {
       </div>
 
       <DiscoverCollection />
-      <AboutUS />
+      <AboutUS data={{openQuote, setOpenQuote}}/>
       <QuartzAdvantage />
       <Gallery />
       <LoveUS />

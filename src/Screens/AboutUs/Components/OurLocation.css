@@ -4,3 +4,9 @@
     font-weight: 600;
     font-family: "Gelasio", serif;
 }
+
+@media screen and (max-width: 425px) and (min-width: 320px) {
+    .location-name {
+        font-size: 30px;
+    }
+}

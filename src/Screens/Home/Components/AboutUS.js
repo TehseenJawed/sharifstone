@@ -6,7 +6,7 @@ import VisualizeSpace from '../../../assets/images/homeImage/visualize_space.png
 import ViewColor from '../../../assets/images/homeImage/view_color.png'
 import WhereToBuy from '../../../assets/images/homeImage/wheretobuy.png'
 
-function AboutUS() {
+function AboutUS({data}) {
     const aboutIdeas = [
         {
             name: 'INSPIRATION IDEAS',
@@ -25,6 +25,7 @@ function AboutUS() {
             image: WhereToBuy
         }
     ]
+    const {openQuote, setOpenQuote} = data
   return (
     <div className="home-aboutconatiner">
       <div className="home-aboutinnercontainer">
@@ -49,7 +50,7 @@ function AboutUS() {
               with clients nationwide. <br /> <br /> Discover the perfect stones for your
               project with Sharifstone!
             </span>
-            <div style={{display: 'flex'}}><div className="home-discovercollection-button">Get a Quote</div></div>
+            <div style={{display: 'flex'}}><div onClick={() => setOpenQuote(true)} className="home-discovercollection-button">Get a Quote</div></div>
           </div>
         </div>
         <div className="home-aboutcard">

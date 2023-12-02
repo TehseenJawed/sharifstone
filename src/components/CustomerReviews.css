@@ -59,3 +59,15 @@
         margin-left: 0px;
     }
 }
+@media screen and (max-width: 425px) and (min-width: 320px) {
+    .home-customerreview-header {
+        font-size: 30px;
+    }
+    .profile-image {
+        width: 70px;
+        height: 70px;
+    }
+    .home-customerreview-talentcontainer {
+        height: 100px;
+    }
+}

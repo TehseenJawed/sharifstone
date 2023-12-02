@@ -1,74 +1,89 @@
 .home-insidestore-container {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .home-insidestore-heading {
-    font-size: 55px;
-    font-family: "Gelasio", serif;
-    font-weight: 600;
+  font-size: 55px;
+  font-family: "Gelasio", serif;
+  font-weight: 600;
 }
 
 .home-insidestore-imagecontainer {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    margin: 50px 0px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 0px;
 }
 
 .home-insidestore-subheading {
-    width: 80%;
-    font-size: 40px;
-    margin: 30px 0px;
+  width: 80%;
+  font-size: 40px;
+  margin: 30px 0px;
 }
 .homeinsider-offercard {
-    background-color: white;
-    width: 350px;
-    height: 220px;
-    border-radius: 15px;
-    box-shadow: 15px 15px 25px #80808056;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  background-color: white;
+  width: 350px;
+  height: 220px;
+  border-radius: 15px;
+  box-shadow: 15px 15px 25px #80808056;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .homeinsider-offercard-image {
-    width:60px;
-    height: 60px;
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: contain;
+  width: 60px;
+  height: 60px;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: contain;
 }
 .homeinsider-offercard-text {
-    font-size: 22px;
-    font-weight: 600;
-    margin-top: 20px;
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 20px;
 }
 
 @media screen and (max-width: 1024px) and (min-width: 756px) {
-    .home-insidestore-imagecontainer img{
-        margin: 10px;
-    }
-    .home-insidestore-imagecontainer {
-        justify-content: flex-start;
-
-    }
-    .homeinsider-offercard {
-        margin: 20px;
-    }
+  .home-insidestore-imagecontainer img {
+    margin: 10px;
+  }
+  .home-insidestore-imagecontainer {
+    justify-content: flex-start;
+  }
+  .homeinsider-offercard {
+    margin: 20px;
+  }
 }
-@media screen and (max-width: 768px) and (min-width: 425px) {
-    .home-insidestore-imagecontainer {
-        justify-content: center;
-        text-align: center;
-    }
-    .home-insidestore-subheading {
-        width: 100%;
-        text-align: center;
-    }
+@media screen and (max-width: 768px) and (min-width: 320px) {
+  .home-insidestore-imagecontainer {
+    justify-content: center;
+    text-align: center;
+  }
+  .home-insidestore-subheading {
+    width: 100%;
+    text-align: center;
+  }
+  .home-insidestore-heading {
+    font-size: 30px;
+    text-align: center;
+  }
 }
 
+@media screen and (max-width: 425px) and (min-width: 320px) {
+  .home-insidestore-imagecontainer img {
+    width: 150px;
+    margin: 5px;
+  }
+  .home-insidestore-subheading {
+    font-size: 30px;
+  }
+  .homeinsider-offercard {
+    margin: 20px;
+  }
+}

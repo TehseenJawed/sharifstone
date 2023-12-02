@@ -36,7 +36,7 @@ const CustomerReview = ({label}) => {
                             <div style={{ margin: 30 }}>{v.desc}</div>
                             <div className='home-customerreview-talentcontainer'>
                                 <div style={{ display: 'flex', margin: '0px 10px' }}>
-                                    <img src={v.image} />
+                                    <img className='profile-image' src={v.image} />
                                     <div style={{ margin: '0px 10px' }}>
                                         <div className='home-customerreview-customername'>{v.name}</div>
                                         <div className='home-customerreview-customer'>{v.designation}</div>

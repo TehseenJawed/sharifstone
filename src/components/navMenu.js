@@ -36,7 +36,6 @@ function NavMenu() {
   ];
 
   useEffect(() => {
-    console.log('7777',window.outerWidth);
     if(window.outerWidth <= 768){
       console.log('TRUE IS WOR<ING');
       setIsMobile(true)
@@ -54,22 +53,22 @@ function NavMenu() {
               <RxCross2 onClick={() => setOpenMenu(false)}  color={"#fff"} size={30} />
             </div>
             <div className="mobile-remove-menucontainer">
-              <Link to={"/"} className="mobile-menu-item">
+              <Link to={"/"} onClick={() => setOpenMenu(false)} className="mobile-menu-item">
                 Home
               </Link>
-              <Link to={"/quartz-collection"} className="mobile-menu-item">
+              <Link to={"/quartz-collection"} onClick={() => setOpenMenu(false)}  className="mobile-menu-item">
                 Quartz Collection <MdArrowDropDown color={"#fff"} />
               </Link>
-              <Link to={"/kitchen-visualizer"} className="mobile-menu-item">
+              <Link to={"/kitchen-visualizer"} onClick={() => setOpenMenu(false)}  className="mobile-menu-item">
                 Kitchen Visualizer
               </Link>
-              <Link to={"/about"} className="mobile-menu-item">
+              <Link to={"/about"} onClick={() => setOpenMenu(false)}  className="mobile-menu-item">
                 About the company
               </Link>
-              <Link to={"/warranty-n-support"} className="mobile-menu-item">
+              <Link to={"/warranty-n-support"} onClick={() => setOpenMenu(false)}  className="mobile-menu-item">
                 Warranty and Support
               </Link>
-              <Link to={"/contact"} className="mobile-menu-item">
+              <Link to={"/contact"} onClick={() => setOpenMenu(false)}  className="mobile-menu-item">
                 Contact Us
               </Link>
             </div>

@@ -64,6 +64,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
 }
 .covercar-image {
     position: absolute;
@@ -71,7 +72,7 @@
     top: 0px;
 }
 
-@media screen and (max-width: 768px) and (min-width: 425px) {
+@media screen and (max-width: 768px) and (min-width: 320px) {
     .home-covercard {
         flex-direction: column-reverse;
         align-items: flex-start;
@@ -81,7 +82,7 @@
         margin-top: -125px;
     }
     .covercard-headertext {
-        font-size: 35px;
+        font-size: 30px;
         margin-left: 10px;
         margin-bottom: 50px;
         width: 35%
@@ -99,5 +100,27 @@
     }
     .covercar-image{
         top: -140px
+    }
+    .home-coverimage {
+        height: 60vh;
+    }
+}
+@media screen and (max-width: 425px) and (min-width: 320px) {
+    .homecard-color-card {
+        height: 100px;
+    }
+    .homecard-color-carousel {
+        margin-top: 80px;
+    }
+    .covercard-bottomtext {
+        width: 200px;
+        font-size: 18px;
+    }
+    .covercard-bottomcontainer {
+        top: 50px;
+        right: 10px;
+    }
+    .covercard-headertext {
+        margin-bottom: 65px;
     }
 }
