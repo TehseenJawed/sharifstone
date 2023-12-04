@@ -22,7 +22,7 @@
 .home-advamtagedesc {
   width: 60%;
   margin-top: 20px;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 30px;
   text-align: center;
 }
@@ -54,7 +54,7 @@
   background-size: cover;
 }
 .homebrand-dowmloadcontainer {
-  width: 100%;
+  width: 80%;
   margin-top: 30px;
 }
 .homebrand-button {

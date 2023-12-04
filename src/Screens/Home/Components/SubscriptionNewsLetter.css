@@ -1,13 +1,19 @@
 .home-subscription-container {
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #F3F5F5;
-    padding: 80px 0px;
+    padding: 130px 0px;
     position: relative;
     overflow: hidden;
+}
+.home-subscribe {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .home-subscription-header {
     text-align: center;
@@ -51,7 +57,7 @@
         line-height: 40px;
     }
     .home-subscript-input {
-        width: 250px;
+        width: 200px;
     }
     .home-subscription-btn {
         width: 55px;

@@ -4,6 +4,7 @@ import Logo from "../../../assets/images/logo_footer.png";
 import { GoArrowUpRight } from "react-icons/go";
 import Carousel from "react-multi-carousel";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const CustomLeftArrow = ({ onClick, ...rest }) => {
   const {
@@ -139,8 +140,8 @@ console.log('gggg',window.outerWidth <= 425);
       className="visualizerform-container"
       style={{ backgroundImage: "url(images/cover/visualizer_form_bg.png)" }}
     >
-      <img src={Logo} />
-      <div className="visualizerform-heading">SELECT KITCHEN LAYOUT</div>
+      <Link to="/"><img src={Logo} /></Link>
+       <div className="visualizerform-heading">SELECT KITCHEN LAYOUT</div>
       <div className="visualizerform-form">
         <div className="visualizerform-itembtn">
           <div

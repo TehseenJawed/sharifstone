@@ -17,9 +17,10 @@
   justify-content: flex-end;
 }
 .reorganize-subcontainer {
-  width: 42%;
+  width: 38%;
   color: white;
   height: 700px;
+  margin-right: 25px;
   display: flex;
   flex-direction: column;
   justify-content: center;

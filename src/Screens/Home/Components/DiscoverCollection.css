@@ -12,7 +12,7 @@
   color: #221f1f;
 }
 .home-desciption {
-  font-size: 16px;
+  font-size: 20px;
   width: 44%;
   text-align: center;
   line-height: 30px;
@@ -58,7 +58,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 90%;
   margin: 70px 0px;
 }
 .discovercollection-arrow {

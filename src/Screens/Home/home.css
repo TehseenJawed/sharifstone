@@ -17,10 +17,16 @@
   background: rgb(126,22,25);
   background: linear-gradient(90deg, rgba(126,22,25,1) 0%, rgba(238,42,46,1) 100%);
 }
+.home-banner-card {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .covercard-headertext {
   font-size: 54px;
   color: white;
-  width: 400px;
+  width: 550px;
   font-family: "Gelasio", serif;
 }
 .covercard-subcontainer {
@@ -99,29 +105,36 @@
         flex-direction: column-reverse;
         align-items: flex-start;
     }
+    .covercard-bottomtext {
+        width: 350px;
+    }
     .covercard-subcontainer {
         width: 100%;
         margin-top: -125px;
     }
+    .homecard-color-carousel {
+        margin-left: -190px;
+        margin-top: 90px;
+    }
     .covercard-headertext {
         font-size: 30px;
         margin-left: 10px;
-        margin-bottom: 50px;
+        margin-bottom: 0px;
         width: 35%
     }
     .covercard-bottomcontainer {
-        width: 50%;
+        width: 60%;
         flex-direction: column;
         position: absolute;
         right: 0px;
-        top: 100px;
+        top: 50px;
         margin-top: 0px;
     }
     .home-covercard {
         position: relative;
     }
     .covercar-image{
-        top: -140px
+        top: -47px
     }
     .home-coverimage {
         height: 60vh;
@@ -129,10 +142,12 @@
 }
 @media screen and (max-width: 425px) and (min-width: 320px) {
     .homecard-color-card {
-        height: 100px;
+        height: 75px;
+        width: 95px;
+        margin: 2px;
     }
     .home-coverimage {
-        width: 150%;
+        width: 100%;
         height: 100%;
     }
     .home-screen-container {
@@ -143,7 +158,8 @@
         align-items: center;
     }
     .homecard-color-carousel {
-        margin-top: 80px;
+        margin-top: 130px;
+        margin-left: -127px;
     }
     .covercard-bottomtext {
         width: 200px;
@@ -155,6 +171,7 @@
     }
     .covercard-headertext {
         margin-bottom: 65px;
-        font-size: 32px !important;
+        font-size: 23px !important;
+        margin-top: 20px;
     }
 }

@@ -26,9 +26,10 @@
   flex-wrap: wrap;
 }
 .discover-collectionimage {
-  width: 270px;
-  height: 240px;
+  width: 100%;
+  height: 280px;
   border-radius: 15px;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: contain;
   display: flex;
@@ -49,6 +50,7 @@
   justify-content: center;
   align-items: center;
   margin: 30px 0px;
+  width: 23%;
 }
 .discover-collectionexpand {
   width: 80px;
@@ -73,6 +75,18 @@
   font-size: 20px;
 }
 
+@media screen and (max-width: 1440px) and (min-width: 1024px) {
+  .discover-collectionimage {
+    height: 235px;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 786px) {
+  .discover-collectionimage {
+    height: 185px;
+  }
+}
+
 @media screen and (max-width: 768px) and (min-width: 320px) {
   .discover-collection-heading {
     font-size: 30px;
@@ -93,6 +107,7 @@
   }
   .discover-collection {
     margin-bottom: 10px;
+    width: 45%;
   }
   .discover-collectionexpand {
     width: 60px;

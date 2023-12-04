@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import './ChooseColor.css'
 import Logo from '../../../assets/images/logo_footer.png';
+import { Link } from 'react-router-dom';
 
 const ChooseColor = ({apiData ,colorArray, updateColorArray}) => {
     const [selectedColor, setSelectedColor] = useState(colorArray[0])
@@ -19,10 +20,23 @@ const ChooseColor = ({apiData ,colorArray, updateColorArray}) => {
         <div className='choosecolor-container'>
             <div className='choosecolor-innercontainer'>
                 <span className='choosecolor-cover'>
-                    <img src={Logo} />
+                    <Link to="/"><img src={Logo} /></Link>
                     <div className='choosecolor-bgncontainer'>
                         <div className='choosecolor-btn-active'>Colors</div>
                         <div className='choosecolor-btn'>Ambients</div>
+                    </div>
+
+                    <div className='choosecolor-topcontainer'>
+                        <div className='choosecolor-palate-top'>
+                          <b>Floor</b>
+                          <div className='choosecolor-palete-container' style={{ backgroundImage: 'url(images/Tk05.png)' }}></div>
+                          <b>Tk05 Sabbia</b>
+                        </div>
+                        <div className='choosecolor-palate-top'>
+                          <b>Countertop</b>
+                          <div className='choosecolor-palete-container' style={{ backgroundImage: 'url(images/parisien.png)', border: '3px solid #EE2A2E', }}></div>
+                          <b>Parisien Bleu</b>
+                        </div>
                     </div>
                     <div className='choosecolor-sel-container'>
                         <div className='choosecolor-selectcontainer'>

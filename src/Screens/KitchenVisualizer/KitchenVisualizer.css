@@ -18,6 +18,7 @@
     width: 60%;
     height: 400px;
     margin-bottom: 40px;
+    padding: 0px 30px;
     display: flex;
     border-radius: 20px;
     background-color: #00000080;
@@ -51,9 +52,9 @@
 
 @media screen and (max-width: 1024px) and (min-width: 768px) {
     .kitchen-visualizer-startform {
-        width: 90%;
+        width: 85%;
         height: auto;
-        padding: 100px 0px;
+        padding: 100px 30px;
     }
   }
 

@@ -6,7 +6,7 @@
     align-items: center;
 }
 .home-gallerysub-container1 {
-    width: 15%;
+    width: 20%;
     height: 400px;
     display: flex;
     flex-direction: column;
@@ -14,15 +14,21 @@
     align-items: flex-start;
 }
 .home-gallerysub-container2 {
-    width: 80%;
+    width: 72%;
     text-align: center;
 }
 .home-gallerysub-container2 img {
-    width: 95%;
+    width: 100%;
 }
 .homecontainer1-tabs {
     font-size: 26px;
     margin: 40px 0px;
+}
+
+@media screen and (max-width: 1440px) and (min-width: 1024px) {
+    .home-gallerysub-container1 {
+        width: 20%;
+    }
 }
 
 @media screen and (max-width: 1024px) and (min-width: 768px) {

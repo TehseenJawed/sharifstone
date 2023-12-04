@@ -21,6 +21,7 @@
   font-family: "Gelasio", serif;
   font-weight: 600;
   margin: 50px 0px;
+  z-index: 1;
 }
 .contactform-inputcontainer {
   width: 80%;
@@ -49,6 +50,8 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  width: 86%;
+  z-index: 1;
   margin: 25px 0px;
 }
 .contactform-inputcheck div {
