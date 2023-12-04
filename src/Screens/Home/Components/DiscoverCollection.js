@@ -17,15 +17,43 @@ function DiscoverCollection() {
         that brings it to life.
       </div>
       <div className="discovercollection-carousel">
-        <div className="discovercollection-carouse-sideimage" style={{backgroundImage: 'url(images/home_colordisplay/color-side.png)'}}>
-            <MdOutlineArrowBackIos color="white" size={20} className="discovercollection-arrow"/>
+        <div
+          className="discovercollection-carouse-sideimage"
+          style={{
+            backgroundImage: "url(images/home_colordisplay/color-side.png)",
+          }}
+        >
+          <MdOutlineArrowBackIos
+            color="white"
+            size={20}
+            className="discovercollection-arrow"
+          />
         </div>
-        <div className="discovercollection-carouse-image" style={{backgroundImage: 'url(images/home_colordisplay/color-main.png)'}}/>
-        <div className="discovercollection-carouse-sideimage" style={{backgroundImage: 'url(images/home_colordisplay/color-side.png)'}}>
-        <MdOutlineArrowForwardIos color="white" size={20} className="discovercollection-arrow"/>
+        <div
+          className="discovercollection-carouse-image"
+          style={{
+            backgroundImage: "url(images/home_colordisplay/color-main.png)",
+          }}
+        />
+        <div
+          className="discovercollection-carouse-sideimage"
+          style={{
+            backgroundImage: "url(images/home_colordisplay/color-side.png)",
+          }}
+        >
+          <MdOutlineArrowForwardIos
+            color="white"
+            size={20}
+            className="discovercollection-arrow"
+          />
         </div>
       </div>
-      <Link to={'/quartz-collection'} className="home-discovercollection-button">See More</Link>
+      <Link
+        to={"/quartz-collection"}
+        className="home-discovercollection-button"
+      >
+        See More
+      </Link>
     </div>
   );
 }

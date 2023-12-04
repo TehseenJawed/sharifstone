@@ -8,8 +8,11 @@
 .home-loveus-innercontainer {
   width: 60%;
 }
+.home-loveus-innercontainer img {
+  width: 95%;
+}
 .home-loveus-innercontainer2 {
-  width: 40%;
+  width: 45%;
   margin-right: 30px;
 }
 .home-loveus-heading {

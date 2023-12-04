@@ -72,6 +72,28 @@
     top: 0px;
 }
 
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    .homecard-color-card {
+        height: 120px;
+    }
+    .covercard-headertext {
+        font-size: 46px;
+    }
+    .covercard-bottomtext {
+        font-size: 18px;
+    }
+    .covercard-collectionbtn {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 425px) {
+    .covercard-headertext {
+        font-size: 35px !important;
+        /* margin-bottom: 99px !important; */
+    }
+}
+
 @media screen and (max-width: 768px) and (min-width: 320px) {
     .home-covercard {
         flex-direction: column-reverse;
@@ -109,6 +131,17 @@
     .homecard-color-card {
         height: 100px;
     }
+    .home-coverimage {
+        width: 150%;
+        height: 100%;
+    }
+    .home-screen-container {
+        display: flex;
+        height: 350px;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+    }
     .homecard-color-carousel {
         margin-top: 80px;
     }
@@ -122,5 +155,6 @@
     }
     .covercard-headertext {
         margin-bottom: 65px;
+        font-size: 32px !important;
     }
 }

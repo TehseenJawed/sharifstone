@@ -37,7 +37,9 @@ function HomeScreen() {
     <div>
       {openQuote && <GetAQuote data={{openQuote, setOpenQuote}}/>}  
       <div className="home-container">
+        <div className="home-screen-container">
         <img className="home-coverimage" src={CoverImage} alt="" />
+        </div>
         <div className="home-covercard">
           <div className="covercard-headertext">
             Building Memories, One Stone at a Time
