@@ -39,6 +39,14 @@ const router = createBrowserRouter(
       ),
     },
     {
+      path: "/product-description",
+      element: (
+        <Layout>
+          <ProductDescription />
+        </Layout>
+      ),
+    },
+    {
       path: "/kitchen-visualizer",
       element: (
         // <Layout>

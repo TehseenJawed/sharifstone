@@ -4,7 +4,7 @@ import Product1 from "../../../assets/images/product/gk07cepp0-1.png";
 import Product2 from "../../../assets/images/product/gk07cepp0-2.png";
 import Product3 from "../../../assets/images/product/gk07cepp0-3.png";
 import ExpandImage from '../../../assets/images/product/gk07cepp0-expand.png';
-function RelatedProduct() {
+function RelatedProduct({relatedImages}) {
   const relatedProductObj = [
     {
       name: "MAORI",
@@ -24,9 +24,9 @@ function RelatedProduct() {
       <div className="productrelated-heading">RELATED PRODUCTS</div>
       <div className="productrelated-container">
         <div className="productrelated-innercontainer">
-          {relatedProductObj.map((v, i) => (
+          {relatedImages.map((v, i) => (
             <div className="productrelated-colorcontainer">
-              <img src={v.image} />
+              <div className="productrelated-colorcontainer_img" style={{backgroundImage: v.image}}/>
               <div className="productrelated-name">{v.name}</div>
             </div>
           ))}
