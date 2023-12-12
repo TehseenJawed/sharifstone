@@ -52,6 +52,7 @@ function AboutUS({data}) {
     <div className="home-aboutconatiner">
       <div className="home-aboutinnercontainer">
         <div className="home-aboutheading">ABOUT US</div>
+
         <hr style={{ margin: "20px 0px" }} />
         <div className="home-aboutsubcontainer">
           <div className="home-about-sections specififc-video">

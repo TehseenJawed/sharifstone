@@ -36,6 +36,7 @@ const QuartzDropdown = ({navState}) => {
       backURL: "url(images/superjumbo_dropdown_image.png)",
     },
   ];
+
   return (
     <div className="dropdown-container" >
       {dropdown.map((v, i) => (
