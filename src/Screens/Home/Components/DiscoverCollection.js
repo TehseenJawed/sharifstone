@@ -12,15 +12,11 @@ function DiscoverCollection() {
   ])
   const [index, setIndex] = useState(1)
   const images = [
-    "url(images/scroller_images/scroller_1.png)",
-    "url(images/scroller_images/scroller_2.png)",
-    "url(images/scroller_images/scroller_3.png)",
-    "url(images/scroller_images/scroller_4.png)",
-    "url(images/scroller_images/scroller_5.png)",
-    "url(images/scroller_images/scroller_6.png)",
-    "url(images/scroller_images/scroller_7.png)",
-    "url(images/scroller_images/scroller_8.png)",
-    "url(images/scroller_images/scroller_9.png)",
+    "url(images/collection_color/ESSENTIAL/ES_Bianco_Puro.jpg)",
+    "url(images/collection_color/ESSENTIAL/ES_Bianco_Puro.jpg)",
+    "url(images/collection_color/ESSENTIAL/ES_Bianco_Puro.jpg)",
+    "url(images/collection_color/ESSENTIAL/ES_Bianco_Puro.jpg)",
+    "url(images/collection_color/ESSENTIAL/ES_Bianco_Puro.jpg)",
   ]
   const changeFunction = (isNext) => {
     if(isNext){
