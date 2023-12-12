@@ -77,7 +77,7 @@ function HomeScreen() {
                     // onClick={() => setActiveColor(i)}
                     className="homecard-color-card"
                     style={{
-                      backgroundImage: `url(images/scroller_images/scroller_${index}.png)`,
+                      backgroundImage: `url(images/scroller_images/scroller_${index}.jpg)`,
                       // border: activeColor === i ? "3px solid black" : "",
                     }}
                   ></div>
@@ -85,7 +85,7 @@ function HomeScreen() {
                     // onClick={() => setActiveColor(i)}
                     className="homecard-color-card"
                     style={{
-                      backgroundImage: `url(images/scroller_images/scroller_${index + 1}.png)`,
+                      backgroundImage: `url(images/scroller_images/scroller_${index + 1}.jpg)`,
                       border: "3px solid black",
                     }}
                   ></div>
@@ -93,7 +93,7 @@ function HomeScreen() {
                     // onClick={() => setActiveColor(i)}
                     className="homecard-color-card"
                     style={{
-                      backgroundImage: `url(images/scroller_images/scroller_${index + 2}.png)`,
+                      backgroundImage: `url(images/scroller_images/scroller_${index + 2}.jpg)`,
                       // border: activeColor === i ? "3px solid black" : "",
                     }}
                   ></div>

@@ -9,7 +9,7 @@ import YouTube from 'react-youtube';
 
 function AboutUS({data}) {
   const opts = {
-    height: '390',
+    height: '500',
     width: '640',
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
@@ -56,7 +56,6 @@ function AboutUS({data}) {
         <div className="home-aboutsubcontainer">
           <div className="home-about-sections specififc-video">
             <YouTube videoId="Zv11L-ZfrSg" opts={window.outerWidth <= 600 ? opts_mobile : opts} onReady={_onReady} />;
-            {/* <img src={VideoImage} style={{width:'100%'}} /> */}
           </div>
           <div className="home-about-sections">
             <span>
