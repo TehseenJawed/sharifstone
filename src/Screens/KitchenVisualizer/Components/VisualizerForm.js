@@ -85,7 +85,6 @@ const VisualizerForm = ({ data }) => {
       slidesToSlide: 1, // optional, default to 1.
     },
   };
-  console.log("5555", layout, "Kitchen");
   const LayoutJSX = (imageLayout = 'Kitchen', layoutArray = kitchenLayout) => (
       layout === imageLayout && (
           layoutArray.map((v, i) => (

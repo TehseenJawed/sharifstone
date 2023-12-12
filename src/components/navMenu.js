@@ -6,11 +6,9 @@ import { RxCross2 } from "react-icons/rx";
 import { MdArrowDropDown } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 
-function NavMenu() {
+function NavMenu({ navState }) {
   const [openMenu, setOpenMenu] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const navigation = useNavigate();
-  console.log("5555 --- ", window.location.pathname);
   const nav = [
     {
       name: "Home",
@@ -147,7 +145,7 @@ function NavMenu() {
         ) : (
           <div className="nav-container">
             {nav.map((v, i) => (
-              <Link to={v.route} className="nav-item">
+              <Link to={v.route} className="nav-item" onMouseOver={v.name === "Quartz Collection" ? () => navState.setShowDropdown(!navState.showDropdown) : () => console.log('')}>
                 <div
                   className="active-dott"
                   style={{
