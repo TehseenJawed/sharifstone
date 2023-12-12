@@ -44,7 +44,8 @@
   margin: 5px;
   height: 160px;
   background-repeat: no-repeat;
-  background-position: center;
+  background-size: cover;
+  /* background-position: center; */
   z-index: 1;
 }
 .covercard-bottomcontainer {

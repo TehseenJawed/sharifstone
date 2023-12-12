@@ -48,7 +48,7 @@ function DiscoverCollection() {
         <div
           className="discovercollection-carouse-sideimage"
           style={{
-            backgroundImage: `url(images/scroller_images/scroller_${index}.png)`,
+            backgroundImage: `url(images/scroller_images/scroller_${index}.jpg)`,
           }}
         >
           <MdOutlineArrowBackIos
@@ -61,13 +61,13 @@ function DiscoverCollection() {
         <div
           className="discovercollection-carouse-image"
           style={{
-            backgroundImage: `url(images/scroller_images/scroller_${index+1}.png)`,
+            backgroundImage: `url(images/scroller_images/scroller_${index+1}.jpg)`,
           }}
         />
         <div
           className="discovercollection-carouse-sideimage"
           style={{
-            backgroundImage: `url(images/scroller_images/scroller_${index+2}.png)`,
+            backgroundImage: `url(images/scroller_images/scroller_${index+2}.jpg)`,
           }}
         >
           <MdOutlineArrowForwardIos
