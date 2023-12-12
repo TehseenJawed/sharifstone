@@ -43,12 +43,12 @@ function FAQ() {
                 onClick={() => setFaq(i)}
               >
                 <div className="faq-questionrow">
-                  Cleaning for Honed, Concrete and Rough Finishes
+                  {v.question}
                   {faq === i ? <FiMinus size={30} /> : <FiPlus size={30} />}
                 </div>
                 {faq === i && (
                   <div className="faq-answer">
-                    {v.message}
+                    {v.message}dd
                   </div>
                 )}
               </div>
