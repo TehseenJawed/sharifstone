@@ -14,7 +14,7 @@ function ProductDescription() {
       <div className='product-infocontainer'>
         <div className='product-infosub'>
             {/* <img src={ProductImage} /> */}
-            <div className='product-innerimage' style={{backgroundImage: store[0]?.image}}/>
+            <div className='product-innerimage' style={{backgroundImage: store[0]?.display_image}}/>
 
         </div>
         <div className='product-infosub'>

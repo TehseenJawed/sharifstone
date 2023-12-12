@@ -1,7 +1,7 @@
 import React from "react";
 import "./OurLocation.css";
 import OrlandoMap from '../../../assets/images/orlando_map.png' 
-import TampaMap from '../../../assets/images/tampa_map.png' 
+import TampaMap from '../../../assets/images/orlando_map2.png' 
 
 function OurLocation() {
   return (
@@ -16,7 +16,7 @@ function OurLocation() {
             <div>2440 Dinneed Ave. Orlando, FL 32804</div>
           </div>
           <div className="ourmission-innercontainer">
-            <img className="ourmission-image" src={OrlandoMap} />
+            <img className="ourmission-image" src={TampaMap} />
             <div className="location-name">TAMPA</div>
             <div>8524 E. Adamo Dr. Tampa, FL 33619</div>
           </div>

@@ -33,7 +33,7 @@ const CustomerReview = ({label}) => {
                 {
                     customerArray.map((v, i) => (
                         <div className='home-customerreview-card'>
-                            <div style={{ margin: 30 }}>{v.desc}</div>
+                            <div className="testimonials-desc"><div className='container-center'>{v.desc}</div></div>
                             <div className='home-customerreview-talentcontainer'>
                                 <div style={{ display: 'flex', margin: '0px 10px' }}>
                                     <img className='profile-image' src={v.image} />
