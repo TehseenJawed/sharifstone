@@ -1,14 +1,21 @@
 .home-advantagecontainer {
   width: 100%;
-  /* height: 100vh; */
+  margin-top: 90px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.home-back-s {
+  z-index: -1;
+}
 .home-advantageinnercontainer {
   width: 90%;
+
+  z-index: -1;
   height: 95%;
   background-color: #f3f5f5;
+  position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;

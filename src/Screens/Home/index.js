@@ -16,11 +16,27 @@ import GetAQuote from "./Components/GetAQuote";
 function HomeScreen() {
   const [activeColor, setActiveColor] = useState(0);
   const [openQuote, setOpenQuote] = useState(false);
+  const [index, setIndex] = useState(1)
   const colorCarousel = [
     "url(images/color_1.png)",
     "url(images/color_2.png)",
     "url(images/color_3.png)",
   ];
+  const changeFunction = (isNext) => {
+    if(isNext){
+      if(index === 8) {
+        setIndex(1)
+      } else {
+        setIndex(index + 1)
+      }
+    } else{
+      if(index === 1) {
+        setIndex(8)
+      } else {
+        setIndex(index - 1)
+      }
+    }
+  }
 
   const changeColor = (isNext) => {
     if (isNext) {
@@ -53,11 +69,35 @@ function HomeScreen() {
             <div className="covercard-subcontainer">
               <div className="homecard-color-carousel">
                 <HiArrowLongLeft
-                  onClick={() => changeColor(false)}
+                  onClick={() => changeFunction(false)}
                   size={30}
                   color={"#fff"}
                 />
-                {colorCarousel.map((v, i) => (
+                <div
+                    // onClick={() => setActiveColor(i)}
+                    className="homecard-color-card"
+                    style={{
+                      backgroundImage: `url(images/scroller_images/scroller_${index}.png)`,
+                      // border: activeColor === i ? "3px solid black" : "",
+                    }}
+                  ></div>
+                  <div
+                    // onClick={() => setActiveColor(i)}
+                    className="homecard-color-card"
+                    style={{
+                      backgroundImage: `url(images/scroller_images/scroller_${index + 1}.png)`,
+                      border: "3px solid black",
+                    }}
+                  ></div>
+                  <div
+                    // onClick={() => setActiveColor(i)}
+                    className="homecard-color-card"
+                    style={{
+                      backgroundImage: `url(images/scroller_images/scroller_${index + 2}.png)`,
+                      // border: activeColor === i ? "3px solid black" : "",
+                    }}
+                  ></div>
+                {/* {colorCarousel.map((v, i) => (
                   <div
                     onClick={() => setActiveColor(i)}
                     className="homecard-color-card"
@@ -66,10 +106,10 @@ function HomeScreen() {
                       border: activeColor === i ? "3px solid black" : "",
                     }}
                   ></div>
-                ))}
+                ))} */}
                 <HiArrowLongRight
                   style={{ zIndex: 1 }}
-                  onClick={() => changeColor(true)}
+                  onClick={() => changeFunction(true)}
                   size={30}
                   color={"#fff"}
                 />

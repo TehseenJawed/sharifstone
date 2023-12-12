@@ -5,6 +5,10 @@
   align-items: center;
 }
 
+.home-back-s {
+  position: absolute;
+}
+
 .home-insidestore-heading {
   font-size: 55px;
   font-family: "Gelasio", serif;
@@ -34,7 +38,7 @@
   width: 31%;
   height: 300px;
   border-radius: 15px;
-  box-shadow: 15px 15px 25px #80808056;
+  box-shadow: 15px 15px 25px #80808026;
   display: flex;
   flex-direction: column;
   justify-content: center;

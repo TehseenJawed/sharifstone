@@ -4,6 +4,7 @@ import InsideStoreImage1 from '../../../assets/images/homeImage/insidestore1.png
 import InsideStoreImage2 from '../../../assets/images/homeImage/insidestore2.png'
 import InsideStoreImage3 from '../../../assets/images/homeImage/insidestore3.png'
 import InsideStoreImage4 from '../../../assets/images/homeImage/insidestore4.png'
+import BackS from '../../../assets/images/back_s.png'
 
 function InsideStore() {
   const imageArray = [InsideStoreImage1, InsideStoreImage2, InsideStoreImage3, InsideStoreImage4]
@@ -24,6 +25,7 @@ function InsideStore() {
   return (
     <div className="home-advantagecontainer">
       <div className="home-advantageinnercontainer">
+      <img className="home-back-s" src={BackS} alt="" />
         <div style={{width: '90%', margin: '50px 0px'}}>
           <div className="home-insidestore-container">
             <div className="home-insidestore-heading">STEP INSIDE OUR STORE</div>

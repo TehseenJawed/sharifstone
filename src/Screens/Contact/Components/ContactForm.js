@@ -1,6 +1,7 @@
 import React from "react";
 import "./ContactForm.css";
-import ContactFormBG from '../../../assets/images/contactform_bg.png'
+import ContactFormBG from "../../../assets/images/contactform_bg.png";
+import Upload from "../../../assets/images/upload.png";
 
 function ContactForm() {
   return (
@@ -27,14 +28,29 @@ function ContactForm() {
           />
         </div>
         <div className="contactform-inputcontainer">
-          <textarea className="contactform-textarea" placeholder="Messages" rows="5" cols="50" />
+          <textarea
+            className="contactform-textarea"
+            placeholder="Messages"
+            rows="5"
+            cols="50"
+          />
+        </div>
+        <div className="contactform-uploads">
+          <img src={Upload} />
         </div>
         <div className="contactform-inputcheck">
-          <input type="checkbox" id="vehicle2" name="vehicle2" value="Car"/>
-          <div>Yes, sign me up to receive email communications from Caesarstone Ltd. about products, news, and events. I understand I can unsubscribe at any time</div>
+          <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" />
+          <div>
+            Yes, sign me up to receive email communications from Caesarstone
+            Ltd. about products, news, and events. I understand I can
+            unsubscribe at any time
+          </div>
         </div>
         <div className="contactform-review">
-          <div>By providing your details and clicking Submit, you acknowledge and agree to our website Privacy Policy and Terms of Use.</div>
+          <div>
+            By providing your details and clicking Submit, you acknowledge and
+            agree to our website Privacy Policy and Terms of Use.
+          </div>
         </div>
         <div className="submit-btn">Submit</div>
         <img className="contactform-bg" src={ContactFormBG} />

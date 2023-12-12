@@ -5,8 +5,30 @@ import InspireIdeas from '../../../assets/images/homeImage/inspire_ideas.png'
 import VisualizeSpace from '../../../assets/images/homeImage/visualize_space.png'
 import ViewColor from '../../../assets/images/homeImage/view_color.png'
 import WhereToBuy from '../../../assets/images/homeImage/wheretobuy.png'
+import YouTube from 'react-youtube';
 
 function AboutUS({data}) {
+  const opts = {
+    height: '390',
+    width: '640',
+    playerVars: {
+      // https://developers.google.com/youtube/player_parameters
+      autoplay: 1,
+    },
+  };
+  const opts_mobile = {
+    height: '390',
+    width: '320',
+    playerVars: {
+      // https://developers.google.com/youtube/player_parameters
+      autoplay: 1,
+    },
+  };
+  const _onReady = (event) => {
+    // access to player in all event handlers via event.target
+    event.target.pauseVideo();
+  }
+
     const aboutIdeas = [
         {
             name: 'INSPIRATION IDEAS',
@@ -32,8 +54,9 @@ function AboutUS({data}) {
         <div className="home-aboutheading">ABOUT US</div>
         <hr style={{ margin: "20px 0px" }} />
         <div className="home-aboutsubcontainer">
-          <div className="home-about-sections">
-            <img src={VideoImage} style={{width:'100%'}} />
+          <div className="home-about-sections specififc-video">
+            <YouTube videoId="Zv11L-ZfrSg" opts={window.outerWidth <= 600 ? opts_mobile : opts} onReady={_onReady} />;
+            {/* <img src={VideoImage} style={{width:'100%'}} /> */}
           </div>
           <div className="home-about-sections">
             <span>
