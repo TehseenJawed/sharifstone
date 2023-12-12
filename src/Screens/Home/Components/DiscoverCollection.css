@@ -40,7 +40,7 @@
   background-position: fill;
   background-repeat: no-repeat;
   background-size: cover;
-  /* box-shadow: 5px 21px 34px #8888886f; */
+  box-shadow: 5px 21px 34px #8888886f;
 }
 .discovercollection-carouse-sideimage {
   width: 12%;

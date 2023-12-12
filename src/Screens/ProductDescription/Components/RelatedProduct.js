@@ -24,10 +24,10 @@ function RelatedProduct({relatedImages}) {
       <div className="productrelated-heading">RELATED PRODUCTS</div>
       <div className="productrelated-container">
         <div className="productrelated-innercontainer">
-          {relatedImages.map((v, i) => (
+          {relatedImages?.map((v, i) => (
             <div className="productrelated-colorcontainer">
-              <div className="productrelated-colorcontainer_img" style={{backgroundImage: v.image}}/>
-              <div className="productrelated-name">{v.name}</div>
+              <div className="productrelated-colorcontainer_img" style={{backgroundImage: v?.color_image}}/>
+              <div className="productrelated-name">{v?.name}</div>
             </div>
           ))}
         </div>

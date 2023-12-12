@@ -4,10 +4,13 @@ import { Link } from "react-router-dom";
 import { RiMenu3Fill } from "react-icons/ri";
 import { RxCross2 } from "react-icons/rx";
 import { MdArrowDropDown } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
 function NavMenu() {
   const [openMenu, setOpenMenu] = useState(false);
-  const [isMobile, setIsMobile] = useState(false)
+  const [isMobile, setIsMobile] = useState(false);
+  const navigation = useNavigate();
+  console.log("5555 --- ", window.location.pathname);
   const nav = [
     {
       name: "Home",
@@ -35,12 +38,31 @@ function NavMenu() {
     },
   ];
 
+  const dashboard = [
+    {
+      name: "Create Collection",
+      route: "/admin-dashboard/create-collection",
+    },
+    {
+      name: "View Collections",
+      route: "/admin-dashboard/collections",
+    },
+    {
+      name: "Create Visualizer",
+      route: "/admin-dashboard/create-visualizer",
+    },
+    {
+      name: "View Visualizer",
+      route: "/admin-dashboard/visualizer",
+    },
+  ];
+
   useEffect(() => {
-    if(window.outerWidth <= 768){
-      console.log('TRUE IS WOR<ING');
-      setIsMobile(true)
+    if (window.outerWidth <= 768) {
+      console.log("TRUE IS WOR<ING");
+      setIsMobile(true);
     }
-  },[])
+  }, []);
   if (isMobile) {
     return (
       <div>
@@ -50,25 +72,53 @@ function NavMenu() {
         {openMenu && (
           <div className="mobile-menu-container">
             <div className="mobile-remove-menu">
-              <RxCross2 onClick={() => setOpenMenu(false)}  color={"#fff"} size={30} />
+              <RxCross2
+                onClick={() => setOpenMenu(false)}
+                color={"#fff"}
+                size={30}
+              />
             </div>
             <div className="mobile-remove-menucontainer">
-              <Link to={"/"} onClick={() => setOpenMenu(false)} className="mobile-menu-item">
+              <Link
+                to={"/"}
+                onClick={() => setOpenMenu(false)}
+                className="mobile-menu-item"
+              >
                 Home
               </Link>
-              <Link to={"/quartz-collection"} onClick={() => setOpenMenu(false)}  className="mobile-menu-item">
+              <Link
+                to={"/quartz-collection"}
+                onClick={() => setOpenMenu(false)}
+                className="mobile-menu-item"
+              >
                 Quartz Collection <MdArrowDropDown color={"#fff"} />
               </Link>
-              <Link to={"/kitchen-visualizer"} onClick={() => setOpenMenu(false)}  className="mobile-menu-item">
+              <Link
+                to={"/kitchen-visualizer"}
+                onClick={() => setOpenMenu(false)}
+                className="mobile-menu-item"
+              >
                 Kitchen Visualizer
               </Link>
-              <Link to={"/about"} onClick={() => setOpenMenu(false)}  className="mobile-menu-item">
+              <Link
+                to={"/about"}
+                onClick={() => setOpenMenu(false)}
+                className="mobile-menu-item"
+              >
                 About the company
               </Link>
-              <Link to={"/warranty-n-support"} onClick={() => setOpenMenu(false)}  className="mobile-menu-item">
+              <Link
+                to={"/warranty-n-support"}
+                onClick={() => setOpenMenu(false)}
+                className="mobile-menu-item"
+              >
                 Warranty and Support
               </Link>
-              <Link to={"/contact"} onClick={() => setOpenMenu(false)}  className="mobile-menu-item">
+              <Link
+                to={"/contact"}
+                onClick={() => setOpenMenu(false)}
+                className="mobile-menu-item"
+              >
                 Contact Us
               </Link>
             </div>
@@ -79,20 +129,37 @@ function NavMenu() {
   } else {
     return (
       <div style={{ display: "flex" }}>
-        <div className="nav-container">
-          {nav.map((v, i) => (
-            <Link to={v.route} className="nav-item">
-              <div
-                className="active-dott"
-                style={{
-                  visibility:
-                    window.location.pathname === v.route ? "" : "hidden",
-                }}
-              />
-              {v.name}
-            </Link>
-          ))}
-        </div>
+        {window.location.pathname === "/admin-dashboard" ? (
+          <div className="nav-container">
+            {dashboard.map((v, i) => (
+              <Link to={v.route} className="nav-item">
+                <div
+                  className="active-dott"
+                  style={{
+                    visibility:
+                      window.location.pathname === v.route ? "" : "hidden",
+                  }}
+                />
+                {v.name}
+              </Link>
+            ))}
+          </div>
+        ) : (
+          <div className="nav-container">
+            {nav.map((v, i) => (
+              <Link to={v.route} className="nav-item">
+                <div
+                  className="active-dott"
+                  style={{
+                    visibility:
+                      window.location.pathname === v.route ? "" : "hidden",
+                  }}
+                />
+                {v.name}
+              </Link>
+            ))}
+          </div>
+        )}
       </div>
     );
   }

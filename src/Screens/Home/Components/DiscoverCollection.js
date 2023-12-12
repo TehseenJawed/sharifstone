@@ -1,10 +1,42 @@
-import React from "react";
+import React, {useState} from "react";
 import "./DiscoverCollection.css";
 import { MdOutlineArrowBackIos, MdOutlineArrowRight } from "react-icons/md";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 function DiscoverCollection() {
+  const [imageArr, setImagesArr] = useState([
+    "url(images/scroller_images/scroller_1.png)",
+    "url(images/scroller_images/scroller_2.png)",
+    "url(images/scroller_images/scroller_3.png)",
+  ])
+  const [index, setIndex] = useState(1)
+  const images = [
+    "url(images/scroller_images/scroller_1.png)",
+    "url(images/scroller_images/scroller_2.png)",
+    "url(images/scroller_images/scroller_3.png)",
+    "url(images/scroller_images/scroller_4.png)",
+    "url(images/scroller_images/scroller_5.png)",
+    "url(images/scroller_images/scroller_6.png)",
+    "url(images/scroller_images/scroller_7.png)",
+    "url(images/scroller_images/scroller_8.png)",
+    "url(images/scroller_images/scroller_9.png)",
+  ]
+  const changeFunction = (isNext) => {
+    if(isNext){
+      if(index === 8) {
+        setIndex(1)
+      } else {
+        setIndex(index + 1)
+      }
+    } else{
+      if(index === 1) {
+        setIndex(8)
+      } else {
+        setIndex(index - 1)
+      }
+    }
+  }
   return (
     <div className="home-discovercollection">
       <div className="home-discovercollection-heading">
@@ -20,10 +52,11 @@ function DiscoverCollection() {
         <div
           className="discovercollection-carouse-sideimage"
           style={{
-            backgroundImage: "url(images/home_colordisplay/color-side.png)",
+            backgroundImage: `url(images/scroller_images/scroller_${index}.png)`,
           }}
         >
           <MdOutlineArrowBackIos
+            onClick={() => changeFunction(false)}
             color="white"
             size={20}
             className="discovercollection-arrow"
@@ -32,16 +65,17 @@ function DiscoverCollection() {
         <div
           className="discovercollection-carouse-image"
           style={{
-            backgroundImage: "url(images/home_colordisplay/color-main.png)",
+            backgroundImage: `url(images/scroller_images/scroller_${index+1}.png)`,
           }}
         />
         <div
           className="discovercollection-carouse-sideimage"
           style={{
-            backgroundImage: "url(images/home_colordisplay/color-side.png)",
+            backgroundImage: `url(images/scroller_images/scroller_${index+2}.png)`,
           }}
         >
           <MdOutlineArrowForwardIos
+            onClick={() => changeFunction(true)}
             color="white"
             size={20}
             className="discovercollection-arrow"

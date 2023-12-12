@@ -62,6 +62,12 @@
   width: 76%;
   z-index: 1;
 }
+.contactform-uploads {
+  width: 77%;
+  margin: 20px 0px;
+  z-index: 1;
+}
+
 .submit-btn {
   padding: 15px 55px;
   background-color: #ee2a2e;

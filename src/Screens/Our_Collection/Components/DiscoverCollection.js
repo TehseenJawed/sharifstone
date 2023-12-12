@@ -464,15 +464,19 @@ const DiscoverCollection = () => {
     ],
     "ESSENTIALS COLLECTION": [
       "ESSENTIALS COLLECTION",
-      "For over three decades, we’ve been crafting the most trusted countertops by blending exquisite design with top durability. Join us on a journey of partnership and creativity, to fulfill your dream with the countertop that brings it to life.",
+      "Thoughtfully curated range of classic colors that serve as the perfect base for any design. This collection is all about giving your space an effortlessly elegant and adaptable look that never goes out of style.",
     ],
     "INDULGE COLLECTION": [
       "DISCOVER OUR NEW COLLECTION",
-      "For over three decades, we’ve been crafting the most trusted countertops by blending exquisite design with top durability. Join us on a journey of partnership and creativity, to fulfill your dream with the countertop that brings it to life.",
+      "Inspired by the tempting world of desserts and comfort food. This collection brings a cozy and inviting vibe to your living spaces, adding a touch of sweet luxury to your everyday life.",
     ],
     "INTERNATIONAL COLLECTION": [
       "DISCOVER OUR NEW COLLECTION",
-      "For over three decades, we’ve been crafting the most trusted countertops by blending exquisite design with top durability. Join us on a journey of partnership and creativity, to fulfill your dream with the countertop that brings it to life.",
+      "This collection takes you on a global journey, with each piece named after iconic cities around the world. These beautiful veined stones bring the essence of these locations into your home, infusing an international vibe that transports you across continents without leaving your space",
+    ],
+    "MYTHOLOGY COLLECTION": [
+      "DISCOVER OUR NEW COLLECTION",
+      "This collection is all about infusing your surfaces with a sense of Greek mythology. The intricate patterns pay homage to the tales of the Greek Gods and Goddesses, with delicate veining that adds depth and a touch of ancient charm.",
     ],
     "MY COLLECTION": [
       "DISCOVER OUR NEW COLLECTION",

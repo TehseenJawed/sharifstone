@@ -6,34 +6,24 @@ function FAQ() {
   const [faq, setFaq] = useState(-1);
   const faqArray = [
     {
-      question: "Cleaning for Honed, Concrete and Rough Finishes",
+      question: "1. How do I clean Quartz surfaces?",
       message:
-        "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+        "Answer: Cleaning Quartz surfaces is simple. Use mild dish soap and warm water with a soft cloth or sponge to wipe away spills and messes. Avoid abrasive cleaners, scouring pads, and harsh chemicals, as these may damage the surface. For stubborn stains, a mixture of baking soda and water can be gently applied and wiped clean.",
     },
     {
-      question: "What’s the best way to contact Caesarstone?",
+      question: "2. Can you refer us to fabricators for installation services?",
       message:
-        "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+        "Answer: While we solely focus on supplying high-quality stone slabs, we can recommend trusted fabricators within our network who specialize in stone installation. Please reach out to our team for more information and recommendations based on your location.",
     },
     {
-      question: "Which cleaning products are good for quartz?",
+      question: "3. What are the advantages of choosing stone slabs over other materials for remodeling projects?",
       message:
-        "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+        "Answer: Stone slabs offer exceptional durability and a variety of design options that can improve the aesthetic appeal of any space. Additionally, their resistance to scratches, stains, and heat makes them a practical and long-lasting choice for various applications.",
     },
     {
-      question: "How many designs can I choose from?",
+      question: "4. What is the process for ordering and delivery of stone slabs?",
       message:
-        "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-    },
-    {
-      question: "Where is engineered quartz made?",
-      message:
-        "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-    },
-    {
-      question: "Are quartz surfaces hygienic?",
-      message:
-        "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+        "Answer: To place an order, simply reach out to our team with your specifications. We ensure a streamlined ordering process and efficient delivery, prioritizing timely and secure transportation to your designated location.",
     },
   ];
   return (

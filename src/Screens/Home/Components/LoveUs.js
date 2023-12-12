@@ -1,4 +1,4 @@
-import LoveUSCover from '../../../assets/images/homeImage/love_us_cover.png'
+import LoveUSCover from '../../../assets/images/designer_love.png'
 import './loveus.css'
 // import 
 
