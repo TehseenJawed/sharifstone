@@ -22,6 +22,15 @@
     width: 95%;
 }
 
+@media screen and (max-width: 1440px) and (min-width: 768px) {
+  .ourmission-heading {
+    font-size: 45px;
+  }
+  .ourmission-innercontainer {
+    font-size: 16px;
+}
+}
+
 @media screen and (max-width: 768px) and (min-width: 320px) {
     .ourmission-heading {
       font-size: 35px !important;

@@ -616,7 +616,7 @@ const DiscoverCollection = () => {
             islable ? (
             <div className="discover-collectionlabel">
                 <div className="discover-collectionlabel1">{v.name}</div>
-                <div className="discover-collectionlabel2">{v.desc}</div>
+                {/* <div className="discover-collectionlabel2">{v.desc}</div> */}
             </div>
             ) 
             : (<div className="discover-collectiontext">{v.name}</div>)

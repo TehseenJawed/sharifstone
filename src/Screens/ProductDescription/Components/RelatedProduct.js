@@ -26,7 +26,7 @@ function RelatedProduct({relatedImages}) {
         <div className="productrelated-innercontainer">
           {relatedImages?.map((v, i) => (
             <div className="productrelated-colorcontainer">
-              <div className="productrelated-colorcontainer_img" style={{backgroundImage: v?.color_image}}/>
+              <div className="productrelated-colorcontainer_img" style={{backgroundImage: v?.image}}/>
               <div className="productrelated-name">{v?.name}</div>
             </div>
           ))}
