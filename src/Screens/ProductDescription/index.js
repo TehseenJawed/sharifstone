@@ -14,12 +14,12 @@ function ProductDescription() {
       <div className='product-infocontainer'>
         <div className='product-infosub'>
             {/* <img src={ProductImage} /> */}
-            <div className='product-innerimage' style={{backgroundImage: store[0]?.display_image}}/>
+            <div className='product-innerimage' style={{backgroundImage: store[0]?.image}}/>
 
         </div>
         <div className='product-infosub'>
-            <div className='product-profilename'>Product Name</div>
-            <div className='product-profilesubtitle '>{store[0]?.name}</div>
+            <div className='product-profilename'>{store[0]?.name}</div>
+            {/* <div className='product-profilesubtitle '>{store[0]?.name}</div> */}
             <div className='product-descriptionheading'>Description</div>
             <div className='product-description'>
             The distinctive blue-grey multiform structure of the Italian Ceppo di Gré stone inspires this unique color. Ideal for both indoors and outdoors, its timeless design makes it a perfect choice for a classic or modern look.
@@ -36,7 +36,7 @@ function ProductDescription() {
                 </div>
             </div>
             <div className='product-descriptionheading'>Thicknesses</div>
-            <span style={{fontSize: 23}}>-- 0.8 cm -- 1,2 cm -- 2,0 cm --0,4 cm</span>
+            <span className='product-desc-span'>-- 0.8 cm -- 1,2 cm -- 2,0 cm --0,4 cm</span>
         </div>
       </div>
       <RelatedProduct relatedImages={[store[1],store[2],store[3]]}/>

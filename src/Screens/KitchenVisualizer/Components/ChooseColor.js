@@ -47,7 +47,7 @@ const ChooseColor = ({apiData ,colorArray, updateColorArray}) => {
                             colorArray.map((v, i) => (
                                 <div className='choosecolor-palate' onClick={() => setSelectedColor(v)}>
                                     <div className='choosecolor-palete-container' style={{ backgroundImage: v.image }}></div>
-                                    <b>{v.name}</b>
+                                    <div className='choosecolor-palate-b'>{v.name}</div>
                                 </div>
                             ))
                         }

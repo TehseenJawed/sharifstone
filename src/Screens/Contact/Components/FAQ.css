@@ -8,7 +8,7 @@
   width: 90%;
 }
 .faq-heading {
-  font-size: 55px;
+  font-size: 50px;
   font-family: "Gelasio", serif;
   font-weight: 600;
 }
@@ -44,6 +44,16 @@
   font-weight: 400;
   margin-top: 25px;
   color: #000000a2;
+}
+
+@media screen and (max-width: 1440px) and (min-width: 768px) {
+  .faq-questionrow {
+    font-size: 17px;
+  }
+  .faq-answer {
+    font-size: 15px;
+    line-height: 25px;
+  }
 }
 
 @media screen and (max-width: 768px) and (min-width: 320px) {
