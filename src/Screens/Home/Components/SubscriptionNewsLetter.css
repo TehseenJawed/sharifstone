@@ -5,7 +5,7 @@
     justify-content: center;
     align-items: center;
     background-color: #F3F5F5;
-    padding: 130px 0px;
+    padding: 70px 0px;
     position: relative;
     overflow: hidden;
 }
@@ -20,8 +20,8 @@
     font-weight: 600;
     font-family: "Gelasio", serif;
     font-size: 40px;
-    width: 70%;
-    margin: 40px 0px;
+    width: 80%;
+    margin: 35px 0px;
 }
 .home-subscript-input {
     width: 550px;

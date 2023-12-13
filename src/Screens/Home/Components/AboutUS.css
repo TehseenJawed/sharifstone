@@ -25,6 +25,9 @@
   margin-top: 35px;
   line-height: 30px;
 }
+.youtube-iframe {
+  border-radius: 25px;
+}
 .home-about-sections span {
   height: 500px;
   font-size: 20px;
