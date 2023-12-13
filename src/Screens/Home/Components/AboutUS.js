@@ -17,8 +17,16 @@ function AboutUS({data}) {
     },
   };
   const opts_mobile = {
-    height: '390',
-    width: '320',
+    height: '400',
+    width: '560',
+    playerVars: {
+      // https://developers.google.com/youtube/player_parameters
+      autoplay: 1,
+    },
+  };
+  const opts_mobile2 = {
+    height: '370',
+    width: '330',
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
       autoplay: 1,
@@ -56,7 +64,7 @@ function AboutUS({data}) {
         <hr style={{ margin: "20px 0px" }} />
         <div className="home-aboutsubcontainer">
           <div className="home-about-sections specififc-video">
-            <YouTube iframeClassName="youtube-iframe" videoId="Zv11L-ZfrSg" opts={window.outerWidth <= 600 ? opts_mobile : opts} onReady={_onReady} />;
+            <YouTube iframeClassName="youtube-iframe" videoId="Zv11L-ZfrSg" opts={window.outerWidth <= 768 ? window.outerWidth <= 425 ? opts_mobile2 : opts_mobile : opts} onReady={_onReady} />;
           </div>
           <div className="home-about-sections">
             <span>

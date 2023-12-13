@@ -43,7 +43,7 @@
     }
     .home-gallerysub-container1 {
         width: 100%;
-        height: 200px;
+        height: 60px;
         flex-direction: column-reverse;
     }
     .home-gallerysub-container2 {
@@ -62,7 +62,7 @@
 }
 @media screen and (max-width: 425px) and (min-width: 320px) {
     .home-gallerysub-container1 {
-        height: 100px;
+        height: 20px;
     }
     .homecontainer1-tabs {
         font-size: 17px;

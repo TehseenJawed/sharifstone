@@ -3,6 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: '100px 0px'
 }
 .home-aboutinnercontainer {
   width: 90%;
@@ -63,14 +64,35 @@
   .specififc-video {
     display: flex;
     justify-content: center;
+    margin-top: 30px !important;
   }
   .home-about-sections {
     width: 100%;
+    margin-top: 0px;
+  }
+  .home-about-sections span {
+    font-size: 16px;
   }
   .home-discovercollection-button {
-    padding: 20px 70px;
+    padding: 15px 70px;
   }
   .home-aboutcard {
     flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 425px) and (min-width: 320px) {
+  .home-aboutcards {
+    width: 155px;
+    height: 160px;
+    margin: 5px;
+    align-items: center;
+    background-color: white;
+    box-shadow: 10px 15px 15px #80808024;
+  }
+  .home-aboutcards div {
+    font-size: 13px;
+  }
+  .home-aboutconatiner {
+    margin-top: 80px;
   }
 }

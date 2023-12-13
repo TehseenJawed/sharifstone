@@ -38,9 +38,9 @@
   width: 60%;
   height: 610px;
   /* background-color: red; */
-  background-position: fill;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-position: fill !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
   box-shadow: 5px 21px 34px #8888886f;
 }
 .discovercollection-carouse-sideimage {
@@ -61,6 +61,7 @@
   align-items: center;
   width: 90%;
   margin: 70px 0px;
+  position: relative;
 }
 .discovercollection-arrow {
   padding: 15px;
@@ -83,7 +84,7 @@
 
 @media screen and (max-width: 768px) and (min-width: 320px) {
   .home-discovercollection-heading {
-    font-size: 35px;
+    font-size: 30px;
     text-align: center;
   }
   .home-desciption {
@@ -109,5 +110,6 @@
   }
   .discovercollection-arrow {
     padding: 7px;
+    position: absolute;
   }
 }

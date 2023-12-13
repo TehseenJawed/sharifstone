@@ -6,7 +6,7 @@ function Gallery() {
     const [currentImage,setCurrentImage] = useState('Kitchen')
     const galleryType = ['Kitchen', 'Bathroom', 'Living Rooms']
   return (
-    <div className="home-aboutconatiner" style={{margin: '100px 0px'}}>
+    <div className="home-aboutconatiner">
       <div className="home-aboutinnercontainer">
         <div className="home-aboutheading">GALLERY</div>
         <hr style={{ margin: "20px 0px" }} />

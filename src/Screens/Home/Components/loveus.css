@@ -22,7 +22,7 @@
   font-family: "Gelasio", serif;
 }
 .home-loveus-desc {
-  font-size: 17px;
+  font-size: 20px;
   line-height: 30px;
   color: #221f1f;
 }
@@ -66,6 +66,7 @@
   }
   .home-loveus-container {
     height: auto;
+    margin: 20px 0px;
     flex-direction: column-reverse;
   }
   .home-loveus-innercontainer img {
@@ -74,6 +75,9 @@
   .home-loveus-heading {
     font-size: 30px;
     margin-top: 15px;
+  }
+  .home-loveus-desc {
+    font-size: 16px;
   }
 }
 
@@ -84,9 +88,20 @@
   .home-loveus-innercontainer2 {
     width: 100%;
     margin-right: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .home-loveus-desc {
-    width: 100%;
+    width: 90%;
+    font-size: 16px;
     text-align: center;
+  }
+  .home-loveus-progress {
+    width: 90%;
+    height: 5px;
+    background-color: #d8dedf;
+    margin: 45px 0px;
   }
 }
