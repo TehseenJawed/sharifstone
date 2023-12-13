@@ -10,7 +10,15 @@ import YouTube from 'react-youtube';
 function AboutUS({data}) {
   const opts = {
     height: '550',
-    width: '580',
+    width: '750',
+    playerVars: {
+      // https://developers.google.com/youtube/player_parameters
+      autoplay: 1,
+    },
+  };
+  const opts2 = {
+    height: '550',
+    width: '550',
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
       autoplay: 1,
@@ -64,7 +72,7 @@ function AboutUS({data}) {
         <hr style={{ margin: "20px 0px" }} />
         <div className="home-aboutsubcontainer">
           <div className="home-about-sections specififc-video">
-            <YouTube iframeClassName="youtube-iframe" videoId="Zv11L-ZfrSg" opts={window.outerWidth <= 768 ? window.outerWidth <= 425 ? opts_mobile2 : opts_mobile : opts} onReady={_onReady} />;
+            <YouTube iframeClassName="youtube-iframe" videoId="Zv11L-ZfrSg" opts={window.outerWidth <= 768 ? window.outerWidth <= 425 ? opts_mobile2 : opts_mobile : window.outerWidth <= 1440 ? opts2 : opts} onReady={_onReady} />;
           </div>
           <div className="home-about-sections">
             <span>
