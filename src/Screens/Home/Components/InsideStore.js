@@ -26,7 +26,7 @@ function InsideStore() {
     <div className="home-advantagecontainer">
       <div className="home-advantageinnercontainer">
       <img className="home-back-s" src={BackS} alt="" />
-        <div style={{width: '90%', margin: '50px 0px'}}>
+        <div className="home-section">
           <div className="home-insidestore-container">
             <div className="home-insidestore-heading">STEP INSIDE OUR STORE</div>
             <div className="homebrand-button">View Full Catalogue</div>

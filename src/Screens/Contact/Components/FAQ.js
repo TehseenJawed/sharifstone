@@ -16,12 +16,14 @@ function FAQ() {
         "Answer: While we solely focus on supplying high-quality stone slabs, we can recommend trusted fabricators within our network who specialize in stone installation. Please reach out to our team for more information and recommendations based on your location.",
     },
     {
-      question: "3. What are the advantages of choosing stone slabs over other materials for remodeling projects?",
+      question:
+        "3. What are the advantages of choosing stone slabs over other materials for remodeling projects?",
       message:
         "Answer: Stone slabs offer exceptional durability and a variety of design options that can improve the aesthetic appeal of any space. Additionally, their resistance to scratches, stains, and heat makes them a practical and long-lasting choice for various applications.",
     },
     {
-      question: "4. What is the process for ordering and delivery of stone slabs?",
+      question:
+        "4. What is the process for ordering and delivery of stone slabs?",
       message:
         "Answer: To place an order, simply reach out to our team with your specifications. We ensure a streamlined ordering process and efficient delivery, prioritizing timely and secure transportation to your designated location.",
     },
@@ -44,13 +46,11 @@ function FAQ() {
               >
                 <div className="faq-questionrow">
                   {v.question}
-                  {faq === i ? <FiMinus size={30} /> : <FiPlus size={30} />}
-                </div>
-                {faq === i && (
-                  <div className="faq-answer">
-                    {v.message}dd
+                  <div>
+                    {faq === i ? <FiMinus size={25} /> : <FiPlus size={25} />}
                   </div>
-                )}
+                </div>
+                {faq === i && <div className="faq-answer">{v.message}dd</div>}
               </div>
             );
           })}

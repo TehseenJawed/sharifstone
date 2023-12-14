@@ -89,7 +89,8 @@ function NavMenu({ navState }) {
                 onClick={() => setOpenMenu(false)}
                 className="mobile-menu-item"
               >
-                Quartz Collection <MdArrowDropDown color={"#fff"} />
+                Quartz Collection 
+                {/* <MdArrowDropDown color={"#fff"} /> */}
               </Link>
               <Link
                 to={"/kitchen-visualizer"}

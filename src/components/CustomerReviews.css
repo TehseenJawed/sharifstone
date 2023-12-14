@@ -8,7 +8,7 @@
 }
 .container-center {
   width: 85%;
-  margin-top: 30px;
+  margin: 40px 0px;
 }
 .home-customerreview-header {
   width: 100%;
@@ -33,7 +33,6 @@
 }
 .home-customerreview-card {
   width: 28.5%;
-  height: 630px;
   font-size: 155%;
   line-height: 150%;
   margin: 20px;
@@ -87,7 +86,6 @@
 @media screen and (max-width: 1440px) and (min-width: 756px) {
   .home-customerreview-card {
     width: 28%;
-    height: 480px;
     font-size: 105%;
   }
 }
@@ -118,10 +116,10 @@
   }
   .home-customerreview-talentcontainer {
     height: 100px;
+    margin-top: 10px;
   }
   .home-customerreview-card {
     margin: 10px;
-    height: 450px;
   }
 }
 @media screen and (max-width: 425px) and (min-width: 320px) {
@@ -136,7 +134,7 @@
     height: 100px;
   }
   .home-customerreview-card {
-    width: 85%;
+    width: 90%;
     font-size: 17px;
   }
 }

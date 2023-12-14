@@ -29,6 +29,7 @@
 }
 .faq-questioncontaier {
   width: 90%;
+  cursor: pointer;
   margin: 10px 0px;
   padding: 25px 45px;
   font-weight: 600;

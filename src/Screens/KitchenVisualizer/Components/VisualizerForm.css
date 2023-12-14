@@ -29,6 +29,16 @@
     font-size: 45px;
     margin: 40px 0px;
 }
+.carousel-review{
+    overflow: scroll;
+}
+.carousel-review ul {
+    display: flex;
+    width: 320px;
+}
+.carousel-review::-webkit-scrollbar {
+    display: none;
+}
 .carousel-container ul {
     display: flex;
     width: 400px;
