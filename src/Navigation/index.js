@@ -14,7 +14,8 @@ import ContactScreen from "../Screens/Contact";
 import KitchenVisualizer from "../Screens/KitchenVisualizer";
 import Login from "../Screens/Login/Login";
 import Dashboard from "../Screens/Dashboard/Dashboard";
-import CreateCollection from "../Screens/Dashboard/Dashboard";
+import CreateCollection from "../Screens/CreateCollection/CreateCollection";
+import CreateVisualizer from "../Screens/CreateVisualizer/createVisualizer";
 
 createBrowserRouter([
   {
@@ -99,6 +100,30 @@ const router = createBrowserRouter(
       },
       {
         path: "/admin-dashboard/create-collection",
+        element: (
+          <Layout>
+            <CreateCollection />
+          </Layout>
+        ),
+      },
+      {
+        path: "/admin-dashboard/create-visualizer",
+        element: (
+          <Layout>
+            <CreateVisualizer />
+          </Layout>
+        ),
+      },
+      {
+        path: "/admin-dashboard/collections",
+        element: (
+          <Layout>
+            <Dashboard />
+          </Layout>
+        ),
+      },
+      {
+        path: "/admin-dashboard/visualizer",
         element: (
           <Layout>
             <Dashboard />

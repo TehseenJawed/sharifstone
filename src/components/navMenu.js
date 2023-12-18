@@ -128,7 +128,7 @@ function NavMenu({ navState }) {
   } else {
     return (
       <div style={{ display: "flex" }}>
-        {window.location.pathname === "/admin-dashboard" ? (
+        {window.location.pathname.includes("/admin-dashboard") ? (
           <div className="nav-container">
             {dashboard.map((v, i) => (
               <Link to={v.route} className="nav-item">
