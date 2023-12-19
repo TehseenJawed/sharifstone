@@ -7,7 +7,7 @@ function ReorganizeIndustry() {
         <div className="reorganize-subcontainer">
           <div className="reorganize-heading">OUR LIFE TIME WARRANTY.</div>
           <div className="reorganize-desc">
-            Sharifstone ® Residential transferable LIFE-TIME WARRANTY covers and
+          <b>Sharifstone ®</b> Residential transferable LIFE-TIME WARRANTY covers and
             warrants the original residential owner/purchaser for the life of
             the product from the date of installation of the Sharifstone®
             Surfaces in their residential home location, that the material will

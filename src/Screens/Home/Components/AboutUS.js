@@ -24,6 +24,30 @@ function AboutUS({data}) {
       autoplay: 1,
     },
   };
+  const opts1024 = {
+    height: '550',
+    width: '470',
+    playerVars: {
+      // https://developers.google.com/youtube/player_parameters
+      autoplay: 1,
+    },
+  };
+  const opts1300 = {
+    height: '550',
+    width: '500',
+    playerVars: {
+      // https://developers.google.com/youtube/player_parameters
+      autoplay: 1,
+    },
+  };
+  const opts1400 = {
+    height: '550',
+    width: '550',
+    playerVars: {
+      // https://developers.google.com/youtube/player_parameters
+      autoplay: 1,
+    },
+  };
   const opts_mobile = {
     height: '400',
     width: '560',
@@ -72,7 +96,7 @@ function AboutUS({data}) {
         <hr style={{ margin: "20px 0px" }} />
         <div className="home-aboutsubcontainer">
           <div className="home-about-sections specififc-video">
-            <YouTube iframeClassName="youtube-iframe" videoId="Zv11L-ZfrSg" opts={window.outerWidth <= 768 ? window.outerWidth <= 425 ? opts_mobile2 : opts_mobile : window.outerWidth <= 1440 ? opts2 : opts} onReady={_onReady} />;
+            <YouTube iframeClassName="youtube-iframe" videoId="Zv11L-ZfrSg" opts={window.outerWidth <= 768 ? window.outerWidth <= 425 ? opts_mobile2 : opts_mobile : window.outerWidth > 1024 ? window.outerWidth <= 1150 ? opts1024 : window.outerWidth <= 1300 ? opts1300 : window.outerWidth <= 1660 ? opts1400 : opts : opts} onReady={_onReady} />;
           </div>
           <div className="home-about-sections">
             <span>

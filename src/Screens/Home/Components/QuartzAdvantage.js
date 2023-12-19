@@ -1,6 +1,7 @@
 import React from "react";
 import "./QuartzAdvantage.css";
 import QuartzCover from "../../../assets/images/homeImage/quartz_advantages.png";
+import { Link } from "react-router-dom";
 function QuartzAdvantage() {
   const advantages = [
     {
@@ -57,7 +58,7 @@ function QuartzAdvantage() {
             ))}
           </div>
         </div>
-          <div className="homebrand-button">Download Slab Technical Chart</div>
+          <Link to="/files/slab.pdf" target="_blank" download className="homebrand-button">Download Slab Technical Chart</Link>
       </div>
     </div>
   );

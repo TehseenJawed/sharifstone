@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 const ChooseColor = ({apiData ,colorArray, updateColorArray}) => {
     const [selectedColor, setSelectedColor] = useState(colorArray[0])
     const [inputText, setInputText] = useState("")
+    const [currentSide, setCurrentSide] = useState(false)
 
     useEffect(() => {
         const newArray = colorArray.filter((v,i) => v.name === inputText);
@@ -22,8 +23,8 @@ const ChooseColor = ({apiData ,colorArray, updateColorArray}) => {
                 <span className='choosecolor-cover'>
                     <Link to="/"><img src={Logo} /></Link>
                     <div className='choosecolor-bgncontainer'>
-                        <div className='choosecolor-btn-active'>Colors</div>
-                        <div className='choosecolor-btn'>Ambients</div>
+                        <div onClick={() => setCurrentSide(false)} className={currentSide ? 'choosecolor-btn' : 'choosecolor-btn-active'}>Colors</div>
+                        <div onClick={() => setCurrentSide(true)} className={!currentSide ? 'choosecolor-btn' : 'choosecolor-btn-active'}>Ambients</div>
                     </div>
 
                     <div className='choosecolor-topcontainer'>

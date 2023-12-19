@@ -6,12 +6,10 @@
   align-items: center;
 }
 .home-back-s {
-  z-index: -1;
+  z-index: 0;
 }
 .home-advantageinnercontainer {
   width: 90%;
-
-  z-index: -1;
   height: 95%;
   background-color: #f3f5f5;
   position: relative;

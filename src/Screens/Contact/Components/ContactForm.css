@@ -33,6 +33,7 @@
   border: 0px;
   margin: 10px;
   padding: 15px 25px;
+  font-family: 'Albert Sans', sans-serif;
   font-size: 20px;
   border-radius: 10px;
   z-index: 1;
@@ -44,6 +45,7 @@
   padding: 15px 25px;
   font-size: 20px;
   border-radius: 10px;
+  font-family: 'Albert Sans', sans-serif;
   z-index: 1;
 }
 .contactform-inputcheck {
@@ -58,9 +60,16 @@
   width: 90%;
   z-index: 1;
 }
+.contactform-inputcheck div {
+  font-size: 17px;
+}
 .contactform-review {
   width: 76%;
   z-index: 1;
+  line-height: 25px;
+}
+.contactform-review div{
+  font-size: 14px;
 }
 .contactform-uploads {
   width: 77%;

@@ -1,5 +1,5 @@
 .home-loveus-container {
-  width: 100%;
+  width: 95%;
   margin: 130px 0px;
   display: flex;
   justify-content: space-between;
@@ -13,7 +13,7 @@
 }
 .home-loveus-innercontainer2 {
   width: 45%;
-  margin-right: 30px;
+  /* margin-right: 30px; */
 }
 .home-loveus-heading {
   font-size: 55px;

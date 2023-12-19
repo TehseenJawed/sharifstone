@@ -10,7 +10,7 @@ function ReorganizeIndustry() {
             WE ARE REDEFINING THE QUARTZ INDUSTRY
           </div>
           <div className="reorganize-desc">
-            Sharifstone ® is one of the leading companies of engineered Quartz
+            <b>Sharifstone ®</b> is one of the leading companies of engineered Quartz
             in Florida.
             <br /> <br />
             Our goal is to make the customers feel proud to put their trust in

@@ -42,7 +42,7 @@ function FAQ() {
                     ? "faq-questioncontaier-active"
                     : "faq-questioncontaier"
                 }
-                onClick={() => setFaq(i)}
+                onClick={() => i === faq ?  setFaq(-1):setFaq(i)}
               >
                 <div className="faq-questionrow">
                   {v.question}

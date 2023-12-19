@@ -26,6 +26,7 @@ const CustomRightArrow = ({ onClick, ...rest }) => {
 
 const VisualizerForm = ({ data }) => {
   const [layout, setLayout] = useState("Kitchen");
+  const [hoverContainer, setHoverContainer] = useState(-1);
   const [changeImageLayout, setChangeImageLayout] = useState("Kitchen");
   const { currentScreen, setCurrentScreen } = data;
   const kitchenLayout = [
@@ -88,9 +89,10 @@ const VisualizerForm = ({ data }) => {
   const LayoutJSX = (imageLayout = 'Kitchen', layoutArray = kitchenLayout) => (
       layout === imageLayout && (
           layoutArray.map((v, i) => (
-              <div className='visualizerform-image' style={{ backgroundImage: v.image }}>
-                  {i === 0 && (
+              <div className='visualizerform-image' onMouseOver={() => setHoverContainer(i)} style={{ backgroundImage: v.image }}>
+                  {i === hoverContainer && (
                       <div
+                      
                           onClick={layout === 'Kitchen' ? () => setCurrentScreen('Pick Kitchen') : () => setCurrentScreen('Pick Bathroom')}
                           className="discover-collectionexpand"
                       >
@@ -133,7 +135,6 @@ const VisualizerForm = ({ data }) => {
         ))}
       </Carousel>
     );
-console.log('gggg',window.outerWidth <= 425);
   return (
     <div
       className="visualizerform-container"

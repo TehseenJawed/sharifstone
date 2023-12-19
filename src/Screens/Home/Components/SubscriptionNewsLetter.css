@@ -30,8 +30,9 @@
     border-radius: 30px;
 }
 .home-subscription-btn {
-    width: 120px;
+    /* width: 120px; */
     background-color: #EE2A2E;
+    border: none;
     text-align: center;
     color: white;
     padding: 20px 50px;
@@ -76,5 +77,8 @@
         font-size: 20px;
         width: 90%;
         line-height: 40px;
+    }
+    .home-subscription-container {
+        padding: 30px 0px;
     }
 }

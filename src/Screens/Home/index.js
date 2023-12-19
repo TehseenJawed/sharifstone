@@ -37,7 +37,7 @@ function HomeScreen() {
       }
     }
   }
-
+console.log('555',openQuote);
   const changeColor = (isNext) => {
     if (isNext) {
       if (activeColor === 2) {
@@ -138,7 +138,7 @@ function HomeScreen() {
       <QuartzAdvantage />
       <Gallery />
       <LoveUS />
-      <InsideStore />
+      <InsideStore data={{ openQuote, setOpenQuote }}/>
       <CustomerReview label={"CUSTOMER REVIEW"} />
     </div>
   );

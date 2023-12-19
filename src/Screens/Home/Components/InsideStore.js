@@ -6,7 +6,9 @@ import InsideStoreImage3 from '../../../assets/images/homeImage/insidestore3.png
 import InsideStoreImage4 from '../../../assets/images/homeImage/insidestore4.png'
 import BackS from '../../../assets/images/back_s.png'
 
-function InsideStore() {
+function InsideStore({data}) {
+  const {openQuote, setOpenQuote} = data
+  console.log('555',openQuote,setOpenQuote);
   const imageArray = [InsideStoreImage1, InsideStoreImage2, InsideStoreImage3, InsideStoreImage4]
   const catalog = [
     {
@@ -38,7 +40,7 @@ function InsideStore() {
           </div>
           <div className="home-insidestore-container">
             <div className="home-insidestore-subheading">DISCOVER OUR TOP-QUALITY STONE OPTIONS TO PERFECTLY MATCH YOUR DESIRED SPACE!</div>
-            <div className="homebrand-button">Get Directions</div>
+            <div className="homebrand-button"  onClick={() => setOpenQuote(true)}>Get Directions</div>
           </div>
           <div className="home-insidestore-imagecontainer">
             {

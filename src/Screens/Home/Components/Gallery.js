@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import "./Gallery.css";
 import DummyImage from '../../../assets/images/homeImage/gallery_dummy.png'
+import BathroomImage from '../../../assets/images/homeImage/bathroom_4.png'
 
 function Gallery() {
     const [currentImage,setCurrentImage] = useState('Kitchen')
