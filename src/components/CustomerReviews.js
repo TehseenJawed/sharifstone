@@ -75,15 +75,7 @@ const CustomerReview = ({ label }) => {
       <div className="home-customerreview-header">{label}</div>
 
       {window.outerWidth <= 425 && (
-        <Carousel
-          containerClass="carousel-review"
-          draggable={true}
-          dotListClass="custom-dot-list-style"
-          itemClass="carousel-item-padding-40-px"
-          customLeftArrow={<CustomLeftArrow />}
-          customRightArrow={<CustomRightArrow />}
-          responsive={responsive}
-        >
+        <div className="mobile-testimonials-container">
           {customerArray.map((v, i) => (
             <div className="home-customerreview-card">
               <div className="testimonials-desc">
@@ -105,7 +97,7 @@ const CustomerReview = ({ label }) => {
               </div>
             </div>
           ))}
-        </Carousel>
+        </div>
       )}
 
       {window.outerWidth > 425 && (

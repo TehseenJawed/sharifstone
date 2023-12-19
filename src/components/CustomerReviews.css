@@ -83,6 +83,11 @@
 .home-customerreview-customer {
   color: #999999;
 }
+.mobile-testimonials-container {
+  display: flex;
+  overflow: auto;
+  width: 100%;
+}
 @media screen and (max-width: 1440px) and (min-width: 756px) {
   .home-customerreview-card {
     width: 28%;
@@ -134,7 +139,7 @@
     height: 100px;
   }
   .home-customerreview-card {
-    width: 90%;
+    width: 95%;
     font-size: 17px;
   }
 }
