@@ -41,7 +41,7 @@ function ContactForm() {
           <Dropzone onDrop={(acceptedFiles) => setUpload(acceptedFiles)}>
             {({ getRootProps, getInputProps }) => (
               <section>
-                <div {...getRootProps()}>
+                <div style={{cursor: 'pointer'}} {...getRootProps()}>
                   <input {...getInputProps()} />
                   <img src={Upload} />
                 </div>
