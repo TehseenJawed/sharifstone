@@ -42,7 +42,7 @@ const KitchenVisualizer = () => {
         {
             name: 'Perisien Blue',
             image: 'url(images/color_collections/kitchen_visualizer/stones/perisien_blue.png)',
-            relatedImage: 'url(images/color_collections/kitchen_visualizer/perisien_blue.png)'
+            relatedImage: 'url(images/color_collections/kitchen_visualizer/perisien_blue.jpeg)'
         },
         {
             name: 'Romantic Ash',
@@ -92,7 +92,7 @@ const KitchenVisualizer = () => {
         {
             name: 'Perisien Blue',
             image: 'url(images/color_collections/kitchen_visualizer/stones/perisien_blue.png)',
-            relatedImage: 'url(images/color_collections/kitchen_visualizer/perisien_blue.png)'
+            relatedImage: 'url(images/color_collections/kitchen_visualizer/perisien_blue.jpeg)'
         },
         {
             name: 'Romantic Ash',
@@ -142,7 +142,7 @@ const KitchenVisualizer = () => {
         {
             name: 'Perisien Blue',
             image: 'url(images/color_collections/kitchen_visualizer/stones/perisien_blue.png)',
-            relatedImage: 'url(images/color_collections/kitchen_visualizer/perisien_blue.png)'
+            relatedImage: 'url(images/color_collections/kitchen_visualizer/perisien_blue.jpeg)'
         },
         {
             name: 'Romantic Ash',
@@ -213,6 +213,47 @@ const KitchenVisualizer = () => {
         },
     ]
 
+    const kitchenLayout = [
+        {
+          image: "url(images/layout/kitchen_1.png)",
+        },
+        {
+          image: "url(images/layout/kitchen_2.png)",
+        },
+        {
+          image: "url(images/layout/kitchen_3.png)",
+        },
+        {
+          image: "url(images/layout/kitchen_4.png)",
+        },
+        {
+          image: "url(images/layout/kitchen_5.png)",
+        },
+        {
+          image: "url(images/layout/kitchen_6.png)",
+        },
+      ];
+      const bathroomLayout = [
+        {
+          image: "url(images/layout/bathroom_1.png)",
+        },
+        {
+          image: "url(images/layout/bathroom_2.png)",
+        },
+        {
+          image: "url(images/layout/bathroom_3.png)",
+        },
+        {
+          image: "url(images/layout/bathroom_4.png)",
+        },
+        {
+          image: "url(images/layout/bathroom_5.png)",
+        },
+        {
+          image: "url(images/layout/bathroom_6.png)",
+        },
+      ];
+
     useEffect(() => {
         setKitchData(kitchenArray)
     },[])
@@ -240,13 +281,13 @@ const KitchenVisualizer = () => {
             }
 
             {
-                currentScreen === "Visualizer Form" && (<VisualizerForm  data={{currentScreen, setCurrentScreen}}/>)
+                currentScreen === "Visualizer Form" && (<VisualizerForm kitchenLayout={kitchenLayout} bathroomLayout={bathroomLayout} data={{currentScreen, setCurrentScreen}}/>)
             }
             {
-                currentScreen === "Pick Kitchen" && (<ChooseColor apiData={kitchenArray} colorArray={kitchenData} updateColorArray={setKitchData}/>)
+                currentScreen === "Pick Kitchen" && (<ChooseColor layoutData={kitchenLayout} apiData={kitchenArray} colorArray={kitchenData} updateColorArray={setKitchData}/>)
             }
             {
-                currentScreen === "Pick Bathroom" && (<ChooseColor colorArray={bathroomArray} updateColorArray={setKitchData}/>)
+                currentScreen === "Pick Bathroom" && (<ChooseColor layoutData={bathroomLayout} colorArray={bathroomArray} updateColorArray={setKitchData}/>)
             }
         </>
     )
