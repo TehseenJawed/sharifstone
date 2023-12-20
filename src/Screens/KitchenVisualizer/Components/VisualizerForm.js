@@ -24,51 +24,12 @@ const CustomRightArrow = ({ onClick, ...rest }) => {
     return <button className="carousel-btn" onClick={() => onClick()}><FaChevronRight size={15} color={'#fff'}/></button>;
   };
 
-const VisualizerForm = ({ data }) => {
+const VisualizerForm = ({ data, kitchenLayout, bathroomLayout }) => {
   const [layout, setLayout] = useState("Kitchen");
   const [hoverContainer, setHoverContainer] = useState(-1);
   const [changeImageLayout, setChangeImageLayout] = useState("Kitchen");
   const { currentScreen, setCurrentScreen } = data;
-  const kitchenLayout = [
-    {
-      image: "url(images/layout/kitchen_1.png)",
-    },
-    {
-      image: "url(images/layout/kitchen_2.png)",
-    },
-    {
-      image: "url(images/layout/kitchen_3.png)",
-    },
-    {
-      image: "url(images/layout/kitchen_4.png)",
-    },
-    {
-      image: "url(images/layout/kitchen_5.png)",
-    },
-    {
-      image: "url(images/layout/kitchen_6.png)",
-    },
-  ];
-  const bathroomLayout = [
-    {
-      image: "url(images/layout/bathroom_1.png)",
-    },
-    {
-      image: "url(images/layout/bathroom_2.png)",
-    },
-    {
-      image: "url(images/layout/bathroom_3.png)",
-    },
-    {
-      image: "url(images/layout/bathroom_4.png)",
-    },
-    {
-      image: "url(images/layout/bathroom_5.png)",
-    },
-    {
-      image: "url(images/layout/bathroom_6.png)",
-    },
-  ];
+  console.log('4444',kitchenLayout);
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },

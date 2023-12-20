@@ -53,6 +53,16 @@
     align-items: center;
     flex-wrap: wrap;
 }
+.choosecolor-amb-container {
+    width: 100%;
+    height: 80vh;
+    margin-top: 10px;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
 .choosecolor-palete-container {
     width: 100%;
     height: 100px;
@@ -93,6 +103,15 @@
 .choosecolor-palate-top {
     width: 35%;
     margin-left: 15px;
+}
+.choosecolor-ambients-container {
+    width: 80%;
+    height: 200px;
+    margin: 5px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 30px;
 }
 .choosecolor-palate-b {
     height: 50px;
