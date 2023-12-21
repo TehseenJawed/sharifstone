@@ -1,7 +1,8 @@
 import React, {useState} from "react";
 import "./Gallery.css";
-import DummyImage from '../../../assets/images/homeImage/gallery_dummy.png'
-import BathroomImage from '../../../assets/images/homeImage/bathroom_4.png'
+import Bathroom from '../../../assets/images/homeImage/bathroom.png'
+import Kitchen from '../../../assets/images/homeImage/kitchen.png'
+import Livingroom from '../../../assets/images/homeImage/livingroom.png'
 
 function Gallery() {
     const [currentImage,setCurrentImage] = useState('Kitchen')
@@ -26,7 +27,7 @@ function Gallery() {
             </div>
           </div>
           <div className="home-gallerysub-container2">
-            <img src={DummyImage} />
+            <img src={currentImage === 'Kitchen' ? Kitchen : currentImage === 'Bathroom' ? Bathroom : Livingroom} />
           </div>
         </div>
       </div>
