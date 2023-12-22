@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import "./login.css";
 import { useNavigate } from 'react-router-dom';
 
@@ -8,13 +8,19 @@ const Login = () => {
     const loginForm = () => {
         if(formData.email === 'admin9871@sharifstore.com' && formData.password === 'sharif-admin0873565') {
             alert('You are loggedin')
+            localStorage.setItem('user', JSON.stringify({email: formData.email, password: formData.password}))
             navigate('/admin-dashboard', { replace: true });
             console.log('doing good job.');
         } else {
             alert('Your email or password does not match. please try again.')
         }
     }
-
+  useEffect(() => {
+    const user = localStorage.getItem('user')
+    if(!!user) {
+      navigate('/admin-dashboard', { replace: true });
+    }
+  },[])
   return (
     <div className="login-container">
       <div className="login-innercontainer">

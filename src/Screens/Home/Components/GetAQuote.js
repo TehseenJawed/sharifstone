@@ -5,6 +5,14 @@ import { IoIosArrowDown } from "react-icons/io";
 
 function GetAQuote({ data }) {
   const { openQuote, setOpenQuote } = data;
+  // const iconId = document?.getElementById('icon-id');
+  // const selectId = document?.getElementById('select-id')
+  // iconId.addEventListener("mousedown",function(){
+  //   var evt = event
+  //   setTimeout(function(){
+  //     selectId.dispatchEvent(Event.)
+  //   })
+  // })
   return (
     <div className="quote-form-containerhidden">
       <div className="quote-form-contactus">
@@ -21,12 +29,11 @@ function GetAQuote({ data }) {
           <input type={"text"} placeholder={"Phone Number"} />
         </div>
         <div className="select-container">
-          <select className="quote-select">
+          <select id="select-id" className="quote-select">
             <option>Select</option>
             <option value="To know the price of a specific stone">To know the price of a specific stone</option>
             <option value='Find a fabricator and get a quote from them'>Find a fabricator and get a quote from them</option>
           </select>
-          <IoIosArrowDown className="select-container-icon" />
         </div>
         <textarea
           id="w3review"

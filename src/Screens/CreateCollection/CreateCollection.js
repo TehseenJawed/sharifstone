@@ -1,13 +1,29 @@
 import React, {useState} from 'react'
 import DropImage from '../../components/dropzone'
 import './createCollection.css'
+import axios from 'axios';
 
 const CreateCollection = () => {
   const [formData, setFormData] = useState({})
   const color_image = useState("")
   const display_image = useState("")
-  const createCollection = () => {}
-  console.log('444',color_image);
+  const handleCreateCollection = async () => {
+    let newFormData = new FormData();
+    const [colorImage, setColorImage] = color_image
+    const [displayImage, setDisplayImage] = display_image
+    newFormData.append("name", formData?.name)
+    newFormData.append("images", colorImage[0])
+    newFormData.append("images", displayImage[0])
+    newFormData.append("category", formData.category)
+    console.log('I am working 111111');
+    await axios.post('http://localhost:3005/api/collection')
+    .then((response) => {
+      console.log('I am working....',response)
+    })
+    .catch(err => console.log('ERROR .. ',err.response.data.message))
+    
+  }
+  console.log('444',formData,color_image);
   return (
     <div className="login-container">
       <div className="login-innercontainer">
@@ -28,7 +44,7 @@ const CreateCollection = () => {
         />
         <DropImage states={color_image} text={"Select Color Image"}/>
         <DropImage states={display_image} customStyle={{backgroundColor: '#a4a7ff'}} text={"Select Present Image"}/>
-        <button onClick={createCollection} className="login-btn">Create Collection</button>
+        <button onClick={handleCreateCollection} className="login-btn">Create Collection</button>
       </div>
     </div>
   )
