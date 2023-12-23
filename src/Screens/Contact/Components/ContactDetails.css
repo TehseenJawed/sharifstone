@@ -8,7 +8,7 @@
 .contactdetails-innercontainer {
     width: 260px;
     margin-right: 20px;
-    display: flex;;
+    display: flex;
 }
 .contactdetails-innercontainer div{
     margin-left: 10px;
@@ -43,7 +43,6 @@
         flex-wrap: wrap;
         width: 85%;
         margin-left: 50px;
-        justify-content: flex-start;
     }
     .contactdetails-innercontainer {
         margin: 20px 10px;
