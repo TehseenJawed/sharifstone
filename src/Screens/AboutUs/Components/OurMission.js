@@ -7,7 +7,7 @@ function OurMission() {
       <div className="ourmission-container">
         <div className="ourmission-heading">OUR MISSION. VISION, AND GOAL</div>
         <hr style={{ margin: "20px 0px" }} />
-        <div className="ourmission-subcontainer">
+        <div className="ourmission-cover ourmission-subcontainer">
           <div className="ourmission-innercontainer">
             <img className="ourmission-image" src={OurMissionImage} />
           </div>

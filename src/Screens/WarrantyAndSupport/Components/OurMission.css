@@ -45,6 +45,9 @@
       font-size: 17px !important;
       margin-bottom: 50px;
     }
+    .ourmission-container .ourmission-cover{
+      flex-direction: column !important;
+    }
 }
 
 @media screen and (max-width: 425px) and (min-width: 320px) {
@@ -53,7 +56,7 @@
       text-align: center;
     }
     .ourmission-subcontainer {
-      flex-direction: column-reverse;
+      flex-direction: column-reverse !important;
       margin: 0px;
     }
     .ourmission-innercontainer {
