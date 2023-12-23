@@ -13,7 +13,7 @@ function OurLocation() {
           <div className="ourmission-innercontainer">
             <img className="ourmission-image" src={OrlandoMap} />
             <div className="location-name">ORLANDO</div>
-            <div>2440 Dinneed Ave. Orlando, FL 32804</div>
+            <div className="location-desc">2440 Dinneed Ave. Orlando, FL 32804</div>
           </div>
           <div className="ourmission-innercontainer">
             <img className="ourmission-image" src={TampaMap} />

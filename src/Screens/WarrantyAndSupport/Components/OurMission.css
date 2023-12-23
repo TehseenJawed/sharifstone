@@ -37,7 +37,7 @@
       text-align: center;
     }
     .ourmission-subcontainer {
-      flex-direction: column-reverse;
+      flex-direction: column-reverse !important;
     }
     .ourmission-innercontainer {
       width: 95% !important;
@@ -57,10 +57,13 @@
       margin: 0px;
     }
     .ourmission-innercontainer {
-      width: 95% !important;
+      width: 100% !important;
       line-height: 35px;
       font-size: 17px !important;
       margin-bottom: 0px;
     }
+    .ourmission-image {
+      width: 100%;
+  }
 }
   

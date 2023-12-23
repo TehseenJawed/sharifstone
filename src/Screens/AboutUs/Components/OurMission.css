@@ -34,8 +34,12 @@
     font-size: 35px !important;
     text-align: center;
   }
+  .ourmission-details {
+    width: 100%;
+    margin-top: 20px;
+  }
   .ourmission-subcontainer {
-    flex-direction: column-reverse;
+    flex-direction: column !important;
   }
   .ourmission-innercontainer {
     width: 95% !important;

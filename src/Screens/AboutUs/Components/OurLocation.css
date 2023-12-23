@@ -9,4 +9,7 @@
     .location-name {
         font-size: 30px;
     }
+    .location-desc {
+        margin-bottom: 10px;
+    }
 }
