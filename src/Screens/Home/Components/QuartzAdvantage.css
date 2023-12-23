@@ -5,6 +5,9 @@
   justify-content: center;
   align-items: center;
 }
+.home-advantagecontainer-center {
+  margin-bottom: 120px;
+}
 .home-back-s {
   z-index: 0;
 }
@@ -72,6 +75,7 @@
   transition: 0.3s;
   color: white;
   text-align: center;
+  text-decoration: none;
   border-radius: 30px;
   cursor: pointer;
 }

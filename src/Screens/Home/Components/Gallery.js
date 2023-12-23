@@ -17,7 +17,7 @@ function Gallery() {
           <div className="home-gallerysub-container1">
             <div className="home-gallery-contain">
                 {
-                    galleryType.map((v,i) => <div onClick={() => setCurrentImage(v)} style={{color: currentImage === v ? '#EE2A2E' : ''}} className="homecontainer1-tabs">{v}</div>)
+                    galleryType.map((v,i) => <div onClick={() => setCurrentImage(v)} style={{color: currentImage === v ? '#EE2A2E' : '', fontWeight: currentImage === v ? '600' : '400'}} className="homecontainer1-tabs">{v}</div>)
                 }
             </div>
             <div className="homebrand-dowmloadcontainer">

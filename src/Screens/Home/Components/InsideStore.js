@@ -25,7 +25,7 @@ function InsideStore({data}) {
     },
   ]
   return (
-    <div className="home-advantagecontainer">
+    <div className="home-advantagecontainer home-advantagecontainer-center">
       <div className="home-advantageinnercontainer">
       <img className="home-back-s" src={BackS} alt="" />
         <div className="home-section">

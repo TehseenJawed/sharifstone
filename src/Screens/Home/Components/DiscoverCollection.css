@@ -1,6 +1,7 @@
 .home-discovercollection {
   width: 100%;
-  padding: 120px 0px;
+  padding-top: 120px;
+  padding-bottom: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -23,7 +24,7 @@
   color: white;
   font-weight: 600;
   font-size: 15px;
-  padding: 15px 65px;
+  padding: 15px 60px;
   border-radius: 30px;
   margin-top: 25px;
   transition: 0.3s;

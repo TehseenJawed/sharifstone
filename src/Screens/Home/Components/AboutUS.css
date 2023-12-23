@@ -7,14 +7,14 @@
 }
 .home-aboutinnercontainer {
   width: 90%;
-  margin-top: 40px;
+  margin-top: 130px;
 }
 .home-aboutheading {
   font-size: 50px;
   font-family: "Gelasio", serif;
 }
 .home-discovercollection-button {
-  padding: 15px 70px;
+  padding: 15px 60px;
 }
 .home-aboutsubcontainer {
   width: 100%;
@@ -44,7 +44,7 @@
 .home-aboutcards {
   border: 1px solid #ee2a2e;
   border-radius: 15px;
-  width: 250px;
+  width: 325px;
   height: 200px;
   margin: 20px;
   display: flex;
