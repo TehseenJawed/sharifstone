@@ -12,14 +12,16 @@ function OurMission() {
             <img className="ourmission-image" src={OurMissionImage} />
           </div>
           <div className="ourmission-innercontainer">
-            Our mission is to provide superior quality stone slabs that enhance
-            the transformation of living spaces, ensuring utmost client
-            satisfaction through dependable service and premium product
-            offerings. <br />
-            <br />
-            We aspire to be one of the globally leading companies in the stone
-            industry, renowned for our commitment to excellence and unparalleled
-            service.
+            <div className="ourmission-details">
+              Our mission is to provide superior quality stone slabs that
+              enhance the transformation of living spaces, ensuring utmost
+              client satisfaction through dependable service and premium product
+              offerings. <br />
+              <br />
+              We aspire to be one of the globally leading companies in the stone
+              industry, renowned for our commitment to excellence and
+              unparalleled service.
+            </div>
           </div>
         </div>
       </div>
