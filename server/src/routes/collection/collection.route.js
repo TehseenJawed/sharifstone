@@ -8,7 +8,7 @@ const router = express.Router();
 
 router
   .route("/")
-//   .get(collectionController.createCollection)
-  .post(upload.array("images"), collectionController.createCollection);
+  .post(upload.array("images"), collectionController.createCollection)
+  .get(collectionController.getAllCollection)
 
 module.exports = router;

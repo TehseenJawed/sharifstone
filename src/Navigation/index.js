@@ -15,7 +15,9 @@ import KitchenVisualizer from "../Screens/KitchenVisualizer";
 import Login from "../Screens/Login/Login";
 import Dashboard from "../Screens/Dashboard/Dashboard";
 import CreateCollection from "../Screens/CreateCollection/CreateCollection";
+import ViewCollection from "../Screens/ViewCollection/ViewCollection";
 import CreateVisualizer from "../Screens/CreateVisualizer/createVisualizer";
+import ViewVisualizer from "../Screens/ViewVisualizer/viewVisualizer";
 
 createBrowserRouter([
   {
@@ -118,7 +120,7 @@ const router = createBrowserRouter(
         path: "/admin-dashboard/collections",
         element: (
           <Layout>
-            <Dashboard />
+            <ViewCollection />
           </Layout>
         ),
       },
@@ -126,7 +128,7 @@ const router = createBrowserRouter(
         path: "/admin-dashboard/visualizer",
         element: (
           <Layout>
-            <Dashboard />
+            <ViewVisualizer />
           </Layout>
         ),
       },

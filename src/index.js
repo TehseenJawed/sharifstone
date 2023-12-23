@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
@@ -14,15 +14,29 @@ import reportWebVitals from "./reportWebVitals";
 import { RouterProvider } from "react-router-dom";
 import { router } from "./Navigation";
 import Context from "./Store/contextStore";
-import { useState } from "react";
+import APIContext from "./Store/apiContext";
+import { getCollection } from "./apiCall/apiCall";
+
 const RunFuncion = () => {
   const [store, setStore] = useState({});
+  const [apiStore, setAPIStore] = useState({});
+
+  useEffect(async () => {
+    const getCollections = await getCollection();
+    const newObj = {
+      ...apiStore,
+      collections: getCollections,
+    };
+    setAPIStore(newObj);
+  }, []);
   return (
-    <Context.Provider value={{ store, setStore }}>
-      <React.StrictMode>
-        <RouterProvider router={router} />
-      </React.StrictMode>
-    </Context.Provider>
+    <APIContext.Provider value={{ apiStore, setAPIStore }}>
+      <Context.Provider value={{ store, setStore }}>
+        <React.StrictMode>
+          <RouterProvider router={router} />
+        </React.StrictMode>
+      </Context.Provider>
+    </APIContext.Provider>
   );
 };
 ReactDOM.createRoot(document.getElementById("root")).render(<RunFuncion />);

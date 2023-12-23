@@ -12,7 +12,7 @@ const userSchema = mongoose.Schema(
       required: true, 
       default: ''
     },
-    color_image: { 
+    counter_top: { 
       type: String, 
       required: true, 
       default: ''
@@ -22,7 +22,7 @@ const userSchema = mongoose.Schema(
       required: true, 
       default: ''
     },
-    category: { 
+    room: { 
       type: String, 
       required: true, 
       default: ''
@@ -69,5 +69,5 @@ userSchema.pre("save", async function (next) {
  * @typedef User
  */
 
-const Collection = mongoose.model("collection", userSchema);
+const Collection = mongoose.model("visualizer", userSchema);
 module.exports = Collection;

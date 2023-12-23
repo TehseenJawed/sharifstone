@@ -12,6 +12,12 @@ const createCollection = async (body) => {
   return response
 };
 
+const getAllCollection = async (body) => {
+  const response = await Collection.find()
+  return response
+};
+
 module.exports = {
   createCollection,
+  getAllCollection
 };

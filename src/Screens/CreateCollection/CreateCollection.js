@@ -7,6 +7,7 @@ const CreateCollection = () => {
   const [formData, setFormData] = useState({})
   const color_image = useState("")
   const display_image = useState("")
+
   const handleCreateCollection = async () => {
     let newFormData = new FormData();
     const [colorImage, setColorImage] = color_image
@@ -15,15 +16,15 @@ const CreateCollection = () => {
     newFormData.append("images", colorImage[0])
     newFormData.append("images", displayImage[0])
     newFormData.append("category", formData.category)
-    console.log('I am working 111111');
-    await axios.post('http://localhost:3005/api/collection')
+    await axios.post('http://localhost:3005/api/collection', newFormData)
     .then((response) => {
-      console.log('I am working....',response)
+      alert('Collection Created')
+      setFormData({})
+      setColorImage("")
+      setDisplayImage("")
     })
     .catch(err => console.log('ERROR .. ',err.response.data.message))
-    
   }
-  console.log('444',formData,color_image);
   return (
     <div className="login-container">
       <div className="login-innercontainer">

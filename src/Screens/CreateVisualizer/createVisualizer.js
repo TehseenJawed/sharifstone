@@ -1,13 +1,32 @@
 import React, { useState } from "react";
 import DropImage from "../../components/dropzone";
 import { IoIosArrowDown } from "react-icons/io";
-import './createVisualizer.css'
+import './createVisualizer.css';
+import axios from 'axios';
 
 const CreateVisualizer = () => {
   const [formData, setFormData] = useState({});
   const color_image = useState("");
   const display_image = useState("");
-  const createCollection = () => {};
+
+  const handleCreateVisualizer = async () => {
+    let newFormData = new FormData();
+    const [colorImage, setColorImage] = color_image
+    const [displayImage, setDisplayImage] = display_image
+    newFormData.append("name", formData?.name)
+    newFormData.append("images", colorImage[0])
+    newFormData.append("images", displayImage[0])
+    newFormData.append("category", formData.category)
+    await axios.post('http://localhost:3005/api/collection', newFormData)
+    .then((response) => {
+      alert('Collection Created')
+      setFormData({})
+      setColorImage("")
+      setDisplayImage("")
+    })
+    .catch(err => console.log('ERROR .. ',err?.response?.data?.message))
+  }
+
   return (
     <div className="login-container">
       <div className="login-innercontainer">
@@ -46,8 +65,8 @@ const CreateVisualizer = () => {
           customStyle={{ backgroundColor: "#a4a7ff" }}
           text={"Select Present Image"}
         />
-        <button onClick={createCollection} className="login-btn">
-          Create Collection
+        <button onClick={handleCreateVisualizer} className="login-btn">
+          Create Visualizer
         </button>
       </div>
     </div>
