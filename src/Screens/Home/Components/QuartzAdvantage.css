@@ -74,6 +74,7 @@
   background-color: #ee2a2e;
   transition: 0.3s;
   color: white;
+  font-size: 18px;
   text-align: center;
   text-decoration: none;
   border-radius: 30px;
@@ -112,6 +113,7 @@
   }
   .homebrand-button {
     display: none;
+    font-size: 15px;
   }
   .home-advamtageheading {
     font-size: 35px;
