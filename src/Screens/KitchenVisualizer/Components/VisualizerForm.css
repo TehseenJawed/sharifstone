@@ -72,6 +72,7 @@
 
 .visualizerform-btn1 {
     width: 200px;
+    cursor: pointer;
     background-color: #EE2A2E;
     height: 50px;
     border-radius: 30px;
@@ -84,6 +85,7 @@
 
 .visualizerform-btn2 {
     width: 200px;
+    cursor: pointer;
     border: 1px solid black;
     height: 50px;
     border-radius: 30px;
@@ -106,6 +108,7 @@
 .visualizerform-image {
     width: 28%;
     height: 220px;
+    cursor: pointer;
     margin: 10px;
     border-radius: 15px;
     background-repeat: no-repeat;

@@ -43,6 +43,7 @@
 }
 .kitchen-visualizer-startbtn {
     background-color: #EE2A2E;
+    cursor: pointer;
     border-radius: 30px;
     width: 100%;
     height: 40px;

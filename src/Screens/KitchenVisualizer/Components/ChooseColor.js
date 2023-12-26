@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "./ChooseColor.css";
 import Logo from "../../../assets/images/logo_footer.png";
 import { Link } from "react-router-dom";
+import { FaCheck } from "react-icons/fa6";
 
 const ChooseColor = ({ apiData, colorArray, updateColorArray, layoutData }) => {
   const [selectedColor, setSelectedColor] = useState(colorArray[0]);
@@ -104,7 +105,8 @@ const ChooseColor = ({ apiData, colorArray, updateColorArray, layoutData }) => {
                           ? "3px solid #EE2A2E"
                           : "none",
                     }}
-                  ></div>
+                  >
+                  </div>
                   <b>{activcounterTop.name}</b>
                 </div>
               </div>
@@ -126,7 +128,11 @@ const ChooseColor = ({ apiData, colorArray, updateColorArray, layoutData }) => {
                     <div
                       className="choosecolor-palete-container"
                       style={{ backgroundImage: v.image }}
-                    ></div>
+                    >
+                      {
+                        activcounterTop.name === v.name && <FaCheck color="#fff" style={{width: 30, height: 30}}/>
+                      }
+                    </div>
                     <div className="choosecolor-palate-b">{v.name}</div>
                   </div>
                 ))}
