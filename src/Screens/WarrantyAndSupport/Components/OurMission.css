@@ -12,10 +12,11 @@
     justify-content: space-between;
     align-items: flex-start;
     margin-top: 50px;
+    font-size: 18px;
 }
 .ourmission-innercontainer {
     width: 49%;
-    line-height: 35px;
+    line-height: 32px;
     font-size: 20px;
 }
 .ourmission-image {
@@ -27,7 +28,7 @@
     font-size: 45px;
   }
   .ourmission-innercontainer {
-    font-size: 16px;
+    font-size: 18px;
 }
 }
 

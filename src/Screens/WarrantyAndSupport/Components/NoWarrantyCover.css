@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   font-size: 23px;
-  line-height: 35px;
+  line-height: 32px;
 }
 .nowarranty-cover div {
   margin-right: 25px;
@@ -12,12 +12,12 @@
 
 @media screen and (max-width: 1440px) and (min-width: 756px) {
   .reorganize-subcontainer {
-    width: 55% !important;
+    width: 45% !important;
     margin-right: 15px;
   }
   .nowarranty-cover {
     align-items: flex-start;
-    font-size: 17px;
+    font-size: 18px;
   }
 }
 

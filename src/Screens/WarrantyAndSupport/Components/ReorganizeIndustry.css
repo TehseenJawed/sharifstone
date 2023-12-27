@@ -19,6 +19,7 @@
 .reorganize-subcontainer {
   width: 42%;
   color: white;
+  margin-right: 50px !important;
   height: 700px;
   display: flex;
   flex-direction: column;
@@ -46,18 +47,19 @@
 
 @media screen and (max-width: 1440px) and (min-width: 320px) {
   .reorganize-heading {
-    font-size: 30px;
-    line-height: 40px;
+    line-height: 50px;
   }
   .reorganize-desc {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
 @media screen and (max-width: 425px) and (min-width: 320px) {
   .reorganize-subcontainer {
     margin-bottom: 50px;
+    margin-right: 0px !important;
   }
+  
   .reorganize-imagecontainer {
     height: 900px;
     justify-content: center;
