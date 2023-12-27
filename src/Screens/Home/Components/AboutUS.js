@@ -113,7 +113,7 @@ function AboutUS({data}) {
               with clients nationwide. <br /> <br /> Discover the perfect stones for your
               project with Sharifstone!
             </span>
-            <div style={{display: 'flex'}}><div onClick={() => setOpenQuote(true)} className="home-discovercollection-button">Get a Quote</div></div>
+            <div className="home-discover-container"><div onClick={() => setOpenQuote(true)} className="home-discovercollection-button">Get a Quote</div></div>
           </div>
         </div>
         <div className="home-aboutcard">

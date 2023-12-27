@@ -16,6 +16,9 @@
 .home-discovercollection-button {
   padding: 15px 60px;
 }
+.home-discover-container {
+  display: flex;
+}
 .home-aboutsubcontainer {
   width: 100%;
   display: flex;
@@ -89,6 +92,11 @@
     align-items: center;
     background-color: white;
     box-shadow: 10px 15px 15px #80808024;
+  }
+  .home-discover-container {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
   }
   .home-aboutcards div {
     font-size: 13px;
