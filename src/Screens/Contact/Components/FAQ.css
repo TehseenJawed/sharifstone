@@ -16,6 +16,8 @@
 }
 .faq-sepeartor {
   margin: 30px 0px;
+  border: '0.5px solid #D9D9D9';
+  opacity: 0.9;
 }
 .faq-formcontainer {
   margin: 60px 0px;

@@ -63,11 +63,11 @@
   background-size: cover;
 }
 .homebrand-dowmloadcontainer {
-  width: 80%;
+  /* width: 100%; */
   margin-top: 30px;
 }
 .homebrand-button {
-  padding: 15px 55px;
+  padding: 15px 30px;
   font-weight: 600;
   display: flex;
   justify-content: center;
@@ -97,7 +97,7 @@
 
 @media screen and (max-width: 1024px) and (min-width: 756px) {
   .homebrand-button {
-    padding: 15px 25px;
+    padding: 15px 20px;
   }
 }
 

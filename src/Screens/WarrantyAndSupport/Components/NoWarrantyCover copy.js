@@ -6,7 +6,7 @@ function NoWarrantyCover() {
     <div className="reorganize_container">
       <div className="ourmission-container">
         <div className="ourmission-heading ">WHAT THIS WARRANTY WILL NOT COVER:</div>
-        <hr style={{ margin: "20px 0px" }} />
+        <hr style={{ margin: "20px 0px", border: '0.5px solid #D9D9D9', opacity: 0.9}} />
         <div className="ourmission-subcontainer warranty-notcover">
           <div className="nowarranty-cover">
             <div>

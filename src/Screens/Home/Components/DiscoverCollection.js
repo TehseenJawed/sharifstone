@@ -78,12 +78,14 @@ function DiscoverCollection() {
           />
         </div>
       </div>
+      <div className="home-discovercollection-container">
       <Link
         to={"/quartz-collection"}
         className="home-discovercollection-button"
       >
         See More
       </Link>
+      </div>
     </div>
   );
 }
