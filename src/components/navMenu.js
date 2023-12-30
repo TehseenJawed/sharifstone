@@ -61,9 +61,9 @@ function NavMenu({ navState }) {
       setIsMobile(true);
     }
   }, []);
-  if (isMobile) {
+  
     return (
-      <div>
+      <>
         <div onClick={() => setOpenMenu(true)} className="mobile-menu-btn">
           <RiMenu3Fill size={30} color={"white"} />
         </div>
@@ -123,11 +123,8 @@ function NavMenu({ navState }) {
             </div>
           </div>
         )}
-      </div>
-    );
-  } else {
-    return (
-      <div style={{ display: "flex" }}>
+
+      <div className="desktop-navbar">
         {window.location.pathname.includes("/admin-dashboard") ? (
           <div className="nav-container">
             {dashboard.map((v, i) => (
@@ -160,8 +157,8 @@ function NavMenu({ navState }) {
           </div>
         )}
       </div>
+      </>
     );
-  }
 }
 
 export default NavMenu;
