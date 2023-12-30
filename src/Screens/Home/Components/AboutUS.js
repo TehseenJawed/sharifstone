@@ -93,10 +93,10 @@ function AboutUS({data}) {
       <div className="home-aboutinnercontainer">
         <div className="home-aboutheading">ABOUT US</div>
 
-        <hr style={{ margin: "20px 0px" }} />
+        <hr style={{ margin: "20px 0px", border: '0.5px solid #D9D9D9', opacity: 0.9}} />
         <div className="home-aboutsubcontainer">
           <div className="home-about-sections specififc-video">
-            <YouTube iframeClassName="youtube-iframe" videoId="Zv11L-ZfrSg" opts={window.outerWidth <= 768 ? window.outerWidth <= 425 ? opts_mobile2 : opts_mobile : window.outerWidth > 1024 ? window.outerWidth <= 1150 ? opts1024 : window.outerWidth <= 1300 ? opts1300 : window.outerWidth <= 1660 ? opts1400 : opts : opts} onReady={_onReady} />;
+            <YouTube iframeClassName="youtube-iframe" videoId="Zv11L-ZfrSg" opts={window.outerWidth <= 768 ? window.outerWidth <= 425 ? opts_mobile2 : opts_mobile : window.outerWidth > 1024 ? window.outerWidth <= 1150 ? opts1024 : window.outerWidth <= 1300 ? opts1300 : window.outerWidth <= 1660 ? opts1400 : opts : opts} onReady={_onReady} />
           </div>
           <div className="home-about-sections">
             <span>
@@ -105,12 +105,12 @@ function AboutUS({data}) {
               years of experience, we take pride in providing our customers with
               top-quality products at the best prices. Our extensive selection
               and commitment to exceeding customer expectations makes us stand
-              out in the industry. <br /> <br /> At Sharifstone, we have a dedicated team that
+              out in the industry. At Sharifstone, we have a dedicated team that
               guides the customers through the entire process, offering tailored
-              solutions for residential, commercial, and architectural projects.
+              solutions for residential, commercial, and architectural projects. <br /> <br /> 
               With our unwavering dedication to professionalism and customer
               satisfaction, Sharifstone has established lasting relationships
-              with clients nationwide. <br /> <br /> Discover the perfect stones for your
+              with clients nationwide. Discover the perfect stones for your
               project with Sharifstone!
             </span>
             <div className="home-discover-container"><div onClick={() => setOpenQuote(true)} className="home-discovercollection-button">Get a Quote</div></div>
@@ -129,7 +129,7 @@ function AboutUS({data}) {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
 export default AboutUS;

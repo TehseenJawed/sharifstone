@@ -6,7 +6,7 @@ function OurMission() {
     <div className="reorganize_container">
       <div className="ourmission-container">
         <div className="ourmission-heading">MORE ABOUT WARRANTY</div>
-        <hr style={{ margin: "20px 0px" }} />
+        <hr style={{ margin: "20px 0px", border: '0.5px solid #D9D9D9', opacity: 0.9}} />
         <div className="ourmission-subcontainer">
           <div className="ourmission-innercontainer">
             <img className="ourmission-image" src={OurMissionImage} />

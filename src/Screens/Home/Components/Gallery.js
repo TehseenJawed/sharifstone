@@ -11,7 +11,7 @@ function Gallery() {
     <div className="home-aboutconatiner">
       <div className="home-aboutinnercontainer">
         <div className="home-aboutheading">GALLERY</div>
-        <hr style={{ margin: "20px 0px" }} />
+        <hr style={{ margin: "20px 0px", border: '0.5px solid #D9D9D9', opacity: 0.9}} />
 
         <div className="home-gallerycontainer">
           <div className="home-gallerysub-container1">

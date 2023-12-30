@@ -14,7 +14,7 @@
   font-family: "Gelasio", serif;
 }
 .home-discovercollection-button {
-  padding: 15px 60px;
+  padding: 15px 40px;
 }
 .home-discover-container {
   display: flex;
@@ -78,7 +78,7 @@
     font-size: 16px;
   }
   .home-discovercollection-button {
-    padding: 15px 70px;
+    padding: 15px 40px;
   }
   .home-aboutcard {
     flex-wrap: wrap;
