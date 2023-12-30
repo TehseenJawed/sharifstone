@@ -12,8 +12,6 @@ function ContactScreen() {
         image={"url(images/cover/contact_us.png)"}
         label={["SPEAK", "WITH US"]}
       />
-      
-      <img src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYSivPKFqfZiv1mJxs6x20BOkYSelu8uAGmWlie91T7-SoSoRTwqI-hxMLvwg-16X7pne6ccLlHiVlR6DEM9SGYL1TvOEg=w3300-h1964" alt="drive image"/>
       <div className="contact-maincontainer">
         <div className="contact-maindesc">
           Feel free to contact us with questions via our form below and we will
