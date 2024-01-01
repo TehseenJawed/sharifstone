@@ -145,6 +145,10 @@ const ChooseColor = ({ apiData, colorArray, updateColorArray, layoutData }) => {
         style={{ backgroundImage: selectedColor.relatedImage }}
         className="choosecolor-innercontainer2"
       ></div>
+      <div
+        style={{ backgroundImage: "url(images/color_collections/kitchen_visualizer/bohemian_flam.png)" }}
+        className="choosecolor-innercontainer3"
+      />
     </div>
   );
 };

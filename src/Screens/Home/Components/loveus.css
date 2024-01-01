@@ -38,6 +38,18 @@
   height: 5px;
 }
 
+@media screen and (max-width: 1400px) and (min-width: 1024px) {
+  .home-loveus-heading {
+    font-size: 45px;
+    margin: 20px 0px;
+    color: #221f1f;
+    font-family: "Gelasio", serif;
+  }
+  .home-loveus-desc {
+    font-size: 16px;
+  }
+}
+
 @media screen and (max-width: 1024px) and (min-width: 756px) {
   .home-loveus-container {
     width: 100%;

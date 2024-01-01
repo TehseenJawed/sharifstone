@@ -56,15 +56,24 @@ const CreateVisualizer = () => {
           onChange={(e) =>
             setFormData({ ...formData, category: e.target.value })
           }
-          value={formData.category}
-          placeholder="Category"
+          // value={formData.category}
+          placeholder="Color Image URL"
         />
-        <DropImage states={color_image} text={"Select Color Image"} />
+        <input
+          className="login-input"
+          type="text"
+          onChange={(e) =>
+            setFormData({ ...formData, category: e.target.value })
+          }
+          // value={formData.category}
+          placeholder="Display Image URL"
+        />
+        {/* <DropImage states={color_image} text={"Select Color Image"} />
         <DropImage
           states={display_image}
           customStyle={{ backgroundColor: "#a4a7ff" }}
           text={"Select Present Image"}
-        />
+        /> */}
         <button onClick={handleCreateVisualizer} className="login-btn">
           Create Visualizer
         </button>

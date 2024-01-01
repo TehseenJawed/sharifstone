@@ -9,7 +9,7 @@ import YouTube from 'react-youtube';
 
 function AboutUS({data}) {
   const opts = {
-    height: '550',
+    height: '500',
     width: '750',
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
@@ -42,7 +42,7 @@ function AboutUS({data}) {
   };
   const opts1400 = {
     height: '550',
-    width: '550',
+    width: '500',
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
       autoplay: 1,
@@ -105,12 +105,12 @@ function AboutUS({data}) {
               years of experience, we take pride in providing our customers with
               top-quality products at the best prices. Our extensive selection
               and commitment to exceeding customer expectations makes us stand
-              out in the industry. At Sharifstone, we have a dedicated team that
+              out in the industry. <br /> <br />  At Sharifstone, we have a dedicated team that
               guides the customers through the entire process, offering tailored
-              solutions for residential, commercial, and architectural projects. <br /> <br /> 
+              solutions for residential, commercial, and architectural projects. 
               With our unwavering dedication to professionalism and customer
               satisfaction, Sharifstone has established lasting relationships
-              with clients nationwide. Discover the perfect stones for your
+              with clients nationwide. <br /> <br />  Discover the perfect stones for your
               project with Sharifstone!
             </span>
             <div className="home-discover-container"><div onClick={() => setOpenQuote(true)} className="home-discovercollection-button">Get a Quote</div></div>

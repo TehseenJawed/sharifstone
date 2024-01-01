@@ -18,6 +18,7 @@ import CreateCollection from "../Screens/CreateCollection/CreateCollection";
 import ViewCollection from "../Screens/ViewCollection/ViewCollection";
 import CreateVisualizer from "../Screens/CreateVisualizer/createVisualizer";
 import ViewVisualizer from "../Screens/ViewVisualizer/viewVisualizer";
+import WhereToBuy from "../Screens/WhereToBuy";
 
 createBrowserRouter([
   {
@@ -33,6 +34,14 @@ const router = createBrowserRouter(
       element: (
         <Layout>
           <HomeScreen />
+        </Layout>
+      ),
+    },
+    {
+      path: "/where-to-buy",
+      element: (
+        <Layout>
+          <WhereToBuy />
         </Layout>
       ),
     },

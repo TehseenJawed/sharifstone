@@ -41,10 +41,24 @@ const CreateCollection = () => {
           type="text"
           onChange={(e) => setFormData({...formData, category: e.target.value})}
           value={formData.category}
-          placeholder="Category"
+          placeholder="Collection Name"
         />
-        <DropImage states={color_image} text={"Select Color Image"}/>
-        <DropImage states={display_image} customStyle={{backgroundColor: '#a4a7ff'}} text={"Select Present Image"}/>
+        <input
+          className="login-input"
+          type="text"
+          onChange={(e) => setFormData({...formData, category: e.target.value})}
+          value={formData.category}
+          placeholder="Color Image URL"
+        />
+        <input
+          className="login-input"
+          type="text"
+          onChange={(e) => setFormData({...formData, category: e.target.value})}
+          value={formData.category}
+          placeholder="Display Image URL"
+        />
+        {/* <DropImage states={color_image} text={"Select Color Image"}/>
+        <DropImage states={display_image} customStyle={{backgroundColor: '#a4a7ff'}} text={"Select Present Image"}/> */}
         <button onClick={handleCreateCollection} className="login-btn">Create Collection</button>
       </div>
     </div>
