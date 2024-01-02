@@ -5,6 +5,7 @@ import InsideStoreImage2 from '../../../assets/images/homeImage/insidestore2.png
 import InsideStoreImage3 from '../../../assets/images/homeImage/insidestore3.png'
 import InsideStoreImage4 from '../../../assets/images/homeImage/insidestore4.png'
 import BackS from '../../../assets/images/back_s.png'
+import { Link } from "react-router-dom";
 
 function InsideStore({data}) {
   const {openQuote, setOpenQuote} = data
@@ -13,15 +14,18 @@ function InsideStore({data}) {
   const catalog = [
     {
       name: 'Color Catalog',
-      image: 'url(images/inside_icon1.png)'
+      image: 'url(images/inside_icon1.png)',
+      href:"/quartz-collection"
     },
     {
       name: 'Digital Brochure',
-      image: 'url(images/inside_icon2.png)'
+      image: 'url(images/inside_icon2.png)',
+      href:"/"
     },
     {
       name: 'Where To Buy',
-      image: 'url(images/inside_icon3.png)'
+      image: 'url(images/inside_icon3.png)',
+      href:"/where-to-buy"
     },
   ]
   return (
@@ -45,10 +49,10 @@ function InsideStore({data}) {
           <div className="home-insidestore-imagecontainer">
             {
               catalog.map((v, i) => (
-                <div className="homeinsider-offercard">
+                <Link to={v.href} className="homeinsider-offercard">
                   <div style={{ backgroundImage: v.image}} className="homeinsider-offercard-image" />
                   <div className="homeinsider-offercard-text">{v.name}</div>
-                </div>
+                </Link>
                 ))
             }
           </div>

@@ -6,6 +6,7 @@ import VisualizeSpace from '../../../assets/images/homeImage/visualize_space.png
 import ViewColor from '../../../assets/images/homeImage/view_color.png'
 import WhereToBuy from '../../../assets/images/homeImage/wheretobuy.png'
 import YouTube from 'react-youtube';
+import { Link } from "react-router-dom";
 
 function AboutUS({data}) {
   const opts = {
@@ -72,19 +73,23 @@ function AboutUS({data}) {
     const aboutIdeas = [
         {
             name: 'INSPIRATION IDEAS',
-            image: InspireIdeas
-        },
-        {
+            image: InspireIdeas,
+            href:"/",
+          },
+          {
             name: 'VISUALIZE YOUR SPACE',
-            image: VisualizeSpace
+            image: VisualizeSpace,
+            href:"/kitchen-visualizer",
         },
         {
             name: 'VIEW COLORS CATALOG',
-            image: ViewColor
+            image: ViewColor,
+            href:"/quartz-collection",
         },
         {
             name: 'WHERE TO BUY',
-            image: WhereToBuy
+            image: WhereToBuy,
+            href:"/where-to-buy",
         }
     ]
     const {openQuote, setOpenQuote} = data
@@ -119,10 +124,10 @@ function AboutUS({data}) {
         <div className="home-aboutcard">
             {
                 aboutIdeas.map((v,i) => (
-                    <div className="home-aboutcards">
+                    <Link to={v.href} className="home-aboutcards" style={{textDecoration: 'none'}}>
                         <img src={v.image} />
                         <div>{v.name}</div>
-                    </div>
+                    </Link>
                 ))
             }
             

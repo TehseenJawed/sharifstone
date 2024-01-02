@@ -60,6 +60,9 @@
 .home-aboutcards div {
   margin-top: 25px;
   font-weight: 600;
+  color: black;
+  text-decoration: none;
+
 }
 @media screen and (max-width: 1440px) and (min-width: 1024px) {
   .home-about-sections span {

@@ -3,6 +3,7 @@ import "./Gallery.css";
 import Bathroom from '../../../assets/images/homeImage/bathroom.png'
 import Kitchen from '../../../assets/images/homeImage/kitchen.png'
 import Livingroom from '../../../assets/images/homeImage/livingroom.png'
+import { Link } from "react-router-dom";
 
 function Gallery() {
     const [currentImage,setCurrentImage] = useState('Kitchen')
@@ -21,9 +22,9 @@ function Gallery() {
                 }
             </div>
             <div className="homebrand-dowmloadcontainer">
-              <div className="homebrand-button">
+              <Link to="/kitchen-visualizer" className="homebrand-button">
                 View All Products
-              </div>
+              </Link>
             </div>
           </div>
           <div className="home-gallerysub-container2">
