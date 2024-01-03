@@ -9,7 +9,6 @@ import { Link } from "react-router-dom";
 
 function InsideStore({data}) {
   const {openQuote, setOpenQuote} = data
-  console.log('555',openQuote,setOpenQuote);
   const imageArray = [InsideStoreImage1, InsideStoreImage2, InsideStoreImage3, InsideStoreImage4]
   const catalog = [
     {

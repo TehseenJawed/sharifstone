@@ -1,33 +1,23 @@
-import { useState, useContext } from "react";
+import { useState, useEffect, useContext } from "react";
 import "./DiscoverCollection.css";
 import { GoArrowUpRight } from "react-icons/go";
 import Context from "../../../Store/contextStore";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
+import APIContext from "../../../Store/apiContext";
+import { getCollectionByParam } from "../../../apiCall/apiCall";
 
 const DiscoverCollection = () => {
   const [collection, setCollection] = useState("none");
   const [onMouseOver, setOnMouseOver] = useState("");
+  const [innerCollection, setInnerCollection] = useState([])
+  const [flag, setFlag] = useState(true)
+  const {apiStore, setAPIStore} = useContext(APIContext) 
   const {store, setStore} = useContext(Context)
   const navigate = useNavigate();
-  console.log('SRORE',store,setStore);
-  const collections = [
-    {
-      name: "ESSENTIALS COLLECTION",
-      image: "url(images/collections/essentials.png)",
-    },
-    {
-      name: "INDULGE COLLECTION",
-      image: "url(images/collections/indulge.png)",
-    },
-    {
-      name: "INTERNATIONAL COLLECTION",
-      image: "url(images/collections/international.png)",
-    },
-    {
-      name: "MY COLLECTION",
-      image: "url(images/collections/mythology.png)",
-    },
-  ];
+  const collectionKeys = apiStore?.collections !== undefined && Object.keys(apiStore?.collections)
+  const collections = apiStore?.collections !== undefined ? collectionKeys?.map((v,i) => ({color_name: v, collection_url: apiStore?.collections[v][0]?.collection_url, color_image: apiStore?.collections[v][0]?.color_image})) : []
+  const params = useParams()
+  console.log('PARAMS...',params);
   const essentialsCollection = [
     {
       name: "ES Arctic White",
@@ -484,112 +474,12 @@ const DiscoverCollection = () => {
     ],
   };
 
-  const gotoNextScreen = (i) => {
-    switch (true) {
-      case collection === "ESSENTIALS COLLECTION":
-        var newArray;
-        if(i < 3) {
-          newArray = [
-            essentialsCollection[i],
-            essentialsCollection[i+1],
-            essentialsCollection[i+2],
-            essentialsCollection[i+3],
-          ]} else if(i > essentialsCollection.length-4) {
-            newArray = [
-              essentialsCollection[i],
-              essentialsCollection[i-1],
-              essentialsCollection[i-2],
-              essentialsCollection[i-3],
-            ]
-          } else {
-            newArray = [
-              essentialsCollection[i],
-              essentialsCollection[i-1],
-              essentialsCollection[i+2],
-              essentialsCollection[i-3],
-            ]
-        }
-        setStore(newArray)
-        navigate('/product-description', { replace: true });
-        break;
-        case collection === "INDULGE COLLECTION":
-          var newArray;
-          if(i < 3) {
-            newArray = [
-              indulgeCollection[i],
-              indulgeCollection[i+1],
-              indulgeCollection[i+2],
-              indulgeCollection[i+3],
-            ]} else if(i > indulgeCollection.length-4) {
-              newArray = [
-                indulgeCollection[i],
-                indulgeCollection[i-1],
-                indulgeCollection[i-2],
-                indulgeCollection[i-3],
-              ]
-            } else {
-              newArray = [
-                indulgeCollection[i],
-                indulgeCollection[i-1],
-                indulgeCollection[i+2],
-                indulgeCollection[i-3],
-              ]
-          }
-          setStore(newArray)
-          navigate('/product-description', { replace: true });
-          break;
-          case collection === "INTERNATIONAL COLLECTION":
-            var newArray;
-            if(i < 3) {
-              newArray = [
-                internationalCollection[i],
-                internationalCollection[i+1],
-                internationalCollection[i+2],
-                internationalCollection[i+3],
-              ]} else if(i > internationalCollection.length-4) {
-                newArray = [
-                  internationalCollection[i],
-                  internationalCollection[i-1],
-                  internationalCollection[i-2],
-                  internationalCollection[i-3],
-                ]
-              } else {
-                newArray = [
-                  internationalCollection[i],
-                  internationalCollection[i-1],
-                  internationalCollection[i+2],
-                  internationalCollection[i-3],
-                ]
-            }
-            setStore(newArray)
-            navigate('/product-description', { replace: true });
-            break;
-            case collection === "MY COLLECTION":
-              var newArray;
-              if(i < 3) {
-                newArray = [
-                  mythology[i],
-                  mythology[i+1],
-                  mythology[i+2],
-                  mythology[i+3],
-                ]} else if(i > mythology.length-4) {
-                  newArray = [
-                    mythology[i],
-                    mythology[i-1],
-                    mythology[i-2],
-                    mythology[i-3],
-                  ]
-                } else {
-                  newArray = [
-                    mythology[i],
-                    mythology[i-1],
-                    mythology[i+2],
-                    mythology[i-3],
-                  ]
-              }
-              setStore(newArray)
-              navigate('/product-description', { replace: true });
-              break;
+  const gotoNextScreen = (value) => {
+    setFlag(false)
+    if(flag) {
+      navigate(`/quartz-collection/${value?.collection_url}`, { replace: true });
+    } else {
+      navigate(`/product-description/${value?.color_url}`, { replace: true });
     }
   }
 
@@ -600,12 +490,12 @@ const DiscoverCollection = () => {
           onMouseOver={() => setOnMouseOver(i)}
           className="discover-collectionimage"
           style={{
-            backgroundImage: v.image,
+            backgroundImage: `url(${v?.color_image})`,
           }}
         >
           {i === onMouseOver && (
             <div
-              onClick={isBack ? () => gotoNextScreen(i) : () => setCollection(v.name)}
+              onClick={() => gotoNextScreen(v)}
               className="discover-collectionexpand"
             >
               <GoArrowUpRight size={35} color="white" />
@@ -615,32 +505,50 @@ const DiscoverCollection = () => {
         {
             islable ? (
             <div className="discover-collectionlabel">
-                <div className="discover-collectionlabel1">{v.name}</div>
-                {/* <div className="discover-collectionlabel2">{v.desc}</div> */}
+                <div className="discover-collectionlabel1">{v.color_name}</div>
             </div>
             ) 
-            : (<div className="discover-collectiontext">{v.name}</div>)
+            : (<div className="discover-collectiontext">{v.color_name}</div>)
         }
       </div>
     );
   };
+
+  const callAPI = async () => {
+    const data = await getCollectionByParam(params?.collection)
+    setInnerCollection(data)
+  }
+
+  useEffect(() => {
+    if(params?.collection !== undefined){
+      callAPI();
+    }
+  },[params?.collection])
+
+  useEffect(() => {
+    if(window.location.pathname !== "/quartz-collection"){
+      setFlag(false)
+    }
+  },[])
   return (
     <div className="discover-collection-component">
       <div className="discover-collection-heading">
-        {content[collection][0]}
+        {flag ? content[collection][0] : innerCollection[0]?.collection_name}
       </div>
       <div className="discover-collection-desc">{content[collection][1]}</div>
       <div className="discover-collection-collections">
-        {collection === "none" &&
-          collections.map((v, i) => collectionJSX(v, i))}
-        {collection === "ESSENTIALS COLLECTION" &&
+        {flag ?
+          collections.map((v, i) => collectionJSX(v, i)) :
+          innerCollection?.map((v, i) => collectionJSX(v, i, true, true))
+        }
+        {/* {collection === "ESSENTIALS COLLECTION" &&
           essentialsCollection.map((v, i) => collectionJSX(v, i, true, true))}
         {collection === "INDULGE COLLECTION" &&
           indulgeCollection.map((v, i) => collectionJSX(v, i, true, true))}
         {collection === "INTERNATIONAL COLLECTION" &&
           internationalCollection.map((v, i) => collectionJSX(v, i, true, true))}
         {collection === "MY COLLECTION" &&
-          mythology.map((v, i) => collectionJSX(v, i, true, true))}
+          mythology.map((v, i) => collectionJSX(v, i, true, true))} */}
       </div>
     </div>
   );

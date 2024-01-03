@@ -7,7 +7,7 @@ const { required } = require("joi");
 
 const userSchema = mongoose.Schema(
   {
-    name: { 
+    color_name: { 
       type: String, 
       required: true, 
       default: ''
@@ -22,7 +22,17 @@ const userSchema = mongoose.Schema(
       required: true, 
       default: ''
     },
-    category: { 
+    collection_name: { 
+      type: String, 
+      required: true, 
+      default: ''
+    },
+    collection_url: { 
+      type: String, 
+      required: true, 
+      default: ''
+    },
+    color_url: { 
       type: String, 
       required: true, 
       default: ''

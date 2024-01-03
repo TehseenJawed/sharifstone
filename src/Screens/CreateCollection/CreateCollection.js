@@ -9,19 +9,10 @@ const CreateCollection = () => {
   const display_image = useState("")
 
   const handleCreateCollection = async () => {
-    let newFormData = new FormData();
-    const [colorImage, setColorImage] = color_image
-    const [displayImage, setDisplayImage] = display_image
-    newFormData.append("name", formData?.name)
-    newFormData.append("images", colorImage[0])
-    newFormData.append("images", displayImage[0])
-    newFormData.append("category", formData.category)
-    await axios.post('http://localhost:3005/api/collection', newFormData)
+    await axios.post('http://localhost:3005/api/collection', formData)
     .then((response) => {
       alert('Collection Created')
       setFormData({})
-      setColorImage("")
-      setDisplayImage("")
     })
     .catch(err => console.log('ERROR .. ',err.response.data.message))
   }
@@ -32,29 +23,29 @@ const CreateCollection = () => {
         <input
           className="login-input"
           type="text"
-          onChange={(e) => setFormData({...formData, name: e.target.value})}
-          value={formData.name}
+          onChange={(e) => setFormData({...formData, color_name: e.target.value})}
+          value={formData.color_name}
           placeholder="Color Name"
         />
         <input
           className="login-input"
           type="text"
-          onChange={(e) => setFormData({...formData, category: e.target.value})}
-          value={formData.category}
+          onChange={(e) => setFormData({...formData, collection_name: e.target.value})}
+          value={formData.collection_name}
           placeholder="Collection Name"
         />
         <input
           className="login-input"
           type="text"
-          onChange={(e) => setFormData({...formData, category: e.target.value})}
-          value={formData.category}
+          onChange={(e) => setFormData({...formData, color_image: e.target.value})}
+          value={formData.color_image}
           placeholder="Color Image URL"
         />
         <input
           className="login-input"
           type="text"
-          onChange={(e) => setFormData({...formData, category: e.target.value})}
-          value={formData.category}
+          onChange={(e) => setFormData({...formData, display_image: e.target.value})}
+          value={formData.display_image}
           placeholder="Display Image URL"
         />
         {/* <DropImage states={color_image} text={"Select Color Image"}/>

@@ -1,10 +1,12 @@
-import React, {useState} from "react";
+import React, {useState, useContext} from "react";
 import "./DiscoverCollection.css";
 import { MdOutlineArrowBackIos, MdOutlineArrowRight } from "react-icons/md";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
 import { Link } from "react-router-dom";
 
+
 function DiscoverCollection() {
+  
   const [imageArr, setImagesArr] = useState([
     "url(images/scroller_images/scroller_1.png)",
     "url(images/scroller_images/scroller_2.png)",

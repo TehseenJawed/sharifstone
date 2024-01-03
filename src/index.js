@@ -21,14 +21,14 @@ const RunFuncion = () => {
   const [store, setStore] = useState({});
   const [apiStore, setAPIStore] = useState({});
 
-  // useEffect(async () => {
-  //   const getCollections = await getCollection();
-  //   const newObj = {
-  //     ...apiStore,
-  //     collections: getCollections,
-  //   };
-  //   setAPIStore(newObj);
-  // }, []);
+  useEffect(async () => {
+    const getCollections = await getCollection();
+    const newObj = {
+      ...apiStore,
+      collections: getCollections,
+    };
+    setAPIStore(newObj);
+  }, []);
   return (
     <APIContext.Provider value={{ apiStore, setAPIStore }}>
       <Context.Provider value={{ store, setStore }}>

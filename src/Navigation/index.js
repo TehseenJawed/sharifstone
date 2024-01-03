@@ -46,7 +46,7 @@ const router = createBrowserRouter(
       ),
     },
     {
-      path: "/quartz-collection",
+      path: "/quartz-collection?/:collection",
       element: (
         <Layout>
           <OurCollection />
@@ -54,7 +54,7 @@ const router = createBrowserRouter(
       ),
     },
     {
-      path: "/product-description",
+      path: "/product-description?/:color",
       element: (
         <Layout>
           <ProductDescription />
