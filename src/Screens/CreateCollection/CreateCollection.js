@@ -9,7 +9,11 @@ const CreateCollection = () => {
   const display_image = useState("")
 
   const handleCreateCollection = async () => {
-    await axios.post('http://localhost:3005/api/collection', formData)
+    const newObj = {
+      ...formData,
+      collection_url: formData.collection_name.replace(' ', '-')
+    }
+    await axios.post('http://localhost:3005/api/collection', newObj)
     .then((response) => {
       alert('Collection Created')
       setFormData({})
@@ -47,6 +51,13 @@ const CreateCollection = () => {
           onChange={(e) => setFormData({...formData, display_image: e.target.value})}
           value={formData.display_image}
           placeholder="Display Image URL"
+        />
+        <input
+          className="login-input"
+          type="text"
+          onChange={(e) => setFormData({...formData, color_url: e.target.value})}
+          value={formData.color_url}
+          placeholder="Dynamic URL for this Color (It should be unique to other colors)"
         />
         {/* <DropImage states={color_image} text={"Select Color Image"}/>
         <DropImage states={display_image} customStyle={{backgroundColor: '#a4a7ff'}} text={"Select Present Image"}/> */}
