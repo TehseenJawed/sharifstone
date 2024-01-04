@@ -5,6 +5,7 @@ import Context from "../../../Store/contextStore";
 import { useNavigate, useParams } from 'react-router-dom';
 import APIContext from "../../../Store/apiContext";
 import { getCollectionByParam } from "../../../apiCall/apiCall";
+import { HistoryRouterProps } from "react-router-dom";
 
 const DiscoverCollection = () => {
   const [collection, setCollection] = useState("none");
@@ -477,9 +478,9 @@ const DiscoverCollection = () => {
   const gotoNextScreen = (value) => {
     setFlag(false)
     if(flag) {
-      navigate(`/quartz-collection/${value?.collection_url}`, { replace: true });
+      navigate(`/collection/${value?.collection_url}`, { replace: false });
     } else {
-      navigate(`/product-description/${value?.color_url}`, { replace: true });
+      navigate(`/product-description/${value?.color_url}`, { replace: false });
     }
   }
 
@@ -522,6 +523,10 @@ const DiscoverCollection = () => {
   useEffect(() => {
     if(params?.collection !== undefined){
       callAPI();
+    } else {
+      if(!flag) {
+        setFlag(true)
+      }
     }
   },[params?.collection])
 

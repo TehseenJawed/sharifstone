@@ -7,22 +7,52 @@ const { required } = require("joi");
 
 const userSchema = mongoose.Schema(
   {
-    name: { 
+    color_name: { 
       type: String, 
       required: true, 
       default: ''
     },
-    counter_top: { 
+    color_image: { 
       type: String, 
       required: true, 
       default: ''
     },
-    display_image: { 
+    color_url: { 
       type: String, 
       required: true, 
       default: ''
     },
     room: { 
+      type: String, 
+      required: true, 
+      default: ''
+    },
+    ambient_one: { 
+      type: String, 
+      required: true, 
+      default: ''
+    },
+    ambient_two: { 
+      type: String, 
+      required: true, 
+      default: ''
+    },
+    ambient_three: { 
+      type: String, 
+      required: true, 
+      default: ''
+    },
+    ambient_four: { 
+      type: String, 
+      required: true, 
+      default: ''
+    },
+    ambient_five: { 
+      type: String, 
+      required: true, 
+      default: ''
+    },
+    ambient_six: { 
       type: String, 
       required: true, 
       default: ''

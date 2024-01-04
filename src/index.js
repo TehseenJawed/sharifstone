@@ -15,17 +15,19 @@ import { RouterProvider } from "react-router-dom";
 import { router } from "./Navigation";
 import Context from "./Store/contextStore";
 import APIContext from "./Store/apiContext";
-import { getCollection } from "./apiCall/apiCall";
+import { getCollection, getVisualizer } from "./apiCall/apiCall";
 
 const RunFuncion = () => {
   const [store, setStore] = useState({});
   const [apiStore, setAPIStore] = useState({});
 
   useEffect(async () => {
-    const getCollections = await getCollection();
+    const collections = await getCollection();
+    const visualizers = await getVisualizer();
     const newObj = {
       ...apiStore,
-      collections: getCollections,
+      collections,
+      visualizers
     };
     setAPIStore(newObj);
   }, []);

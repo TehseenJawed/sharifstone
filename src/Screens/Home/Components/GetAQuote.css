@@ -65,6 +65,7 @@
 }
 .select-container {
   position: relative;
+  margin: 5px 0px;
 }
 .select-container-icon {
   position: absolute;

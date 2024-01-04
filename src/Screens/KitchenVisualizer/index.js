@@ -3,11 +3,12 @@ import './KitchenVisualizer.css'
 import Logo from '../../assets/images/logo_footer.png'
 import VisualizerForm from './Components/VisualizerForm'
 import ChooseColor from './Components/ChooseColor'
-import {Link} from 'react-router-dom'
+import {Link, useParams} from 'react-router-dom'
 
 const KitchenVisualizer = () => {
     const [currentScreen, setCurrentScreen] = useState('start')
     const [kitchenData, setKitchData] = useState()
+    const params = useParams()
     const kitchenArray = [
         {
             name: 'Bohemian Flam',
@@ -256,6 +257,10 @@ const KitchenVisualizer = () => {
 
     useEffect(() => {
         setKitchData(kitchenArray)
+        console.log('44444',params);
+        if(params?.color !== "kitchen-visualizer") {
+            setCurrentScreen("Pick Kitchen")
+        }
     },[])
     return (
         <>

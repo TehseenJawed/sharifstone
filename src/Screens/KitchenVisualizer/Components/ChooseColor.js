@@ -1,42 +1,58 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import "./ChooseColor.css";
 import Logo from "../../../assets/images/logo_footer.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { FaCheck } from "react-icons/fa6";
+import APIContext from "../../../Store/apiContext";
 
 const ChooseColor = ({ apiData, colorArray, updateColorArray, layoutData }) => {
   const [selectedColor, setSelectedColor] = useState(colorArray[0]);
   const [inputText, setInputText] = useState("");
   const [currentSide, setCurrentSide] = useState(false);
   const [selectedPicker, setSelectedPicker] = useState("Countertop");
+  const [ambient, setAmbient] = useState('one')
   const [activeFloor, setActiveFloor] = useState(
     "url(images/color_collections/kitchen_visualizer/stones/lime_delight.jpg)"
   );
-  const [activcounterTop, setActiveCounterTop] = useState(
-    {
-        name: 'Bohemian Flam',
-        image: 'url(images/color_collections/kitchen_visualizer/stones/bohemian_flam.jpg)',
-        relatedImage: 'url(images/color_collections/kitchen_visualizer/bohemian_flam.png)'
-    },
-  );
-
+  const [activcounterTop, setActiveCounterTop] = useState();
+  const {apiStore, setAPIStore} = useContext(APIContext)
+  const navigate = useNavigate()
+  const params = useParams()
+  console.log('555',params?.color);
   const onColorSelect = (value) => {
+    console.log('4444',value);
     if (selectedPicker === "Floor") {
       setActiveFloor(value);
     } else {
+      console.log('New work....');
       setActiveCounterTop(value);
     }
     setSelectedColor(value);
+    navigate(`/kitchen-visualizer/${value?.color_url}`, { replace: true });
   };
 
   useEffect(() => {
-    const newArray = colorArray.filter((v, i) => v.name === inputText);
+    const newArray = colorArray.filter((v, i) => v?.color_name === inputText);
     if (newArray.length >= 1) {
       updateColorArray(newArray);
     } else {
       updateColorArray(apiData);
     }
   }, [inputText]);
+  useEffect(() => {
+    if(apiStore?.visualizers){
+      setActiveCounterTop(apiStore?.visualizers[0])
+      setSelectedColor(apiStore?.visualizers[0])
+    }
+  }, [apiStore]);
+  useEffect(() => {
+    console.log('GOOO ',apiStore?.visualizers, apiStore?.visualizers);
+    if(apiStore?.visualizers){
+      if(params?.color === "kitchen-visualizer") {
+        navigate(`/kitchen-visualizer/${apiStore?.visualizers[0]?.color_url}`, { replace: true });
+      }
+    }
+  }, []);
   return (
     <div className="choosecolor-container">
       <div className="choosecolor-innercontainer">
@@ -69,7 +85,7 @@ const ChooseColor = ({ apiData, colorArray, updateColorArray, layoutData }) => {
                     {
                         layoutData.map((v,i) => <div
                         className="choosecolor-ambients-container"
-                        style={{ backgroundImage: v.image }}
+                        style={{ backgroundImage: `url(${v.image})` }}
                       ></div>)
                     }
                     
@@ -99,7 +115,7 @@ const ChooseColor = ({ apiData, colorArray, updateColorArray, layoutData }) => {
                     className="choosecolor-palete-container"
                     onClick={() => setSelectedPicker("Countertop")}
                     style={{
-                      backgroundImage: activcounterTop.image,
+                      backgroundImage: `url(${activcounterTop?.color_image})`,
                       border:
                         selectedPicker === "Countertop"
                           ? "3px solid #EE2A2E"
@@ -107,7 +123,7 @@ const ChooseColor = ({ apiData, colorArray, updateColorArray, layoutData }) => {
                     }}
                   >
                   </div>
-                  <b>{activcounterTop.name}</b>
+                  <b>{activcounterTop?.color_name}</b>
                 </div>
               </div>
               <div className="choosecolor-sel-container">
@@ -120,20 +136,20 @@ const ChooseColor = ({ apiData, colorArray, updateColorArray, layoutData }) => {
                     placeholder="Search"
                   />
                 </div>
-                {colorArray.map((v, i) => (
+                {apiStore?.visualizers?.map((v, i) => (
                   <div
                     className="choosecolor-palate"
                     onClick={() => onColorSelect(v)}
                   >
                     <div
                       className="choosecolor-palete-container"
-                      style={{ backgroundImage: v.image }}
+                      style={{ backgroundImage: `url(${v.color_image})` }}
                     >
                       {
-                        activcounterTop.name === v.name && <FaCheck color="#fff" style={{width: 30, height: 30}}/>
+                        activcounterTop?.color_name === v?.color_name && <FaCheck color="#fff" style={{width: 30, height: 30}}/>
                       }
                     </div>
-                    <div className="choosecolor-palate-b">{v.name}</div>
+                    <div className="choosecolor-palate-b">{v?.color_name}</div>
                   </div>
                 ))}
               </div>
@@ -142,11 +158,11 @@ const ChooseColor = ({ apiData, colorArray, updateColorArray, layoutData }) => {
         </span>
       </div>
       <div
-        style={{ backgroundImage: selectedColor.relatedImage }}
+        style={{ backgroundImage: `url(${selectedColor?.ambient_one})` }}
         className="choosecolor-innercontainer2"
       ></div>
       <div
-        style={{ backgroundImage: "url(images/color_collections/kitchen_visualizer/bohemian_flam.png)" }}
+        // style={{ backgroundImage: `url(${apiStore?.visualizers[0]?.ambient_one})` }}
         className="choosecolor-innercontainer3"
       />
     </div>

@@ -14,6 +14,18 @@ const getCollection = async () => {
     .catch((err) => alert(err.response.data.message));
 };
 
+const getVisualizer = async () => {
+  // const {store, setStore} = useContext(APIContext)
+  return await axios
+    .get(`${apiEndpoint}visualizer`)
+    .then((response) => {
+      // console.log('RESPONSE .... ',response?.data?.result)
+      return response?.data?.result;
+    })
+    .catch((err) => alert(err.response.data.message));
+};
+
+
 const getCollectionByParam = async (collection) => {
   return await axios
     .get(`${apiEndpoint}collection/filter?collection_url=${collection}`)
@@ -32,4 +44,4 @@ const getColorByParam = async (color) => {
     .catch((err) => alert(err.response.data.message));
 };
 
-export { getCollection, getCollectionByParam, getColorByParam };
+export { getCollection, getCollectionByParam, getColorByParam, getVisualizer };

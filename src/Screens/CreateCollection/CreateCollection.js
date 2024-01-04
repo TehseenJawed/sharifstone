@@ -5,8 +5,6 @@ import axios from 'axios';
 
 const CreateCollection = () => {
   const [formData, setFormData] = useState({})
-  const color_image = useState("")
-  const display_image = useState("")
 
   const handleCreateCollection = async () => {
     const newObj = {

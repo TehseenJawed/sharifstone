@@ -9,7 +9,7 @@ const Login = () => {
         if(formData.email === 'admin9871@sharifstore.com' && formData.password === 'sharif-admin0873565') {
             alert('You are loggedin')
             localStorage.setItem('user', JSON.stringify({email: formData.email, password: formData.password}))
-            navigate('/admin-dashboard', { replace: true });
+            navigate('/admin-dashboard', { replace: false });
             console.log('doing good job.');
         } else {
             alert('Your email or password does not match. please try again.')
@@ -18,7 +18,7 @@ const Login = () => {
   useEffect(() => {
     const user = localStorage.getItem('user')
     if(!!user) {
-      navigate('/admin-dashboard', { replace: true });
+      navigate('/admin-dashboard', { replace: false });
     }
   },[])
   return (

@@ -46,7 +46,23 @@ const router = createBrowserRouter(
       ),
     },
     {
-      path: "/quartz-collection?/:collection",
+      path: "/kitchen-visualizer?/:color",
+      element: (
+        // <Layout>
+          <KitchenVisualizer />
+        // </Layout>
+      ),
+    },
+    {
+      path: "/quartz-collection",
+      element: (
+        <Layout>
+          <OurCollection />
+        </Layout>
+      ),
+    },
+    {
+      path: "/collection?/:collection",
       element: (
         <Layout>
           <OurCollection />
@@ -61,14 +77,7 @@ const router = createBrowserRouter(
         </Layout>
       ),
     },
-    {
-      path: "/kitchen-visualizer",
-      element: (
-        // <Layout>
-          <KitchenVisualizer />
-        // </Layout>
-      ),
-    },
+    
     {
       path: "/about",
       element: (

@@ -6,7 +6,7 @@ const router = Router();
 
 router
   .route("/")
-  .post(upload.array("images"), visualizerController.createVisualizer)
+  .post(visualizerController.createVisualizer)
   .get(visualizerController.getAllVisualizer);
 
 module.exports = router;
