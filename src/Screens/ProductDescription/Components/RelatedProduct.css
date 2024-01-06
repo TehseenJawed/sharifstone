@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 160px 0px;
+  margin: 50px 0px;
 }
 .productrelated-heading {
   font-size: 60px;
@@ -14,13 +14,12 @@
 }
 .productrelated-container {
   width: 90%;
-  height: 700px;
   background-color: #fef6f7;
   border-radius: 25px;
 }
 .productrelated-innercontainer {
   border-radius: 25px;
-  margin: 70px 40px;
+  margin: 40px 40px;
   border: 3px solid #d6d6d6;
   /* height: 550px; */
   display: flex;
@@ -43,18 +42,19 @@
   background-size: cover;
 }
 .productexpand-container {
-  margin: 150px 0px;
+  margin: 80px 0px;
 }
 .productexpand-btncontainer {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 100px 0px;
+  margin: 50px 0px;
 }
 .productexpand-wheretobuy {
   padding: 20px 50px;
   border-radius: 50px;
+  text-decoration: none;
   color: white;
   font-size: 22px;
   font-weight: 600;
@@ -62,6 +62,7 @@
 .productexpand-productcatalog {
   padding: 20px 50px;
   border-radius: 50px;
+  text-decoration: none;
   color: #ee2a2e;
   font-size: 22px;
   font-weight: 600;

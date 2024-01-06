@@ -4,7 +4,7 @@ import Logo from "../../../assets/images/logo_footer.png";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { FaCheck } from "react-icons/fa6";
 import APIContext from "../../../Store/apiContext";
-
+import FloorColor from '../../../assets/images/lime_delight.jpg'
 const ChooseColor = ({ apiData, colorArray, updateColorArray, layoutData }) => {
   const [selectedColor, setSelectedColor] = useState(colorArray[0]);
   const [inputText, setInputText] = useState("");
@@ -100,7 +100,7 @@ const ChooseColor = ({ apiData, colorArray, updateColorArray, layoutData }) => {
                     className="choosecolor-palete-container"
                     // onClick={() => setSelectedPicker("Floor")}
                     style={{
-                      backgroundImage: activeFloor,
+                      backgroundImage: `url(${FloorColor})`,
                       border:
                         selectedPicker === "Floor"
                           ? "3px solid #EE2A2E"

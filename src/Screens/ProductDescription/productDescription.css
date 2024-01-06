@@ -5,12 +5,19 @@
     align-items: center;
     margin-top: 80px;
 }
+.switch-container {
+    width: 210px;
+    margin-top: 15px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .product-infosub {
     width: 45%;
-    height: 850px;
+    height: 770px;
     margin-left: 60px;
     overflow: hidden;
-    border-radius: 30px;
 }
 .product-infosub img {
     width: 800px;
@@ -52,10 +59,11 @@
 }
 .product-innerimage {
     width: 100%;
-    height: 900px;
+    height: 700px;
     background-position: left;
     background-repeat: no-repeat;
     background-size: cover;
+    border-radius: 30px;
 }
 .product-desc-span {
     font-size: 20px;

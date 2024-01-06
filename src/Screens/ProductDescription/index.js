@@ -6,14 +6,16 @@ import RelatedProduct from "./Components/RelatedProduct";
 import Context from "../../Store/contextStore";
 import { getCollectionByParam, getColorByParam } from "../../apiCall/apiCall";
 import { useParams } from "react-router-dom";
-import CoverImage from '../../assets/images/product_description.png'
+import CoverImage from "../../assets/images/product_description.png";
+import Switch from "react-switch";
 
 function ProductDescription() {
   const [colorDetails, setColorDetails] = useState({});
   const [relatedColors, setRelatedColors] = useState([]);
+  const [showColor, setShowColor] = useState(true)
   const { store } = useContext(Context);
   const params = useParams();
-  
+
   useEffect(() => {
     if (params?.color !== undefined) {
       new Promise(async (resolve, reject) => {
@@ -39,8 +41,13 @@ function ProductDescription() {
           {/* <img src={ProductImage} /> */}
           <div
             className="product-innerimage"
-            style={{ backgroundImage: `url(${colorDetails?.display_image})` }}
+            style={{ backgroundImage: showColor ? `url(${colorDetails?.display_image})` : `url(${colorDetails?.color_image})` }}
           />
+          <div className="switch-container">
+            <span style={{fontWeight: showColor ? 600 : 400}}>Space</span>
+            <Switch onHandleColor={"#fff"} offColor={"#EE2A2E"} onColor={"#D6D6D6"} checkedIcon={false} uncheckedIcon={true} onChange={() => setShowColor(!showColor)} checked={!showColor} />
+            <span style={{fontWeight: !showColor ? 600 : 400}}>Color</span>
+          </div>
         </div>
         <div className="product-infosub">
           <div className="product-profilename">{colorDetails?.color_name}</div>
