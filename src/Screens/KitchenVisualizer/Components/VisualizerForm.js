@@ -28,7 +28,7 @@ const VisualizerForm = ({ data, kitchenLayout, bathroomLayout }) => {
   const [layout, setLayout] = useState("Kitchen");
   const [hoverContainer, setHoverContainer] = useState(-1);
   const [changeImageLayout, setChangeImageLayout] = useState("Kitchen");
-  const { currentScreen, setCurrentScreen } = data;
+  const { currentScreen, setCurrentScreen, currentAmbient, setCurrentAmbient } = data;
   console.log('4444',kitchenLayout);
   const responsive = {
     desktop: {
@@ -47,14 +47,24 @@ const VisualizerForm = ({ data, kitchenLayout, bathroomLayout }) => {
       slidesToSlide: 1, // optional, default to 1.
     },
   };
+  const selectLayout = (layout, {value}) => {
+    console.log('VVVV',value);
+    if(layout === 'Kitchen') {
+      setCurrentScreen('Pick Kitchen')
+      setCurrentAmbient(value)
+    }
+    else {
+      setCurrentScreen('Pick Bathroom')
+      setCurrentAmbient(value)
+    }
+  }
   const LayoutJSX = (imageLayout = 'Kitchen', layoutArray = kitchenLayout) => (
       layout === imageLayout && (
           layoutArray.map((v, i) => (
               <div className='visualizerform-image' onMouseOver={() => setHoverContainer(i)} style={{ backgroundImage: v.image }}>
                   {i === hoverContainer && (
                       <div
-                      
-                          onClick={layout === 'Kitchen' ? () => setCurrentScreen('Pick Kitchen') : () => setCurrentScreen('Pick Bathroom')}
+                          onClick={() => selectLayout(layout, v)}
                           className="discover-collectionexpand"
                       >
                           <GoArrowUpRight size={35} color="white" />
