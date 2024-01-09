@@ -12,7 +12,7 @@ const CreateVisualizer = () => {
       color_url: formData.color_name.replace(' ', '-')
     }
     console.log('DATA ---> ',newObj);
-    await axios.post('http://localhost:3005/api/visualizer', newObj)
+    await axios.post('https://sharifstone-server-3sm424vfs-tehseenjawed.vercel.app/api/visualizer', newObj)
     .then((response) => {
       alert('Visualizer Created')
       setFormData({})

@@ -11,7 +11,7 @@ const CreateCollection = () => {
       ...formData,
       collection_url: formData.collection_name.replace(' ', '-')
     }
-    await axios.post('http://localhost:3005/api/collection', newObj)
+    await axios.post('https://sharifstone-server-3sm424vfs-tehseenjawed.vercel.app/api/collection', newObj)
     .then((response) => {
       alert('Collection Created')
       setFormData({})

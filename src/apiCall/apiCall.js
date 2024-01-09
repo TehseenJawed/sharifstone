@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useContext } from "react";
 import APIContext from "../Store/contextStore";
-const apiEndpoint = "http://localhost:3005/api/";
+const apiEndpoint = "https://sharifstone-server-3sm424vfs-tehseenjawed.vercel.app/api/";
 
 const getCollection = async () => {
   // const {store, setStore} = useContext(APIContext)
