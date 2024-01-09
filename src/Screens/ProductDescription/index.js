@@ -45,7 +45,7 @@ function ProductDescription() {
           />
           <div className="switch-container">
             <span style={{fontWeight: showColor ? 600 : 400}}>Space</span>
-            <Switch onHandleColor={"#fff"} offColor={"#EE2A2E"} onColor={"#D6D6D6"} checkedIcon={false} uncheckedIcon={true} onChange={() => setShowColor(!showColor)} checked={!showColor} />
+            <Switch onHandleColor={"#fff"} offColor={"#D6D6D6"} onColor={"#EE2A2E"} checkedIcon={false} uncheckedIcon={true} onChange={() => setShowColor(!showColor)} checked={!showColor} />
             <span style={{fontWeight: !showColor ? 600 : 400}}>Color</span>
           </div>
         </div>

@@ -16,6 +16,28 @@ const createCollection = async (body) => {
   return response
 };
 
+const getCollectionById = async (id) => {
+  return Collection.findById(id);
+};
+
+const deleteCollectionById = async (id) => {
+  const collection = await getCollectionById(id);
+  if (!collection) {
+    throw new ApiError(httpStatus.NOT_FOUND, "Collection not found.");
+  }
+  await collection.remove();
+  return collection;
+}
+const updateCollection = async (id, update) => {
+  const collection = await getCollectionById(id);
+  if (!collection) {
+    throw new ApiError(httpStatus.NOT_FOUND, "Collection not found.");
+  }
+  Object.assign(collection, update);
+  await collection.save();
+  return collection;
+};
+
 const queryCollections = async (
   filter,
   options,
@@ -44,5 +66,7 @@ const getAllCollection = async (body) => {
 module.exports = {
   createCollection,
   getAllCollection,
-  queryCollections
+  queryCollections,
+  updateCollection,
+  deleteCollectionById,
 };

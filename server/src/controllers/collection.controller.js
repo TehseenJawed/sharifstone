@@ -30,9 +30,18 @@ const filterCollection = catchAsync(async (req, res) => {
   res.send(result);
 });
 
+const updateCollection = catchAsync(async (req, res) => {
+  const result = await collectionService.updateCollection(req.params.id, req.body);
+  res.send(result);
+});
+
+const deleteCollection = catchAsync(async (req, res) => {
+  const product = await collectionService.deleteCollectionById(req.params.id);
+  res.send(product);
+});
+
 const getAllCollection = catchAsync(async (req, res) => {
   const result = await collectionService.getAllCollection();
-  console.log('Result... ',result);
   res.status(httpStatus.ACCEPTED).send({
     status: httpStatus.ACCEPTED,
     result
@@ -42,5 +51,7 @@ const getAllCollection = catchAsync(async (req, res) => {
 module.exports = {
   createCollection,
   getAllCollection,
-  filterCollection
+  filterCollection,
+  updateCollection,
+  deleteCollection
 };

@@ -12,6 +12,11 @@ router
   .get(collectionController.getAllCollection);
 
 router
+  .route("/:id")
+  .delete(collectionController.deleteCollection)
+  .put(collectionController.updateCollection);
+
+router
   .route("/filter")
   .get(collectionController.filterCollection);
 

@@ -4,52 +4,71 @@ import Logo from "../../../assets/images/logo_footer.png";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { FaCheck } from "react-icons/fa6";
 import APIContext from "../../../Store/apiContext";
-import FloorColor from '../../../assets/images/lime_delight.jpg'
-const ChooseColor = ({ apiData, colorArray, updateColorArray, layoutData }) => {
+import FloorColor from "../../../assets/images/lime_delight.jpg";
+
+const ChooseColor = ({
+  apiData,
+  colorArray,
+  updateColorArray,
+  layoutData,
+  ambient,
+}) => {
   const [selectedColor, setSelectedColor] = useState(colorArray[0]);
   const [inputText, setInputText] = useState("");
   const [currentSide, setCurrentSide] = useState(false);
   const [selectedPicker, setSelectedPicker] = useState("Countertop");
-  const [ambient, setAmbient] = useState('one')
   const [activeFloor, setActiveFloor] = useState(
     "url(images/color_collections/kitchen_visualizer/stones/lime_delight.jpg)"
   );
   const [activcounterTop, setActiveCounterTop] = useState();
-  const {apiStore, setAPIStore} = useContext(APIContext)
-  const navigate = useNavigate()
-  const params = useParams()
-  console.log('555',params?.color);
+  const { apiStore, setAPIStore } = useContext(APIContext);
+  const [selectedAPIStore, setSelectedAPIStore] = useState(apiStore?.visualizers);
+  const navigate = useNavigate();
+  const params = useParams();
+  const { currentAmbient, setCurrentAmbient } = ambient;
   const onColorSelect = (value) => {
-    console.log('4444',value);
     if (selectedPicker === "Floor") {
       setActiveFloor(value);
     } else {
-      console.log('New work....');
       setActiveCounterTop(value);
     }
     setSelectedColor(value);
     navigate(`/kitchen-visualizer/${value?.color_url}`, { replace: true });
   };
-
+  const selectAmbient = ({ value }) => {
+    setCurrentAmbient(value);
+    setCurrentSide(false);
+  };
   useEffect(() => {
-    const newArray = colorArray.filter((v, i) => v?.color_name === inputText);
+    const newArray = apiStore?.visualizers?.filter(
+      (v, i) => v?.color_name === inputText
+    );
     if (newArray.length >= 1) {
-      updateColorArray(newArray);
-    } else {
-      updateColorArray(apiData);
-    }
+      console.log('NewArray 222');
+      setSelectedAPIStore(newArray);
+    } 
   }, [inputText]);
   useEffect(() => {
-    if(apiStore?.visualizers){
-      setActiveCounterTop(apiStore?.visualizers[0])
-      setSelectedColor(apiStore?.visualizers[0])
+    if (apiStore?.visualizers) {
+      setActiveCounterTop(apiStore?.visualizers[0]);
+      setSelectedColor(apiStore?.visualizers[0]);
+      if (params?.color !== "kitchen-visualizer") {
+        const selectedColor = apiStore?.visualizers?.find(
+          (value) => value.color_url === params?.color
+        );
+        if (!!selectedColor) {
+          setActiveCounterTop(selectedColor);
+          setSelectedColor(selectedColor);
+        }
+      }
     }
   }, [apiStore]);
   useEffect(() => {
-    console.log('GOOO ',apiStore?.visualizers, apiStore?.visualizers);
-    if(apiStore?.visualizers){
-      if(params?.color === "kitchen-visualizer") {
-        navigate(`/kitchen-visualizer/${apiStore?.visualizers[0]?.color_url}`, { replace: true });
+    if (apiStore?.visualizers) {
+      if (params?.color === "kitchen-visualizer") {
+        navigate(`/kitchen-visualizer/${apiStore?.visualizers[0]?.color_url}`, {
+          replace: true,
+        });
       }
     }
   }, []);
@@ -81,15 +100,16 @@ const ChooseColor = ({ apiData, colorArray, updateColorArray, layoutData }) => {
 
           {currentSide ? (
             <div>
-                <div className="choosecolor-amb-container">
-                    {
-                        layoutData.map((v,i) => <div
-                        className="choosecolor-ambients-container"
-                        style={{ backgroundImage: `url(${v.image})` }}
-                      ></div>)
-                    }
-                    
-                </div>
+              <div className="choosecolor-amb-container">
+                {layoutData.map((v, i) => (
+                  <img
+                    onClick={() => selectAmbient(v)}
+                    className="choosecolor-ambients-container"
+                    src={v?.image}
+                    alt="ALT"
+                  />
+                ))}
+              </div>
             </div>
           ) : (
             <div>
@@ -121,8 +141,7 @@ const ChooseColor = ({ apiData, colorArray, updateColorArray, layoutData }) => {
                           ? "3px solid #EE2A2E"
                           : "none",
                     }}
-                  >
-                  </div>
+                  ></div>
                   <b>{activcounterTop?.color_name}</b>
                 </div>
               </div>
@@ -136,33 +155,70 @@ const ChooseColor = ({ apiData, colorArray, updateColorArray, layoutData }) => {
                     placeholder="Search"
                   />
                 </div>
-                {apiStore?.visualizers?.map((v, i) => (
-                  <div
-                    className="choosecolor-palate"
-                    onClick={() => onColorSelect(v)}
-                  >
-                    <div
-                      className="choosecolor-palete-container"
-                      style={{ backgroundImage: `url(${v.color_image})` }}
-                    >
-                      {
-                        activcounterTop?.color_name === v?.color_name && <FaCheck color="#fff" style={{width: 30, height: 30}}/>
-                      }
-                    </div>
-                    <div className="choosecolor-palate-b">{v?.color_name}</div>
-                  </div>
-                ))}
+                {inputText !== "" ? (
+                  <>
+                    {selectedAPIStore?.map((v, i) => (
+                      <div
+                        className="choosecolor-palate"
+                        onClick={() => onColorSelect(v)}
+                      >
+                        <div
+                          className="choosecolor-palete-container"
+                          style={{ backgroundImage: `url(${v.color_image})` }}
+                        >
+                          {activcounterTop?.color_name === v?.color_name && (
+                            <FaCheck
+                              color="#fff"
+                              style={{ width: 30, height: 30 }}
+                            />
+                          )}
+                        </div>
+                        <div className="choosecolor-palate-b">
+                          {v?.color_name}
+                        </div>
+                      </div>
+                    ))}
+                  </>
+                ) : (
+                  <>
+                    {apiStore?.visualizers?.map((v, i) => (
+                      <div
+                        className="choosecolor-palate"
+                        onClick={() => onColorSelect(v)}
+                      >
+                        <div
+                          className="choosecolor-palete-container"
+                          style={{ backgroundImage: `url(${v.color_image})` }}
+                        >
+                          {activcounterTop?.color_name === v?.color_name && (
+                            <FaCheck
+                              color="#fff"
+                              style={{ width: 30, height: 30 }}
+                            />
+                          )}
+                        </div>
+                        <div className="choosecolor-palate-b">
+                          {v?.color_name}
+                        </div>
+                      </div>
+                    ))}
+                  </>
+                )}
               </div>
             </div>
           )}
         </span>
       </div>
       <div
-        style={{ backgroundImage: `url(${selectedColor?.ambient_one})` }}
+        style={{
+          backgroundImage: `url(${selectedColor[`ambient_${currentAmbient}`]})`,
+        }}
         className="choosecolor-innercontainer2"
       ></div>
       <div
-        // style={{ backgroundImage: `url(${apiStore?.visualizers[0]?.ambient_one})` }}
+        style={{
+          backgroundImage: `url(https://lh3.googleusercontent.com/drive-viewer/AEYmBYT1VVIUvYS1lxIcraPDwHOhoY84lkp-LcDAf1UWc9h4RIK7Zje0s_UuTAbeJyDhXhcjR1NZKUUPYI9n3F3Ejv2Jk_G5=w1920-h929)`,
+        }}
         className="choosecolor-innercontainer3"
       />
     </div>

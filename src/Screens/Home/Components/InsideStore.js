@@ -34,7 +34,8 @@ function InsideStore({data}) {
         <div className="home-section">
           <div className="home-insidestore-container">
             <div className="home-insidestore-heading">STEP INSIDE OUR STORE</div>
-            <div className="homebrand-button">View Full Catalogue</div>
+            {/* <div className="homebrand-button">View Full Catalogue</div> */}
+            <div className="homebrand-button"  onClick={() => setOpenQuote(true)}>Get Directions</div>
           </div>
           <div className="home-insidestore-imagecontainer">
             {
@@ -43,7 +44,7 @@ function InsideStore({data}) {
           </div>
           <div className="home-insidestore-container">
             <div className="home-insidestore-subheading">DISCOVER OUR TOP-QUALITY STONE OPTIONS TO PERFECTLY MATCH YOUR DESIRED SPACE!</div>
-            <div className="homebrand-button"  onClick={() => setOpenQuote(true)}>Get Directions</div>
+            
           </div>
           <div className="home-insidestore-imagecontainer">
             {
